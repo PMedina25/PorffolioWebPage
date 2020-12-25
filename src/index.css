@@ -97,7 +97,13 @@ a:hover {
 
 #home {
   width: 100%;
-  height: 100vh;
+  padding: 2rem 0;
+}
+
+#greetings {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
 }
 
 
