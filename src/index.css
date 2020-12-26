@@ -1,12 +1,14 @@
 
 :root {
-  --background-main-color: #EAEAEA;
+  --background-main-color: #F7F7F7;
   --background-secondary-color: #FFF;
 
   --secondary-text-color: #4B5156;
   --navbar-text-color: #B4DEE3;
 
   --border-color: #B4DEE3;
+
+  --arrow-color: #B4DEE3;
 }
 
 body {
@@ -64,6 +66,7 @@ a:hover {
   border: 2px solid var(--border-color);
   border-radius: 10px;
   background-color: var(--background-secondary-color);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -129,6 +132,48 @@ a:hover {
   width: 100%;
   padding: 4rem;
   border-bottom: 1px solid var(--border-color);
+}
+
+/* =============
+ * Education and Experience
+ * =============
+*/
+#education-experience {
+  width: 100%;
+  padding: 4rem;
+  text-align: center;
+}
+
+
+
+.slider-card {
+  display: flex;
+  flex-direction: row !important;
+  padding-top: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-slider-image {
+  width: 125px;
+  height: 125px;
+  object-fit: contain;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-footer {
+  border: 1px solid rgba(0,0,0,.125);
+  border-bottom: 0;
+  display: sticky !important;
+  bottom: 0 !important;
+}
+
+.left-arrow-slider,
+.right-arrow-slider {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 4rem;
+  color: var(--arrow-color);
+  cursor: pointer;
 }
 
 
