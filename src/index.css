@@ -38,7 +38,7 @@ h1 {
   font-weight: 500;
 }
 
-h3, p, li, span, label, input, textarea {
+h4, p, li, span, label, input, textarea {
   color: var(--secondary-text-color);
   font-family: 'Roboto Mono', monospace;
 }
@@ -97,13 +97,28 @@ a:hover {
 
 #home {
   width: 100%;
-  padding: 2rem 0;
+  padding: 4rem;
+  border-bottom: 1px solid var(--border-color);
 }
 
 #greetings {
   display: flex;
   flex-direction: column;
   align-self: center;
+}
+
+#profile-image {
+  border: 3px solid var(--border-color);
+}
+
+/* =============
+ * About Me
+ * =============
+*/
+#about-me {
+  width: 100%;
+  padding: 4rem;
+  border-bottom: 1px solid var(--border-color);
 }
 
 
