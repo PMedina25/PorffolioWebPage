@@ -1,18 +1,16 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Container from 'react-bootstrap/Container';
 
-import { Card, CardDeck, Col, Image, Row  } from 'react-bootstrap';
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { Button, Card, CardDeck, Col, Container, Image, Row  } from 'react-bootstrap';
 
 // Import components
 import Navbar from './components/Navbar';
+import EducationExperience from './components/EducationExperience';
 
 // Import images
 import profilePhoto from './images/FotoPabloMedina.png';
-import freeCodeCampLogo from './images/freecodecamp-logo.jpg';
-import universidadSevillaLogo from './images/universidad-sevilla.png'
-import ttinorteLogo from './images/ttinorte.png';
+import openSirocoImg from './images/open-siroco.png';
+import socialNetworkAppImg from './images/social-network-app.png';
 
 function App() {
   console.log(profilePhoto)
@@ -68,69 +66,44 @@ function App() {
              </Col>
           </Container>
 
-          <Container id="education-experience" fluid>
-            <Row>
-              <Col md={4}>
-                <h1>Education</h1>
-              </Col>
-              <Col md={4}>
-                <h1>Experience</h1>
-              </Col>
-              <Col md={4}>
-                <h1>Certifications</h1>
-              </Col>
-            </Row>
+          <EducationExperience />
+
+          <Container id="projects" fluid>
+            <h1 style={{'textAlign': 'center'}}>Projects</h1>
             <CardDeck>
-                <Card id="education" className="slider-card">
-                  <FiChevronLeft className="left-arrow-slider" />
-                  <div className="card-content">
-                    <Image src={universidadSevillaLogo} className="card-slider-image" roundedCircle />
-                    <Card.Body>
-                      <Card.Title>Education title</Card.Title>
-                      <Card.Text>
-                        This is a education card. Here we display the education info.
-                      </Card.Text>
-                    </Card.Body>
-                    <Card.Footer>
-                      <small className="text-muted">2014-2019</small>
-                    </Card.Footer>
-                  </div>
-                  <FiChevronRight className="right-arrow-slider" />
-                </Card>
-                <Card id="experience" className="slider-card">
-                  <FiChevronLeft className="left-arrow-slider" />
-                  <div className="card-content">
-                    <Image src={ttinorteLogo} className="card-slider-image" roundedCircle />
-                    <Card.Body>
-                      <Card.Title>Experience title</Card.Title>
-                      <Card.Text>
-                        This is a experience card. Here we display the experience info.
-                      </Card.Text>
-                    </Card.Body>
-                    <Card.Footer>
-                      <small className="text-muted">2014-2019</small>
-                    </Card.Footer>
-                  </div>
-                  <FiChevronRight className="right-arrow-slider" />
-                </Card>
-                <Card id="certifications" className="slider-card">
-                  <FiChevronLeft className="left-arrow-slider" />
-                  <div className="card-content">
-                    <Image src={freeCodeCampLogo} className="card-slider-image" roundedCircle />
-                    <Card.Body>
-                      <Card.Title>Certifications title</Card.Title>
-                      <Card.Text>
-                        This is a certification card. Here we display the certification info.
-                      </Card.Text>
-                    </Card.Body>
-                    <Card.Footer>
-                      <small className="text-muted">2014-2019</small>
-                    </Card.Footer>
-                  </div>
-                  <FiChevronRight className="right-arrow-slider" />
-                </Card>
+              <Card>
+                <Card.Img className="img-project-card" variant="top" src={openSirocoImg} />
+                <Card.Body>
+                  <Card.Title>Open Siroco</Card.Title>
+                  <Card.Text>
+                    Open Innovation Platform for Production 4.0 Colaborative Robot Systems.
+                  </Card.Text>
+                  <Button className="btn-project-card">Show More</Button>
+                </Card.Body>
+              </Card>
+              <Card>
+                <Card.Img className="img-project-card" variant="top" src={socialNetworkAppImg} />
+                <Card.Body>
+                  <Card.Title>MERNG Social Network</Card.Title>
+                  <Card.Text>
+                    Social media app using MongoDB, Express, Node, React, GraphQL and Node (the MERNG Stack).
+                  </Card.Text>
+                  <Button className="btn-project-card">Show More</Button>
+                </Card.Body>
+              </Card>
+              <Card>
+                <Card.Img className="img-project-card" variant="top" src={socialNetworkAppImg} />
+                <Card.Body>
+                  <Card.Title>MERNG Social Network</Card.Title>
+                  <Card.Text>
+                    Social media app using MongoDB, Express, Node, React, GraphQL and Node (the MERNG Stack).
+                  </Card.Text>
+                  <Button className="btn-project-card">Show More</Button>
+                </Card.Body>
+              </Card>
             </CardDeck>
           </Container>
+          
         </div>
       </Container>
   )
