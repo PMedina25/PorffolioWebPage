@@ -1,30 +1,35 @@
 
 :root {
-  --background-main-color: #c7e3b4;
-  --background-secondary-color: #FFF;
-
-  --secondary-text-color: #4B5156;
-
-  --button-color: #c7e3b4;
-  
-  --light-blue-color: #B4DEE3;
-
-  --box-shadow-color: #8FC76A;
+  --main-white: #FFF;
+  --main-red: #BE3144;
+  --main-dark-blue: #45567D;
+  --main-gray: #303841;
 }
 
-body {
+
+/* Base reset */
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+/* box-sizing and font sizing */
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  /* Set font size for easy rem calculations
+   * default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
+  scroll-behavior: smooth;
 }
 
 /* =============
@@ -32,7 +37,8 @@ code {
  * =============
 */
 #root {
-  background: var(--background-main-color);
+  color: var(--main-white);
+  background: var(--main-dark-blue);
   padding: 20px 0;
 }
 
@@ -41,13 +47,13 @@ h1, .card-title {
   font-weight: 500;
 }
 
-h3, p, li, span, label, input, textarea {
-  color: var(--secondary-text-color);
+h3, h4, p, li, span, label, input, textarea {
+  color: var(--main-white);
   font-family: 'Roboto Mono', monospace;
 }
 
 a {
-  color: var(--light-blue-color)!important;
+  color: var(--main-red)!important;
   font-family: 'Roboto Mono', monospace;
   font-weight: bold;
 }
@@ -64,9 +70,10 @@ a:hover {
   width: 90vw;
   margin-right: auto;
   margin-left: auto;
-  border: 2px solid var(--light-blue-color);
+  border: 2px solid var(--main-red);
   border-radius: 10px;
-  background-color: var(--background-secondary-color);
+  background-color: var(--main-gray);
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -82,7 +89,8 @@ a:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px solid var(--light-blue-color);
+  border-bottom: 2px solid var(--main-red);
+  padding: 0;
 }
 
 .navbar-nav {
@@ -90,8 +98,22 @@ a:hover {
 }
 
 .nav-link {
-  width: 16%;
+  width: 17%;
   text-align: center;
+  transition: 0.3s ease-out;
+}
+
+.nav-link:hover {
+  background-color: var(--main-dark-blue);
+  transition: 0.3s ease-out;
+}
+
+.nav-link:first-child:hover {
+  border-top-left-radius: 8px;
+}
+
+.nav-link:last-child:hover {
+  border-top-right-radius: 8px;
 }
 
 /* =============
@@ -102,7 +124,7 @@ a:hover {
 #home {
   width: 100%;
   padding: 4rem;
-  border-bottom: 1px solid var(--light-blue-color);
+  border-bottom: 1px solid var(--main-red);
 }
 
 #greetings {
@@ -112,7 +134,7 @@ a:hover {
 }
 
 #profile-image {
-  border: 3px solid var(--light-blue-color);
+  border: 3px solid var(--main-red);
 }
 
 /* =============
@@ -122,7 +144,7 @@ a:hover {
 #about-me {
   width: 100%;
   padding: 4rem;
-  border-bottom: 1px solid var(--light-blue-color);
+  border-bottom: 1px solid var(--main-red);
 }
 
 /* =============
@@ -132,7 +154,7 @@ a:hover {
 #skills {
   width: 100%;
   padding: 4rem;
-  border-bottom: 1px solid var(--light-blue-color);
+  border-bottom: 1px solid var(--main-red);
 }
 
 /* =============
@@ -143,7 +165,7 @@ a:hover {
   width: 100%;
   padding: 4rem;
   text-align: center;
-  border-bottom: 1px solid var(--light-blue-color);
+  border-bottom: 1px solid var(--main-red);
 }
 
 .slider-card {
@@ -151,6 +173,7 @@ a:hover {
   flex-direction: row !important;
   padding-top: 1rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  color: black;
 }
 
 .card-slider-image {
@@ -158,6 +181,10 @@ a:hover {
   height: 125px;
   object-fit: contain;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-text {
+  color: black;
 }
 
 .card-footer {
@@ -172,7 +199,7 @@ a:hover {
   margin-top: auto;
   margin-bottom: auto;
   font-size: 4rem;
-  color: var(--light-blue-color);
+  color: var(--main-red);
   cursor: pointer;
 }
 
@@ -185,22 +212,45 @@ a:hover {
   padding: 4rem;
 }
 
-.img-project-card {
+#projects .card {
+  color: black;
+}
+
+.img-project {
   min-height: 200px;
 }
 
-.btn-project-card {
-  background-color: var(--button-color) !important;
-  color: black !important;
+.btn-project {
+  background-color: var(--main-red) !important;
   border: 0px !important;
 }
 
-.btn-project-card:hover {
-  background-color: #ABD58F !important;
+.btn-project:hover {
+  background-color: var(--main-dark-blue) !important;
 }
 
-.btn-project-card:focus {
-  box-shadow: black !important;
+.btn-project:focus {
+  box-shadow: none !important;
+}
+
+#btn-show-all {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 2rem auto 4rem auto;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: 0.3s ease-out;
+}
+
+#btn-show-all:hover #show-all-arrow {
+  transform: translateX(2px);
+}
+
+#btn-show-all #show-all-arrow {
+  margin-left: 5px;
+  transform: translateX(0);
+  transition: 0.3s ease-out;
 }
 
 

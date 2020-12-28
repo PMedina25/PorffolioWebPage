@@ -3,6 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Button, Card, CardDeck, Col, Container, Image, Row  } from 'react-bootstrap';
 
+import { FiChevronRight } from 'react-icons/fi';
+
+
 // Import components
 import Navbar from './components/Navbar';
 import EducationExperience from './components/EducationExperience';
@@ -23,7 +26,7 @@ function App() {
           <Container id="home" fluid>
             <Row>
               <Col md={4}>
-                <Image id="profile-image" src={profilePhoto} alt="Photo of Pablo" roundedCircle thumbnail fluid />
+                <Image id="profile-image" src={profilePhoto} alt="Photo of Pablo" roundedCircle fluid />
               </Col>
               <Col md={8} id="greetings">
                 <h1>Hi, I'm Pablo</h1>
@@ -72,36 +75,40 @@ function App() {
             <h1 style={{'textAlign': 'center'}}>Projects</h1>
             <CardDeck>
               <Card>
-                <Card.Img className="img-project-card" variant="top" src={openSirocoImg} />
+                <Card.Img className="img-project" variant="top" src={openSirocoImg} />
                 <Card.Body>
                   <Card.Title>Open Siroco</Card.Title>
                   <Card.Text>
                     Open Innovation Platform for Production 4.0 Colaborative Robot Systems.
                   </Card.Text>
-                  <Button className="btn-project-card">Show More</Button>
+                  <Button className="btn-project">Show More</Button>
                 </Card.Body>
               </Card>
               <Card>
-                <Card.Img className="img-project-card" variant="top" src={socialNetworkAppImg} />
+                <Card.Img className="img-project" variant="top" src={socialNetworkAppImg} />
                 <Card.Body>
                   <Card.Title>MERNG Social Network</Card.Title>
                   <Card.Text>
                     Social media app using MongoDB, Express, Node, React, GraphQL and Node (the MERNG Stack).
                   </Card.Text>
-                  <Button className="btn-project-card">Show More</Button>
+                  <Button className="btn-project">Show More</Button>
                 </Card.Body>
               </Card>
               <Card>
-                <Card.Img className="img-project-card" variant="top" src={socialNetworkAppImg} />
+                <Card.Img className="img-project" variant="top" src={socialNetworkAppImg} />
                 <Card.Body>
                   <Card.Title>MERNG Social Network</Card.Title>
                   <Card.Text>
                     Social media app using MongoDB, Express, Node, React, GraphQL and Node (the MERNG Stack).
                   </Card.Text>
-                  <Button className="btn-project-card">Show More</Button>
+                  <Button className="btn-project">Show More</Button>
                 </Card.Body>
               </Card>
             </CardDeck>
+            <Button id="btn-show-all" className="btn-project">
+              Show all
+              <FiChevronRight id="show-all-arrow" size={32} fontWeight={700}/>
+            </Button>
           </Container>
           
         </div>
