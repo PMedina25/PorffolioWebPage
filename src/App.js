@@ -1,9 +1,12 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Button, Card, CardDeck, Col, Container, Image, Row  } from 'react-bootstrap';
+import { Button, Card, CardDeck, Col, Container, Form, Image, Row  } from 'react-bootstrap';
 
+import { FaLinkedin, FaGithub, FaReact, FaBootstrap, FaNodeJs } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
 import { FiChevronRight } from 'react-icons/fi';
+import { SiApollographql, SiGraphql, SiMongodb } from 'react-icons/si';
 
 
 // Import components
@@ -16,7 +19,6 @@ import openSirocoImg from './images/open-siroco.png';
 import socialNetworkAppImg from './images/social-network-app.png';
 
 function App() {
-  console.log(profilePhoto)
   return (
     <Container fluid>
       <div id="main">
@@ -111,6 +113,63 @@ function App() {
             </Button>
           </Container>
           
+          <Container id="contact" fluid>
+            <h1 style={{'textAlign': 'center'}}>Contact</h1>
+            <Form id="contact-form">
+              <Form.Row>
+                <Form.Group as={Col} controlId="formName">
+                  <Form.Label>Name</Form.Label>
+                  <Form.Control type="text" placeholder="Enter name" />
+                </Form.Group>
+
+                <Form.Group as={Col} controlId="formLastName">
+                  <Form.Label>Last Name</Form.Label>
+                  <Form.Control type="text" placeholder="Enter last name" />
+                </Form.Group>
+              </Form.Row>
+
+              <Form.Group controlId="formSubject">
+                <Form.Label>Subject</Form.Label>
+                <Form.Control placeholder="Enter subject" />
+              </Form.Group>
+
+              <Form.Group controlId="formMessage">
+                <Form.Label>Message</Form.Label>
+                <Form.Control as="textarea" placeholder="Enter message" rows={4} />
+              </Form.Group>
+
+              <Button className="btn-project" type="submit">
+                Send
+              </Button>
+            </Form>
+          </Container>
+
+          <footer>
+            <Container fluid>
+              <Row>
+                <Col id="social-networks" md={6}>
+                  <a href="https://www.linkedin.com/in/pablo-medina-rodr%C3%ADguez-a3a8b9135/" alt="linkedin profile" target="_blank" class="btn">
+                    <FaLinkedin className="social-network-icon" />
+                  </a>
+                  <a className="social-network-icon" href="https://github.com/PMedina25" alt="github profile" target="_blank" class="btn">
+                    <FaGithub className="social-network-icon" />
+                  </a>
+                  <a className="social-network-icon" href="mailto:pablo.medina.us@gmail.com" alt="email account" target="_blank" class="btn">
+                    <HiOutlineMail className="social-network-icon" />
+                  </a>
+                </Col>
+                <Col id="technologies" md={6}>
+                  <span>Developed with:</span>
+                  <FaReact size={32} style={{'paddingLeft': '12'}} />
+                  <FaBootstrap size={32} style={{'paddingLeft': '12'}} />
+                  <FaNodeJs size={32} style={{'paddingLeft': '12'}} />
+                  <SiMongodb size={32} style={{'paddingLeft': '12'}} />
+                  <SiApollographql size={32} style={{'paddingLeft': '12'}} />
+                  <SiGraphql size={32} style={{'paddingLeft': '12'}} />
+                </Col>
+              </Row>
+            </Container>
+          </footer>
         </div>
       </Container>
   )
