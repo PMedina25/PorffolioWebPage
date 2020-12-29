@@ -157,6 +157,24 @@ a:hover {
   border-bottom: 1px solid var(--main-red);
 }
 
+#technologies-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 1rem;
+}
+
+.technology-icon {
+  width: 4rem;
+  height: 4rem;
+  transition: 0.5s ease-out;
+}
+
+.technology-icon:hover {
+  width: 6rem;
+  height: 6rem;
+  transition: 0.5s ease-out;
+}
+
 /* =============
  * Education and Experience
  * =============
