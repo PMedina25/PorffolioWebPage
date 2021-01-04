@@ -30,9 +30,9 @@ function Skills() {
 
     return (
         <Container id="skills" fluid>
+            <h1 className="mb-4">Skills</h1>
             <Row>
                 <Col md={6} id="skills-info">
-                    <h1>Skills</h1>
                     <p>The main area of my expertise is all related to MERN Stack (<strong>MongoDB</strong>, <strong>Express</strong>, <strong>React</strong>, <strong>Node</strong>).</p>
                     <p>
                         This involves skilled in <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong> and <strong>JSX</strong>, 
@@ -105,7 +105,7 @@ function Skills() {
                     </div>
                 </Col>
             </Row>
-          </Container>
+        </Container>
     );
 }
 

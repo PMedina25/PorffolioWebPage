@@ -9,22 +9,15 @@ import universidadSevillaLogo from '../images/universidad-sevilla.png'
 import ttinorteLogo from '../images/ttinorte.png';
 
 
+
+
 function EducationExperience() {
     return (
-        <Container id="education-experience" fluid>
+        <Container id="education-experience" className="bg-light" fluid>
             <Row>
-              <Col md={4}>
+              <Col className="card-column" md={4}>
                 <h1>Education</h1>
-              </Col>
-              <Col md={4}>
-                <h1>Experience</h1>
-              </Col>
-              <Col md={4}>
-                <h1>Certifications</h1>
-              </Col>
-            </Row>
-            <CardDeck>
-                <Card id="education" className="slider-card">
+                <Card className="m-auto" id="education" className="slider-card">
                   <FiChevronLeft className="left-arrow-slider" />
                   <div className="card-content">
                     <Image src={universidadSevillaLogo} className="card-slider-image" roundedCircle />
@@ -40,7 +33,10 @@ function EducationExperience() {
                   </div>
                   <FiChevronRight className="right-arrow-slider" />
                 </Card>
-                <Card id="experience" className="slider-card">
+              </Col>
+              <Col className="card-column" md={4}>
+                <h1>Experience</h1>
+                <Card className="m-auto" id="experience" className="slider-card">
                   <FiChevronLeft className="left-arrow-slider" />
                   <div className="card-content">
                     <Image src={ttinorteLogo} className="card-slider-image" roundedCircle />
@@ -56,7 +52,10 @@ function EducationExperience() {
                   </div>
                   <FiChevronRight className="right-arrow-slider" />
                 </Card>
-                <Card id="certifications" className="slider-card">
+              </Col>
+              <Col className="card-column" md={4}>
+                <h1>Certifications</h1>
+                <Card className="m-auto" id="certifications" className="slider-card">
                   <FiChevronLeft className="left-arrow-slider" />
                   <div className="card-content">
                     <Image src={freeCodeCampLogo} className="card-slider-image" roundedCircle />
@@ -72,7 +71,8 @@ function EducationExperience() {
                   </div>
                   <FiChevronRight className="right-arrow-slider" />
                 </Card>
-            </CardDeck>
+              </Col>
+            </Row>
           </Container>
     )
 }

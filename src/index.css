@@ -35,47 +35,52 @@ html {
 /* =============
  * Global Styles
  * =============
-*/
+*/ 
 #root {
-  color: var(--main-white);
+  /* color: var(--main-white);
   background: var(--main-dark-blue);
-  padding: 20px 0;
+  padding: 20px 0; */
+  width: 100%;
 }
 
-h1, .card-title {
+
+.card-title {
   font-family: 'Russo One', sans-serif;
   font-weight: 500;
 }
 
-h3, h4, p, li, span, label, input, textarea {
+p, li, span, label, input, textarea {
   color: var(--main-white);
   font-family: 'Roboto Mono', monospace;
 }
 
+strong {
+  color: var(--main-red);
+}
+
 a {
-  color: var(--main-red)!important;
   font-family: 'Roboto Mono', monospace;
   font-weight: bold;
 }
 
 a:hover {
   color: var(--secondary-text-color)!important;
-}
+} 
 
 /* =============
  * Main
  * =============
 */
-#main {
+/* #main {
   width: 90vw;
   margin-right: auto;
   margin-left: auto;
   border: 2px solid var(--main-red);
   border-radius: 10px;
   background-color: var(--main-gray);
-  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  background-image: linear-gradient(62deg, #434649 0%, #181719 100%);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
+} */
 
 
 /* =============
@@ -84,13 +89,19 @@ a:hover {
 */
 
 #navbar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
   width:  100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px solid var(--main-red);
+  background-color: var(--main-gray);
+  background-image: linear-gradient(62deg, #434649 0%, #181719 100%);
+  /* border-bottom: 2px solid var(--main-red); */
   padding: 0;
+  z-index: 1;
 }
 
 .navbar-nav {
@@ -123,29 +134,48 @@ a:hover {
 
 #home {
   width: 100%;
-  padding: 4rem;
-  border-bottom: 1px solid var(--main-red);
-}
-
-#greetings {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
+  padding: 5rem;
+  color: white;
+  background-color: var(--main-gray);
+  background-image: linear-gradient(62deg, #434649 0%, #181719 100%);
+  /* border-bottom: 1px solid var(--main-red); */
+  margin: 0;
 }
 
 #profile-image {
   border: 3px solid var(--main-red);
+} 
+
+.social-network-icon {
+  font-size: 2rem;
+  color: white;
+  transform: translateY(0);
+  transition: 0.3s ease-out;
+}
+
+.social-network-icon:hover {
+  transform: translateY(1rem);
+  transition: 0.3s ease-out;
+}
+
+#home a:focus {
+  box-shadow: none !important;
 }
 
 /* =============
  * About Me
  * =============
 */
+
 #about-me {
-  width: 100%;
   padding: 4rem;
-  border-bottom: 1px solid var(--main-red);
+  margin: 0;
+} 
+
+#about-me-info p {
+  color: black;
 }
+
 
 /* =============
  * Skills
@@ -154,7 +184,10 @@ a:hover {
 #skills {
   width: 100%;
   padding: 4rem;
-  border-bottom: 1px solid var(--main-red);
+  color: white;
+  background-color: var(--main-gray);
+  background-image: linear-gradient(62deg, #434649 0%, #181719 100%);
+  margin: 0;
 }
 
 #technologies-grid {
@@ -163,8 +196,6 @@ a:hover {
   gap: 1rem;
   border: 4px solid var(--main-red);
   border-radius: 15px 50px 30px;
-  background-color: var(--main-dark-blue);
-  background-image: linear-gradient(62deg, #303C57 0%,#667BAB 100%);
   padding: 1rem;
 }
 
@@ -182,7 +213,7 @@ a:hover {
   width: 6rem;
   height: 6rem;
   transition: 0.5s ease-out;
-}
+} 
 
 /* =============
  * Education and Experience
@@ -192,15 +223,21 @@ a:hover {
   width: 100%;
   padding: 4rem;
   text-align: center;
-  border-bottom: 1px solid var(--main-red);
 }
 
 .slider-card {
   display: flex;
   flex-direction: row !important;
+  max-width: 350px;
   padding-top: 1rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   color: black;
+}
+
+.card-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card-slider-image {
@@ -228,7 +265,7 @@ a:hover {
   font-size: 4rem;
   color: var(--main-red);
   cursor: pointer;
-}
+} 
 
 /* =============
  * Projects
@@ -237,7 +274,9 @@ a:hover {
 #projects {
   width: 100%;
   padding: 4rem;
-  border-bottom: 1px solid var(--main-red);
+  color: white;
+  background-color: var(--main-gray);
+  background-image: linear-gradient(62deg, #434649 0%, #181719 100%);
 }
 
 #projects .card {
@@ -251,10 +290,12 @@ a:hover {
 .btn-project {
   background-color: var(--main-red) !important;
   border: 0px !important;
+  transition: 0.3s ease-out !important;
 }
 
 .btn-project:hover {
   background-color: var(--main-dark-blue) !important;
+  transition: 0.3s ease-out;
 }
 
 .btn-project:focus {
@@ -265,7 +306,7 @@ a:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 2rem auto 4rem auto;
+  margin: 2rem auto 0 auto;
   font-size: 1.5rem;
   font-weight: 600;
   transition: 0.3s ease-out;
@@ -279,7 +320,7 @@ a:hover {
   margin-left: 5px;
   transform: translateX(0);
   transition: 0.3s ease-out;
-}
+} 
 
 /* =============
  * Contact
@@ -295,7 +336,11 @@ a:hover {
 
 #contact-form {
   width: 50%;
-}
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: var(--main-gray);
+  background-image: linear-gradient(62deg, #434649 0%, #181719 100%);
+} 
 
 /* =============
  * Footer
@@ -305,6 +350,8 @@ footer {
   display: flex;
   justify-content: center;
   padding: 2rem;
+  background-color: var(--main-gray);
+  background-image: linear-gradient(62deg, #434649 0%, #181719 100%);
 }
 
 .social-network-icon {
