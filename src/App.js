@@ -9,28 +9,20 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import EducationExperience from './components/EducationExperience';
+import EducationExperience from './components/organizations/Organizations';
 
 function App() {
   return (
       <div id="main">
-
-          <Navbar />
-
-          <Home />
-
-          <AboutMe />
-
-          <Skills />
-
-          <EducationExperience />
-
-          <Projects />
-
-          <Contact />
-          
-          <Footer />
-        </div>
+        <Navbar />
+        <Home />
+        <AboutMe />
+        <Skills />
+        <EducationExperience />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>     
   )
 }
 
