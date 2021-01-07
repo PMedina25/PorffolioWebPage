@@ -221,23 +221,25 @@ a:hover {
 */
 #organizations {
   width: 100%;
+  min-height: 500px;
   padding: 4rem;
   text-align: center;
 }
 
 .slider-card {
+  position: absolute !important;
+  top: 1;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: row !important;
-  max-width: 350px;
+  max-width: 300px;
+  min-height: 300px;
   padding-top: 1rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   color: black;
-}
-
-.card-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  opacity: 0;
+  transition: all 0.3s linear;
 }
 
 .card-slider-image {
@@ -266,6 +268,21 @@ a:hover {
   color: var(--main-red);
   cursor: pointer;
 } 
+
+.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.lastSlide {
+  transform: translateX(-100%);
+  z-index: -1;
+}
+
+.nextSlide {
+  transform: translateX(100%);
+  z-index: -1;
+}
 
 /* =============
  * Projects
