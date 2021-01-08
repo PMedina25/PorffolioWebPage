@@ -181,6 +181,7 @@ a:hover {
 #mapContainer {
   height: 400px;
   width: 100%;
+  z-index: 0;
 }
 
 
