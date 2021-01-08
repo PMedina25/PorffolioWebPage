@@ -1,7 +1,6 @@
 import React from 'react';
 import App from './App';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-import { setContext } from 'apollo-link-context';
 
 const client = new ApolloClient({
     uri: 'http://localhost:3000',
