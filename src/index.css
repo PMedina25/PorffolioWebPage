@@ -349,6 +349,37 @@ a:hover {
   transition: 0.3s ease-out;
 } 
 
+span {
+  color: black !important;
+}
+
+.modal-image {
+  width: 100%;
+}
+
+.project-modal-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.project-modal-description {
+  width: 50%;
+  margin: 1rem;
+}
+
+.project-technologies-grid {
+  width: 50% !important;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.technology-name {
+  display: inline-block;
+  margin-left: 10px;
+}
+
 /* =============
  * Contact
  * =============

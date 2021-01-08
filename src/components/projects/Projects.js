@@ -35,6 +35,7 @@ function Projects() {
                                             key={project.id}
                                             title={project.title} 
                                             description={project.description}
+                                            technologies={project.technologies}
                                             url={project.url}
                                             image={project.image} />)
                 }
@@ -45,6 +46,7 @@ function Projects() {
                                             key={project.id}
                                             title={project.title} 
                                             description={project.description}
+                                            technologies={project.technologies}
                                             url={project.url}
                                             image={project.image} />)
                 }
@@ -55,6 +57,7 @@ function Projects() {
                                             key={project.id}
                                             title={project.title} 
                                             description={project.description}
+                                            technologies={project.technologies}
                                             url={project.url}
                                             image={project.image} />)
                 }
