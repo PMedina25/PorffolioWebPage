@@ -14,3 +14,19 @@ export const FETCH_ORGANIZATIONS_QUERY = gql`
     }
 }
 `;
+
+export const FETCH_PROJECTS_QUERY = gql`
+{
+    getProjects {
+        id
+        title
+        description
+        category
+        technologies
+        startDate
+        endDate
+        url
+        image
+    }
+}
+`;
