@@ -168,12 +168,20 @@ a:hover {
 */
 
 #about-me {
+  display: flex;
+  flex-direction: row;
   padding: 4rem;
   margin: 0;
 } 
 
 #about-me-info p {
   color: black;
+}
+
+#mapContainer {
+  height: 400px;
+  width: 100%;
+  z-index: 0;
 }
 
 
