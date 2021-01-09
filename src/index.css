@@ -115,7 +115,8 @@ a:hover {
 }
 
 .nav-link:hover {
-  background-color: var(--main-dark-blue);
+  color: white !important;
+  background-color: var(--main-red);
   transition: 0.3s ease-out;
 }
 
@@ -210,18 +211,20 @@ a:hover {
 
 .technologies-grid-item {
   text-align: center;
-}
-
-.technology-icon {
-  width: 4rem;
-  height: 4rem;
   transition: 0.2s ease-in-out;
 }
 
-.technology-icon:hover {
+.technologies-grid-item:hover {
   transform: scale(1.5);
   z-index: 1;
-} 
+}
+
+.technology-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+
 
 /* =============
  * Education and Experience
@@ -415,7 +418,7 @@ span {
   background-image: linear-gradient(62deg, #434649 0%, #181719 100%);
 }
 
-#all-projects h1 {
+h1 {
   padding: 1rem 0;
 }
 

@@ -25,9 +25,10 @@ const AboutMe = () => {
         <Row id="about-me" className="card card-body bg-light">
             <Col md={6} id="about-me-info">
                 <h1>About Me</h1>
-                <p>Computer engineer, full stack developer  and tech enthusiast.</p>
+                <p>Computer engineer and full stack developer based in Sevilla and Amsterdam.</p>
                 <p>With experience in teamwork, always willing to learn new things and delighted at facing new challenges.</p>
-                <p>Looking for a MERN Stack junior developer job, especially if it involves Machine Learning.</p>
+                <p>No matter the time, I will always be dealing with a project.</p>
+                <p>Looking for a Full Stack junior developer job.</p>
             </Col>
             <Col md={6} id="about-me-map">
                 <MapContainer center={[locationData.lyon.lat, locationData.lyon.lng]} zoom={4} scrollWheelZoom={true} id="mapContainer" className="rounded-circle">
