@@ -6,12 +6,12 @@ import { Button, Card } from 'react-bootstrap';
 // Import components
 import ProjectInfo from './ProjectInfo';
 
-const ProjectCard = ({ title, description, technologies, startDate, endDate, url, image }) => {
+const ProjectCard = ({ title, description, technologies, startDate, endDate, url, image, projectPage }) => {
     const [modalShow, setModalShow] = useState(false);
 
     return (
         <>
-        <Card className="project-card">
+        <Card className={projectPage ? "project-card" : "project-card project-card-hover"}>
             <Card.Img className="img-project" variant="top" src={image} />
             <Card.Body className="project-card-body">
                 <Card.Title>{title}</Card.Title>

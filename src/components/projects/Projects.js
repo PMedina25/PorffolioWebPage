@@ -43,7 +43,8 @@ const Projects = () => {
                                             startDate={project.startDate}
                                             endDate={project.endDate}
                                             url={project.url}
-                                            image={project.image} />)
+                                            image={project.image}
+                                            projectPage={false} />)
                 }
                 {
                     data.getProjects
@@ -56,7 +57,8 @@ const Projects = () => {
                                             startDate={project.startDate}
                                             endDate={project.endDate}
                                             url={project.url}
-                                            image={project.image} />)
+                                            image={project.image}
+                                            projectPage={false} />)
                 }
                 {
                     data.getProjects
@@ -69,7 +71,8 @@ const Projects = () => {
                                             startDate={project.startDate}
                                             endDate={project.endDate}
                                             url={project.url}
-                                            image={project.image} />)
+                                            image={project.image}
+                                            projectPage={false} />)
                 }
             </CardDeck>
             <Link to={'/projects'} id="btn-show-all" className="btn-project btn">

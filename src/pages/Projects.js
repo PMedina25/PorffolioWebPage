@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { FETCH_PROJECTS_QUERY } from '../utils/graphql';
 
-import { Col, Container, Row } from 'react-bootstrap';
+import { CardColumns, Col, Container, Row } from 'react-bootstrap';
 
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 
@@ -46,15 +46,41 @@ const Projects = () => {
                 </Row>
                 <div id="main-projects">
                     <h1>Professional and Academic Projects</h1>
-                    <div className="grid-all-projects">
+                    <CardColumns>
                         {
                             data.getProjects &&
                             data.getProjects
                                 .filter(project => project.category === 'professional' || project.category === 'academic')
                                 .map(project => {
                                     return (
-                                        <div className="all-projects-grid-item">
+                                        <div className="card-column-item">
                                             <ProjectCard
+                                                    key={project.id}
+                                                    title={project.title} 
+                                                    description={project.description}
+                                                    technologies={project.technologies}
+                                                    startDate={project.startDate}
+                                                    endDate={project.endDate}
+                                                    url={project.url}
+                                                    image={project.image}
+                                                    projectPage={true} />
+                                        </div> 
+                                    )
+                                })
+                        }
+                    </CardColumns>
+                </div>
+                <div id="personal-projects">
+                    <h1>Personal Projects</h1>
+                    <CardColumns>
+                    {
+                        data.getProjects &&
+                        data.getProjects
+                            .filter(project => project.category === 'personal')
+                            .map(project => {
+                                return (
+                                    <div className="card-column-item">
+                                        <ProjectCard
                                                 key={project.id}
                                                 title={project.title} 
                                                 description={project.description}
@@ -63,62 +89,38 @@ const Projects = () => {
                                                 endDate={project.endDate}
                                                 url={project.url}
                                                 image={project.image}
-                                                 />
-                                        </div>
-                                    )
-                                })
-                        }
-                    </div>
-                </div>
-                <div id="personal-projects">
-                    <h1>Personal Projects</h1>
-                    <div className="grid-all-projects">
-                    {
-                        data.getProjects &&
-                        data.getProjects
-                            .filter(project => project.category === 'personal')
-                            .map(project => {
-                                return (
-                                    <div className="all-projects-grid-item">
-                                        <ProjectCard
-                                            key={project.id}
-                                            title={project.title} 
-                                            description={project.description}
-                                            technologies={project.technologies}
-                                            startDate={project.startDate}
-                                            endDate={project.endDate}
-                                            url={project.url}
-                                            image={project.image} />
-                                    </div>
+                                                projectPage={true} />
+                                    </div> 
                                 )
                             })
                     }
-                    </div>
+                    </CardColumns>
                 </div>
                 <div id="other-projects">
                     <h1>Other Projects</h1>
-                    <div className="grid-all-projects">
+                    <CardColumns>
                     {
                         data.getProjects &&
                         data.getProjects
                             .filter(project => project.category === 'others')
                             .map(project => {
                                 return (
-                                    <div className="all-projects-grid-item">
+                                    <div className="card-column-item">
                                         <ProjectCard
-                                            key={project.id}
-                                            title={project.title} 
-                                            description={project.description}
-                                            technologies={project.technologies}
-                                            startDate={project.startDate}
-                                            endDate={project.endDate}
-                                            url={project.url}
-                                            image={project.image} />
-                                    </div>
-                                )
+                                                key={project.id}
+                                                title={project.title} 
+                                                description={project.description}
+                                                technologies={project.technologies}
+                                                startDate={project.startDate}
+                                                endDate={project.endDate}
+                                                url={project.url}
+                                                image={project.image}
+                                                projectPage={true} />
+                                    </div> 
+                                ); 
                             })
                     }
-                    </div>
+                    </CardColumns>
                 </div>
             </Container>
         </div>
