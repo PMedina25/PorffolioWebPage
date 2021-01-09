@@ -23,7 +23,15 @@ const ProjectCard = ({ title, description, technologies, url, image }) => {
             </Card.Body>
         </Card>
 
-        <ProjectInfo show={modalShow} onHide={() => setModalShow(false)} title={title} description={description} technologies={technologies} image={image} />
+        <ProjectInfo 
+          show={modalShow} 
+          onHide={() => setModalShow(false)} 
+          title={title} 
+          description={description} 
+          technologies={technologies} 
+          url={url} 
+          image={image} 
+        />
         </>
     );
 }

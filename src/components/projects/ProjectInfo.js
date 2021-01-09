@@ -44,7 +44,7 @@ const ProjectInfo = (props) => {
             </Modal.Body>
             {props.url &&
                 <Modal.Footer>
-                    <Button type="button" href={props.url}>Go to project</Button>
+                    <Button className="btn-project" type="button" href={props.url} target="_blank">Go to project</Button>
                 </Modal.Footer>
             }
         </Modal>

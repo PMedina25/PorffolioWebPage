@@ -312,10 +312,12 @@ a:hover {
 .btn-project {
   background-color: var(--main-red) !important;
   border: 0px !important;
+  font-family: 'Roboto Mono', sans-serif;
   transition: 0.3s ease-out !important;
 }
 
 .btn-project:hover {
+  color: white !important;
   background-color: var(--main-dark-blue) !important;
   transition: 0.3s ease-out;
 }
