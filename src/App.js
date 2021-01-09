@@ -1,28 +1,21 @@
 import React from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Import components
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import AboutMe from './components/AboutMe';
-import Skills from './components/Skills';
-import Projects from './components/projects/Projects';
-import Contact from './components/Contact';
+import MainPage from './pages/MainPage';
+import Projects from './pages/Projects';
 import Footer from './components/Footer';
-import EducationExperience from './components/organizations/Organizations';
 
 function App() {
   return (
+    <Router>
       <div id="main">
-        <Navbar />
-        <Home />
-        <AboutMe />
-        <Skills />
-        <EducationExperience />
-        <Projects />
-        <Contact />
+        <Route exact path="/" component={MainPage} />
+        <Route exact path="/projects" component={Projects} />
         <Footer />
-      </div>     
+      </div>    
+    </Router> 
   )
 }
 

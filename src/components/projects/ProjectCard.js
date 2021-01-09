@@ -4,23 +4,25 @@ import { Button, Card } from 'react-bootstrap';
 
 import ProjectInfo from './ProjectInfo';
 
-const ProjectCard = ({ title, description, technologies, url, image }) => {
+const ProjectCard = ({ title, description, technologies, startDate, endDate, url, image }) => {
     const [modalShow, setModalShow] = useState(false);
 
     return (
         <>
-        <Card>
+        <Card className="project-card">
             <Card.Img className="img-project" variant="top" src={image} />
             <Card.Body className="project-card-body">
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>
                     {description}
                 </Card.Text>
-                <Button type="button" className="btn-project btn-show-more" onClick={() => setModalShow(true)}
-                >
+                <Button type="button" className="btn-project btn-show-more" onClick={() => setModalShow(true)}>
                     Show More
                 </Button>
             </Card.Body>
+            <Card.Footer style={{'textAlign': 'center', 'fontFamily': 'Roboto Mono, sans-serif'}}>
+                {startDate}{' - '}{endDate}
+            </Card.Footer>
         </Card>
 
         <ProjectInfo 

@@ -6,7 +6,7 @@ import { FaLinkedin, FaGithub, FaReact, FaBootstrap, FaNodeJs } from 'react-icon
 import { HiOutlineMail } from 'react-icons/hi';
 import { SiApollographql, SiGraphql, SiMongodb } from 'react-icons/si';
 
-export default function Footer() {
+const Footer = () => {
     return (
         <footer>
             <Container fluid>
@@ -36,3 +36,5 @@ export default function Footer() {
           </footer>
     )
 }
+
+export default Footer;

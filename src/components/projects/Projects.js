@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { FETCH_PROJECTS_QUERY } from '../../utils/graphql';
 
-import { Button, Card, CardDeck, Container } from 'react-bootstrap';
+import { Button, CardDeck, Container } from 'react-bootstrap';
 
 import { FiChevronRight } from 'react-icons/fi';
 
 import ProjectCard from './ProjectCard';
 
-function Projects() {
+const Projects = () => {
     const {
         loading,
         error,
@@ -18,7 +19,7 @@ function Projects() {
     // TODO: Add Spinner
     if (loading) {
         return <p>Loading...</p>;
-      }
+    }
     if (error) {
     return <p>Error:(</p>;
     }
@@ -36,6 +37,8 @@ function Projects() {
                                             title={project.title} 
                                             description={project.description}
                                             technologies={project.technologies}
+                                            startDate={project.startDate}
+                                            endDate={project.endDate}
                                             url={project.url}
                                             image={project.image} />)
                 }
@@ -47,6 +50,8 @@ function Projects() {
                                             title={project.title} 
                                             description={project.description}
                                             technologies={project.technologies}
+                                            startDate={project.startDate}
+                                            endDate={project.endDate}
                                             url={project.url}
                                             image={project.image} />)
                 }
@@ -58,14 +63,16 @@ function Projects() {
                                             title={project.title} 
                                             description={project.description}
                                             technologies={project.technologies}
+                                            startDate={project.startDate}
+                                            endDate={project.endDate}
                                             url={project.url}
                                             image={project.image} />)
                 }
             </CardDeck>
-            <Button id="btn-show-all" className="btn-project">
+            <Link to={'/projects'} id="btn-show-all" className="btn-project btn">
                 Show all
                 <FiChevronRight id="show-all-arrow" size={32} fontWeight={700}/>
-            </Button>
+            </Link>
       </Container>
     )
 }

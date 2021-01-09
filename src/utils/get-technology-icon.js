@@ -1,4 +1,6 @@
 import { 
+    FaApple,
+    FaBluetooth,
     FaBootstrap,
     FaCloud,
     FaDocker, 
@@ -7,6 +9,7 @@ import {
     FaPython,
     FaRaspberryPi, 
     FaReact,
+    FaSwift,
     FaWifi
 } from 'react-icons/fa';
 
@@ -18,10 +21,12 @@ import {
     SiGooglemaps,
     SiGraphql, 
     SiHeroku,
+    SiIbeacon,
     SiJavascript, 
     SiKeras,
     SiKubernetes, 
     SiMariadb,
+    SiMathworks,
     SiMongodb,
     SiMysql,
     SiNetlify,
@@ -38,8 +43,16 @@ import {
     AiFillLayout
 } from 'react-icons/ai';
 
+import {
+    MdGpsFixed
+} from 'react-icons/md';
+
 export const getTechnologyIcon = (technology) => {
     switch(technology) {
+        case 'ARKit':
+            return <FaApple />
+        case 'Bluetooth':
+            return <FaBluetooth />;
         case 'Bootstrap':
             return <FaBootstrap />;
         case 'Cloud':
@@ -57,6 +70,8 @@ export const getTechnologyIcon = (technology) => {
             return <FaRaspberryPi />;
         case 'React':
             return <FaReact />;
+        case 'Swift':
+            return <FaSwift />
         case 'LoRa':
         case 'MQTT':
             return <FaWifi />;
@@ -68,12 +83,14 @@ export const getTechnologyIcon = (technology) => {
             return <SiCplusplus />;
         case 'Firebase':
             return <SiFirebase />;
-        case 'Google Maps API':
+        case 'Google Maps':
             return <SiGooglemaps />;
         case 'GraphQL':
             return <SiGraphql />;
         case 'Heroku':
             return <SiHeroku />;
+        case 'iBeacons':
+            return <SiIbeacon />;
         case 'JavaScript':
             return <SiJavascript />;
         case 'Keras':
@@ -82,6 +99,8 @@ export const getTechnologyIcon = (technology) => {
             return <SiKubernetes />;
         case 'MariaDB':
             return <SiMariadb />;
+        case 'MATLAB':
+            return <SiMathworks />;
         case 'MongoDB':
             return <SiMongodb />;
         case 'MySQL':
@@ -95,7 +114,11 @@ export const getTechnologyIcon = (technology) => {
         case 'Zigbee':
             return <SiZigbee />;
         case 'Semantic UI':
-            return <AiFillLayout />
+            return <AiFillLayout />;
+        case 'Android':
+            return <DiAndroid />;
+        case 'GPS':
+            return <MdGpsFixed />
         default:
             return <div></div>;
     }
