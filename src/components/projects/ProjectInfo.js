@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { Button, Image, Modal } from 'react-bootstrap';
-import { DiVim } from 'react-icons/di';
 
 import { getTechnologyIcon } from '../../utils/get-technology-icon';
 

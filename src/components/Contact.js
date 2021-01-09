@@ -1,8 +1,7 @@
 import React from 'react';
-
 import { Button, Col, Container, Form } from 'react-bootstrap';
 
-function Contact() {
+const Contact = () => {
     return (
         <Container id="contact" className="bg-light" fluid>
             <h1 style={{'textAlign': 'center'}}>Contact</h1>
@@ -34,8 +33,7 @@ function Contact() {
               </Button>
             </Form>
           </Container>
-
-    )
+    );
 }
 
 export default Contact;

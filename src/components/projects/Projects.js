@@ -3,10 +3,13 @@ import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { FETCH_PROJECTS_QUERY } from '../../utils/graphql';
 
-import { Button, CardDeck, Container } from 'react-bootstrap';
+// Import bootstrap components
+import { CardDeck, Container } from 'react-bootstrap';
 
+// Import react icon
 import { FiChevronRight } from 'react-icons/fi';
 
+// Import components
 import ProjectCard from './ProjectCard';
 
 const Projects = () => {
@@ -74,7 +77,7 @@ const Projects = () => {
                 <FiChevronRight id="show-all-arrow" size={32} fontWeight={700}/>
             </Link>
       </Container>
-    )
+    );
 }
 
 export default Projects;

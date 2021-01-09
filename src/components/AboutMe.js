@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 
+// Import leaflet components
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
+// Import bootstrap components
 import { Col, Row  } from 'react-bootstrap';
 
 const AboutMe = () => {
@@ -58,7 +59,7 @@ const AboutMe = () => {
                 </MapContainer>
             </Col>
         </Row> 
-    )
+    );
 }
 
 export default AboutMe;

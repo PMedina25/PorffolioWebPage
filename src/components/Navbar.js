@@ -1,8 +1,7 @@
 import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap';
 
-
-function navbar() {
+const navbar = () => {
     return (
         <Navbar id="navbar" className="navbar-expand-lg navbar-dark bg-dark">
           <Nav>

@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
-import { Link, useLocation, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { FETCH_PROJECTS_QUERY } from '../utils/graphql';
 
 import { Col, Container, Row } from 'react-bootstrap';
+
+import { AiOutlineArrowLeft } from 'react-icons/ai';
 
 import ProjectCard from '../components/projects/ProjectCard';
 
@@ -35,7 +37,8 @@ const Projects = () => {
             <Container>
                 <Row>
                     <Col md={6}>
-                        <Link to="/" className="btn btn-light">
+                        <Link to="/" id="back-btn" className="btn btn-project">
+                            <AiOutlineArrowLeft style={{'marginRight': '10'}} />
                             Back to main page
                         </Link>
                     </Col>

@@ -99,7 +99,6 @@ a:hover {
   align-items: center;
   background-color: var(--main-gray);
   background-image: linear-gradient(62deg, #434649 0%, #181719 100%);
-  /* border-bottom: 2px solid var(--main-red); */
   padding: 0;
   z-index: 1;
 }
@@ -109,23 +108,15 @@ a:hover {
 }
 
 .nav-link {
+  color: white !important;
   width: 17%;
   text-align: center;
   transition: 0.3s ease-out;
 }
 
 .nav-link:hover {
-  color: white !important;
   background-color: var(--main-red);
   transition: 0.3s ease-out;
-}
-
-.nav-link:first-child:hover {
-  border-top-left-radius: 8px;
-}
-
-.nav-link:last-child:hover {
-  border-top-right-radius: 8px;
 }
 
 /* =============
@@ -232,7 +223,7 @@ a:hover {
 */
 #organizations {
   width: 100%;
-  min-height: 500px;
+  min-height: 600px;
   padding: 4rem;
   text-align: center;
 }
@@ -416,6 +407,14 @@ span {
   color: white;
   background-color: var(--main-gray);
   background-image: linear-gradient(62deg, #434649 0%, #181719 100%);
+}
+
+#back-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 40%;
+  color: white;
 }
 
 h1 {

@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Import bootstrap components
 import { Col, Container, Image, Row } from 'react-bootstrap';
 
 // Import images
@@ -26,8 +27,7 @@ import herokuIcon from '../images/heroku.png';
 
 
 
-function Skills() {
-
+const Skills = () => {
     return (
         <Container id="skills" fluid>
             <Row>

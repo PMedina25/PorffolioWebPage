@@ -1,12 +1,14 @@
 import React from 'react'
 
-import profilePhoto from '../images/FotoPabloMedina.png';
+// Import bootstrap components
+import { Col, Image, Row  } from 'react-bootstrap';
 
-import { Button, Card, CardDeck, Col, Container, Form, Image, Row  } from 'react-bootstrap';
+// Import react icons
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 
-
-import { FaLinkedin, FaGithub, FaReact, FaBootstrap, FaNodeJs } from 'react-icons/fa';
+// Import profile photo
+import profilePhoto from '../images/FotoPabloMedina.png';
 
 const Home = () => {
     return (
@@ -21,13 +23,13 @@ const Home = () => {
                     <h1 className="display-4 text-center">Pablo Medina</h1>
                     <p className="lead text-center">Full Stack Developer (React and Node)</p>
                     <p>
-                        <a href="https://www.linkedin.com/in/pablo-medina-rodr%C3%ADguez-a3a8b9135/" alt="linkedin profile" target="_blank" className="btn">
+                        <a href="https://www.linkedin.com/in/pablo-medina-rodr%C3%ADguez-a3a8b9135/" rel="noreferrer" alt="linkedin profile" target="_blank" className="btn">
                             <FaLinkedin className="social-network-icon" />
                         </a>
-                        <a className="social-network-icon" href="https://github.com/PMedina25" alt="github profile" target="_blank" className="btn">
+                        <a href="https://github.com/PMedina25" rel="noreferrer" alt="github profile" target="_blank" className="btn">
                             <FaGithub className="social-network-icon" />
                         </a>
-                        <a className="social-network-icon" href="mailto:pablo.medina.us@gmail.com" alt="email account" target="_blank" className="btn">
+                        <a href="mailto:pablo.medina.us@gmail.com" rel="noreferrer" alt="email account" target="_blank" className="btn">
                             <HiOutlineMail className="social-network-icon" />
                         </a>
                     </p>

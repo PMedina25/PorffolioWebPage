@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
+
+// Import bootstrap components
 import { Card, Col, Container, Row } from 'react-bootstrap';
 
+// Import react icons
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
+// Import components
 import SliderCard from './SliderCard';
 
 const OrganizationCard = ({ data }) => {
@@ -10,9 +14,9 @@ const OrganizationCard = ({ data }) => {
     const expOrgs = data.getOrganizations.filter(organization => organization.type === 'experience');
     const certOrgs = data.getOrganizations.filter(organization => organization.type === 'certification');
 
-    const [eduOrganizations, setEduOrganizations] = useState(eduOrgs);
-    const [expOrganizations, setExpOrganizations] = useState(expOrgs);
-    const [certOrganizations, setCertOrganizations] = useState(certOrgs);
+    const [eduOrganizations] = useState(eduOrgs);
+    const [expOrganizations] = useState(expOrgs);
+    const [certOrganizations] = useState(certOrgs);
     const [eduIndex, setEduIndex] = useState(0);
     const [expIndex, setExpIndex] = useState(0);
     const [certIndex, setCertIndex] = useState(0);
@@ -90,10 +94,9 @@ const OrganizationCard = ({ data }) => {
                         }
 
                         return (
-                            <Card className={"m-auto slider-card " + position}>
+                            <Card key={organization.id} className={"m-auto slider-card " + position}>
                                 <FiChevronLeft className="left-arrow-slider" onClick={() => setEduIndex(eduIndex - 1)} />
                                 <SliderCard
-                                    key={organization.id} 
                                     name={organization.name} 
                                     description={organization.description} 
                                     startDate={organization.startDate} 
@@ -125,10 +128,9 @@ const OrganizationCard = ({ data }) => {
                         
 
                         return (
-                            <Card className={"m-auto slider-card " + position}>
+                            <Card key={organization.id} className={"m-auto slider-card " + position}>
                                 <FiChevronLeft className="left-arrow-slider" onClick={() => setExpIndex(expIndex - 1)} />
                                 <SliderCard
-                                    key={organization.id} 
                                     name={organization.name} 
                                     description={organization.description} 
                                     startDate={organization.startDate} 
@@ -158,10 +160,9 @@ const OrganizationCard = ({ data }) => {
                         }
 
                         return (
-                            <Card className={"m-auto slider-card " + position}>
+                            <Card key={organization.id} className={"m-auto slider-card " + position}>
                                 <FiChevronLeft className="left-arrow-slider" onClick={() => setCertIndex(certIndex - 1)} />
                                 <SliderCard
-                                    key={organization.id} 
                                     name={organization.name} 
                                     description={organization.description} 
                                     startDate={organization.startDate} 

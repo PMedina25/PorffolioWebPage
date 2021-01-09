@@ -1,7 +1,9 @@
 import React from 'react';
 
-import { Button, Card, CardDeck, Col, Container, Form, Image, Row  } from 'react-bootstrap';
+// Import bootstrap components
+import { Col, Container, Row  } from 'react-bootstrap';
 
+// Import react icons
 import { FaLinkedin, FaGithub, FaReact, FaBootstrap, FaNodeJs } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { SiApollographql, SiGraphql, SiMongodb } from 'react-icons/si';
@@ -12,13 +14,13 @@ const Footer = () => {
             <Container fluid>
               <Row>
                 <Col id="social-networks" md={6}>
-                  <a href="https://www.linkedin.com/in/pablo-medina-rodr%C3%ADguez-a3a8b9135/" alt="linkedin profile" target="_blank" className="btn">
+                  <a href="https://www.linkedin.com/in/pablo-medina-rodr%C3%ADguez-a3a8b9135/" rel="noreferrer" alt="linkedin profile" target="_blank" className="btn">
                     <FaLinkedin className="social-network-icon" />
                   </a>
-                  <a className="social-network-icon" href="https://github.com/PMedina25" alt="github profile" target="_blank" className="btn">
+                  <a href="https://github.com/PMedina25" alt="github profile" rel="noreferrer" target="_blank" className="btn">
                     <FaGithub className="social-network-icon" />
                   </a>
-                  <a className="social-network-icon" href="mailto:pablo.medina.us@gmail.com" alt="email account" target="_blank" className="btn">
+                  <a href="mailto:pablo.medina.us@gmail.com" rel="noreferrer" alt="email account" target="_blank" className="btn">
                     <HiOutlineMail className="social-network-icon" />
                   </a>
                 </Col>

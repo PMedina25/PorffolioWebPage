@@ -19,7 +19,7 @@ const MainPage = () => {
             <Skills />
             <EducationExperience />
             <Projects />
-            <Contact />
+            {/* <Contact />*/}
         </>
     )
 }

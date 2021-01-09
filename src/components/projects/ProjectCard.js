@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 
+// Import bootstrap components
 import { Button, Card } from 'react-bootstrap';
 
+// Import components
 import ProjectInfo from './ProjectInfo';
 
 const ProjectCard = ({ title, description, technologies, startDate, endDate, url, image }) => {

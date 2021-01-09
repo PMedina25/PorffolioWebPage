@@ -2,6 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 import { FETCH_ORGANIZATIONS_QUERY } from '../../utils/graphql';
 
+// Import components
 import OrganizationCard from './OrganizationCard';
 
 const Organizations = () => {
