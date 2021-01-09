@@ -11,6 +11,7 @@ import { FiChevronRight } from 'react-icons/fi';
 
 // Import components
 import ProjectCard from './ProjectCard';
+import Spinner from '../common/Spinner';
 
 const Projects = () => {
     const {
@@ -19,12 +20,11 @@ const Projects = () => {
         data
     } = useQuery(FETCH_PROJECTS_QUERY);
 
-    // TODO: Add Spinner
     if (loading) {
-        return <p>Loading...</p>;
+        return <Spinner />
     }
     if (error) {
-    return <p>Error:(</p>;
+        return <h1>Error: Something Wrong Happened</h1>;
     }
 
     return (

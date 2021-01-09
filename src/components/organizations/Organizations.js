@@ -4,6 +4,8 @@ import { FETCH_ORGANIZATIONS_QUERY } from '../../utils/graphql';
 
 // Import components
 import OrganizationCard from './OrganizationCard';
+import Spinner from '../common/Spinner';
+
 
 const Organizations = () => {
     const { 
@@ -12,12 +14,11 @@ const Organizations = () => {
       data 
     } = useQuery(FETCH_ORGANIZATIONS_QUERY);
     
-    // TODO: Add Spinner
     if (loading) {
-      return <p>Loading...</p>;
+      return <Spinner />
     }
     if (error) {
-      return <p>Error:(</p>;
+        return <h1>Error: Something Wrong Happened</h1>;
     }
 
     return (

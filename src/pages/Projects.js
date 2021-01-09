@@ -7,7 +7,9 @@ import { Col, Container, Row } from 'react-bootstrap';
 
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 
+// Import components
 import ProjectCard from '../components/projects/ProjectCard';
+import Spinner from '../components/common/Spinner';
 
 const Projects = () => {
     const {
@@ -24,12 +26,11 @@ const Projects = () => {
         });
     }, []);
 
-    // TODO: Add Spinner
     if (loading) {
-        return <p>Loading...</p>;
+        return <Spinner />
     }
     if (error) {
-    return <p>Error:(</p>;
+        return <h1>Error: Something Wrong Happened</h1>;
     }
 
     return (
