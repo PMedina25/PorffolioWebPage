@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 // Import bootstrap components
 import { Button, Card } from 'react-bootstrap';
@@ -9,9 +11,13 @@ import ProjectInfo from './ProjectInfo';
 const ProjectCard = ({ title, description, technologies, startDate, endDate, url, image, projectPage }) => {
     const [modalShow, setModalShow] = useState(false);
 
+    useEffect(() => {
+        Aos.init({duration: 1000});
+    }, []);
+
     return (
         <>
-        <Card className={projectPage ? "project-card" : "project-card project-card-hover"}>
+        <Card className={projectPage ? "project-card" : "project-card project-card-hover"} data-aos={projectPage ? "fade-up" : ""}>
             <Card.Img className="img-project" variant="top" src={image} />
             <Card.Body className="project-card-body">
                 <Card.Title>{title}</Card.Title>

@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { FETCH_PROJECTS_QUERY } from '../../utils/graphql';
@@ -20,6 +22,10 @@ const Projects = () => {
         data
     } = useQuery(FETCH_PROJECTS_QUERY);
 
+    useEffect(() => {
+        Aos.init({duration: 1000});
+    }, []);
+
     if (loading) {
         return <Spinner />
     }
@@ -29,8 +35,8 @@ const Projects = () => {
 
     return (
         <Container id="projects" fluid>
-            <h1 style={{'textAlign': 'center'}}>Projects</h1>
-            <CardDeck>
+            <h1 style={{'textAlign': 'center'}} data-aos="zoom-in">Projects</h1>
+            <CardDeck data-aos="zoom-in">
                 {
                     data.getProjects &&
                     data.getProjects
@@ -75,7 +81,7 @@ const Projects = () => {
                                             projectPage={false} />)
                 }
             </CardDeck>
-            <Link to={'/projects'} id="btn-show-all" className="btn-project btn">
+            <Link to={'/projects'} id="btn-show-all" className="btn-project btn" data-aos="zoom-in">
                 Show all
                 <FiChevronRight id="show-all-arrow" size={32} fontWeight={700}/>
             </Link>

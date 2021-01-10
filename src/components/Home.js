@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 // Import bootstrap components
 import { Col, Image, Row  } from 'react-bootstrap';
@@ -12,14 +12,10 @@ import profilePhoto from '../images/FotoPabloMedina.png';
 
 const Home = () => {
     return (
-        <Row id="home">
-            <Col md={12}>
-                <Row>
-                    <Col className="m-auto text-center" lg={4} md={6}>
-                        <Image id="profile-image" src={profilePhoto} alt="Photo of Pablo" roundedCircle />
-                    </Col>
-                </Row>
-                <div className="text-center">
+            <Row id="home">
+                <Col className="m-auto text-center" lg={4} md={6}>
+                    <Image id="profile-image" src={profilePhoto} alt="Photo of Pablo" roundedCircle />
+                    <div className="text-center">
                     <h1 className="display-4 text-center">Pablo Medina</h1>
                     <p className="lead text-center">Full Stack Developer (React and Node)</p>
                     <p>
@@ -36,7 +32,7 @@ const Home = () => {
                 </div>
             </Col>
         </Row>
-    )
+    );
 }
 
 export default Home;

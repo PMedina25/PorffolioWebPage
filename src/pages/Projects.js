@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Aos from 'aos';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { FETCH_PROJECTS_QUERY } from '../utils/graphql';

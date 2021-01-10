@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 // Import bootstrap components
 import { Card, Col, Container, Row } from 'react-bootstrap';
@@ -75,12 +77,16 @@ const OrganizationCard = ({ data }) => {
       return () => clearInterval(certSlider);
     }, [certIndex]);
 
+    useEffect(() => {
+      Aos.init({duration: 1000});
+    }, []);
+
     return (
         <Container id="organizations" className="bg-light" fluid>
             <Row>
               <Col className="card-column" md={4}>
-                <h1>Education</h1>
-                <div className="cards-container">
+                <h1 data-aos="fade-down">Education</h1>
+                <div className="cards-container" data-aos="flip-down">
                     {eduOrganizations &&
                     eduOrganizations
                     .map((organization, organizationIndex) => {
@@ -111,8 +117,8 @@ const OrganizationCard = ({ data }) => {
                 </div>
               </Col>
               <Col className="card-column" md={4}>
-                <h1>Experience</h1>
-                <div className="cards-container">
+                <h1 data-aos="fade-down">Experience</h1>
+                <div className="cards-container" data-aos="flip-down">
                     {expOrganizations &&
                     expOrganizations
                     .map((organization, organizationIndex) => {
@@ -145,8 +151,8 @@ const OrganizationCard = ({ data }) => {
                 </div>
               </Col>
               <Col className="card-column" md={4}>
-                <h1>Certifications</h1>
-                <div className="cards-container">
+                <h1 data-aos="fade-down">Certifications</h1>
+                <div className="cards-container" data-aos="flip-down">
                     {certOrganizations &&
                     certOrganizations
                     .map((organization, organizationIndex) => {
