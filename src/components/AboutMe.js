@@ -30,14 +30,14 @@ const AboutMe = () => {
 
     return (
         <Row id="about-me" className="card card-body bg-light">
-            <Col md={6} id="about-me-info"  data-aos="fade-right">
+            <Col xs={12} md={6} id="about-me-info"  data-aos="fade-right">
                 <h1>About Me</h1>
                 <p>Computer engineer and full stack developer based in Sevilla and Amsterdam.</p>
                 <p>With experience in teamwork, always willing to learn new things and delighted at facing new challenges.</p>
                 <p>No matter the time, I will always be dealing with a project.</p>
                 <p>Looking for a Full Stack junior developer job.</p>
             </Col>
-            <Col md={6} id="about-me-map"  data-aos="flip-right">
+            <Col xs={12} md={6} id="about-me-map"  data-aos="flip-right">
                 <MapContainer center={[locationData.lyon.lat, locationData.lyon.lng]} zoom={4} scrollWheelZoom={true} id="mapContainer" className="rounded-circle">
                     <TileLayer
                         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

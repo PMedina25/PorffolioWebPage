@@ -10,7 +10,7 @@ const navbar = () => {
             <Nav.Link href="#skills">Skills</Nav.Link>
             <Nav.Link href="#organizations">Education/Experience</Nav.Link>
             <Nav.Link href="#projects">Projects</Nav.Link>
-            <Nav.Link href="#contact">Contact</Nav.Link>
+            <Nav.Link onClick={() => alert('I\'m so sorry. Contact section is still in development.')}>Contact</Nav.Link>
           </Nav>
         </Navbar>
     )

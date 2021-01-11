@@ -6,7 +6,7 @@ import { useQuery } from '@apollo/client';
 import { FETCH_PROJECTS_QUERY } from '../../utils/graphql';
 
 // Import bootstrap components
-import { CardDeck, Container } from 'react-bootstrap';
+import { CardDeck, Container, Row } from 'react-bootstrap';
 
 // Import react icon
 import { FiChevronRight } from 'react-icons/fi';
@@ -37,6 +37,7 @@ const Projects = () => {
         <Container id="projects" fluid>
             <h1 style={{'textAlign': 'center'}} data-aos="zoom-in">Projects</h1>
             <CardDeck data-aos="zoom-in">
+                <Row>
                 {
                     data.getProjects &&
                     data.getProjects
@@ -49,8 +50,8 @@ const Projects = () => {
                                             startDate={project.startDate}
                                             endDate={project.endDate}
                                             url={project.url}
-                                            image={project.image}
-                                            projectPage={false} />)
+                                            image={project.image} 
+                                        />)
                 }
                 {
                     data.getProjects
@@ -63,8 +64,8 @@ const Projects = () => {
                                             startDate={project.startDate}
                                             endDate={project.endDate}
                                             url={project.url}
-                                            image={project.image}
-                                            projectPage={false} />)
+                                            image={project.image} 
+                                        />)
                 }
                 {
                     data.getProjects
@@ -78,8 +79,10 @@ const Projects = () => {
                                             endDate={project.endDate}
                                             url={project.url}
                                             image={project.image}
-                                            projectPage={false} />)
+                                        />)
                 }
+                     
+                </Row>
             </CardDeck>
             <Link to={'/projects'} id="btn-show-all" className="btn-project btn" data-aos="zoom-in">
                 Show all
