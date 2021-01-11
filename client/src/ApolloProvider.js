@@ -3,7 +3,7 @@ import App from './App';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
-    uri: 'http://localhost:5000',
+    uri: 'https://portfolio-pmedina.herokuapp.com/profiles',
     cache: new InMemoryCache()
 });
 
