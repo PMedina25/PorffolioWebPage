@@ -37,7 +37,7 @@ const Skills = () => {
     return (
         <Container id="skills" fluid>
             <Row>
-                <Col md={6} id="skills-info">
+                <Col xs={12} md={12} lg={6} id="skills-info">
                     <h1 className="mb-4" data-aos="fade-up">Skills</h1>
                     <p data-aos="fade-up">The main area of my expertise is all related to MERN Stack (<strong>MongoDB</strong>, <strong>Express</strong>, <strong>React</strong>, <strong>Node</strong>).</p>
                     <p data-aos="fade-up">
@@ -48,7 +48,7 @@ const Skills = () => {
                     <p data-aos="fade-up">Moreover, experienced in developing Backend services with <strong>GraphQL</strong> and <strong>Apollo Server</strong>.</p>
                     <p data-aos="fade-up">Finally, as a complementary background, <strong>Java</strong> for <strong>Android App Development</strong>, and also <strong>TensorFlow</strong> and <strong>Keras</strong> with <strong>Python</strong>.</p>
                 </Col>
-                <Col md={6} id="technologies-grid">
+                <Col xs={12} md={12} lg={6} id="technologies-grid">
                     <div className="technologies-grid-item" data-aos="fade-up">
                         <Image className="technology-icon" src={htmlIcon} alt="html icon" />
                         <p>HTML</p>

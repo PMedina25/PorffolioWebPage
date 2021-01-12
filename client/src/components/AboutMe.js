@@ -38,7 +38,7 @@ const AboutMe = () => {
                 <p>Looking for a Full Stack junior developer job.</p>
             </Col>
             <Col xs={12} md={6} id="about-me-map"  data-aos="flip-right">
-                <MapContainer center={[locationData.lyon.lat, locationData.lyon.lng]} zoom={4} scrollWheelZoom={true} id="mapContainer" className="rounded-circle">
+                <MapContainer center={[locationData.lyon.lat, locationData.lyon.lng]} zoom={4} scrollWheelZoom={true} id="mapContainer">
                     <TileLayer
                         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
