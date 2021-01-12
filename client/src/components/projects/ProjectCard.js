@@ -22,7 +22,7 @@ const ProjectCard = ({ title, description, technologies, startDate, endDate, url
                 <Card.Img className="img-project" variant="top" src={image} />
                 <Card.Body className="project-card-body">
                     <Card.Title>{title}</Card.Title>
-                    <Card.Text>
+                    <Card.Text style={{'textAlign': 'justify'}}>
                         {description}
                     </Card.Text>
                     <Button type="button" className="btn-project btn-show-more" onClick={() => setModalShow(true)}>

@@ -111,13 +111,26 @@ a:hover {
 .nav-link {
   color: white !important;
   width: 17%;
-  text-align: center;
+  font-size: 0.9rem;
   transition: 0.3s ease-out;
 }
 
 .nav-link:hover {
   background-color: var(--main-red);
   transition: 0.3s ease-out;
+}
+
+.nav-link {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+@media (max-width: 992px) {
+  .nav-link {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* =============
