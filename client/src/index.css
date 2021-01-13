@@ -330,6 +330,16 @@ a:hover {
   transform: translateX(100%);
 }
 
+@media (max-width: 768px) {
+  #organizations {
+    height: 1550px;
+  }
+  .card-column:nth-child(2),
+  .card-column:nth-child(3) {
+    margin-top: 400px;
+  }
+}
+
 /* =============
  * Projects
  * =============

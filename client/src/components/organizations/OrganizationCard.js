@@ -84,7 +84,7 @@ const OrganizationCard = ({ data }) => {
     return (
         <Container id="organizations" className="bg-light" fluid>
             <Row>
-              <Col className="card-column" md={4}>
+              <Col className="card-column" xs={12} md={4} lg={4}>
                 <h1 data-aos="fade-down">Education</h1>
                 <div className="cards-container" data-aos="flip-down">
                     {eduOrganizations &&
@@ -116,7 +116,7 @@ const OrganizationCard = ({ data }) => {
                     }
                 </div>
               </Col>
-              <Col className="card-column" md={4}>
+              <Col className="card-column" xs={12} md={4} lg={4}>
                 <h1 data-aos="fade-down">Experience</h1>
                 <div className="cards-container" data-aos="flip-down">
                     {expOrganizations &&
@@ -150,7 +150,7 @@ const OrganizationCard = ({ data }) => {
                     }
                 </div>
               </Col>
-              <Col className="card-column" md={4}>
+              <Col className="card-column" xs={12} md={4} lg={4}>
                 <h1 data-aos="fade-down">Certifications</h1>
                 <div className="cards-container" data-aos="flip-down">
                     {certOrganizations &&
