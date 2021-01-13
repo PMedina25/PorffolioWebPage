@@ -17,7 +17,7 @@ const ProjectCard = ({ title, description, technologies, startDate, endDate, url
 
     return (
         <>
-        <Col xs={12} sm={12} md={6} lg={6} xl={4}>
+        <Col xs={12} sm={12} md={6} lg={6}>
             <Card className="project-card project-card-hover">
                 <Card.Img className="img-project" variant="top" src={image} />
                 <Card.Body className="project-card-body">

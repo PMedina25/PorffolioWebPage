@@ -340,6 +340,15 @@ a:hover {
   }
 }
 
+@media (max-width: 992px) and (min-width: 768px) {
+  .slider-card .card-body {
+    font-size: 0.9rem;
+  }
+  .slider-card .card-body .card-title {
+    font-size: 1rem;
+  }
+}
+
 /* =============
  * Projects
  * =============
@@ -479,7 +488,8 @@ span {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 40%;
+  justify-content: center;
+  width: 100%;
   color: white;
 }
 
@@ -489,6 +499,18 @@ h1 {
 
 .card-column-item:hover {
   transform: scale(1) !important;
+}
+
+@media (max-width: 992px) {
+  .card-columns {
+    column-count: 2 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-columns {
+    column-count: 1 !important;
+  }
 }
 
 /* =============
@@ -575,7 +597,13 @@ footer a:focus {
   }
 
   .btn-show-more {
-    width: 40%;
+    width: 45%;
+  }
+}
+
+@media (max-width: 1015px) {
+  .btn-show-more {
+    width: 50%;
   }
 }
 
