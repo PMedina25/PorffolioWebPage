@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Import components
-import Navbar from '../components/Navbar';
+import NavbarComponent from '../components/Navbar';
 import Home from '../components/Home';
 import AboutMe from '../components/AboutMe';
 import Skills from '../components/Skills';
@@ -13,7 +13,7 @@ import Contact from '../components/Contact';
 const MainPage = () => {
     return (
         <>
-            <Navbar />
+            <NavbarComponent />
             <Home />
             <AboutMe />
             <Skills />

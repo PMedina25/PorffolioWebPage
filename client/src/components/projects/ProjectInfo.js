@@ -22,7 +22,7 @@ const ProjectInfo = (props) => {
                 <Image className="modal-image" src={props.image} />
                 <div className="project-modal-content">
                     <div className="project-modal-description">
-                        <p style={{'color': 'black'}}>
+                        <p style={{'color': 'black', 'textAlign': 'justify'}}>
                             {props.description}
                         </p>
                     </div>
