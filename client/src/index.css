@@ -467,6 +467,15 @@ span {
   margin-left: 10px;
 }
 
+@media (max-width: 992px) {
+  .project-modal-description {
+    font-size: 0.9rem;
+  }
+  .project-technologies-grid {
+    font-size: 0.8rem;
+  }
+}
+
 /* =============
  * Projects page
  * =============

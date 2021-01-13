@@ -28,9 +28,8 @@ const Projects = ({ projects }) => {
                             .filter(project => project.category === 'professional' || project.category === 'academic')
                             .map(project => {
                                 return (
-                                    <div className="card-column-item">
+                                    <div key={project.id} className="card-column-item">
                                         <ProjectCard
-                                                key={project.id}
                                                 title={project.title} 
                                                 description={project.description}
                                                 technologies={project.technologies}
@@ -54,9 +53,8 @@ const Projects = ({ projects }) => {
                         .filter(project => project.category === 'personal')
                         .map(project => {
                             return (
-                                <div className="card-column-item">
+                                <div key={project.id} className="card-column-item">
                                     <ProjectCard
-                                            key={project.id}
                                             title={project.title} 
                                             description={project.description}
                                             technologies={project.technologies}
@@ -80,9 +78,8 @@ const Projects = ({ projects }) => {
                         .filter(project => project.category === 'others')
                         .map(project => {
                             return (
-                                <div className="card-column-item">
+                                <div key={project.id} className="card-column-item">
                                     <ProjectCard
-                                            key={project.id}
                                             title={project.title} 
                                             description={project.description}
                                             technologies={project.technologies}
