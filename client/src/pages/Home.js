@@ -27,7 +27,7 @@ const Home = () => {
                     <Col xs={12} md={12} lg={12}>
                         <div id="home-text">
                             <h1>Hi, this is Pablo</h1>
-                            <p>Full Stack Developer (React and Node)</p>
+                            <p>Full Stack Developer (MERN Stack)</p>
                         </div>
                     </Col>
                 </Row>

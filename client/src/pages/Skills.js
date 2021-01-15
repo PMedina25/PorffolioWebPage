@@ -17,19 +17,25 @@ import reduxIcon from '../assets/images/Redux.png';
 import bootstrapIcon from '../assets/images/bootstrap.png';
 import semanticUiIcon from '../assets/images/semantic-ui.png';
 import nodeIcon from '../assets/images/nodejs.png';
-import mongodbIcon from '../assets/images/mongodb-logo.png';
+import mongodbIcon from '../assets/images/mongodb.png';
 import graphqlIcon from '../assets/images/graphql.png';
 import apolloIcon from '../assets/images/apollo.png';
 import pythonIcon from '../assets/images/python.png';
 import tensorFlowIcon from '../assets/images/TensorFlow.png';
 import kerasIcon from '../assets/images/keras.png';
 import mySqlIcon from '../assets/images/mysql.png';
+import mariadbIcon from '../assets/images/mariadb.png';
+import firebaseIcon from '../assets/images/firebase.png';
 import androidJavaIcon from '../assets/images/android_w_java.png';
+import vsCodeIcon from '../assets/images/vscode.png';
 import gitIcon from '../assets/images/git.png';
 import githubIcon from '../assets/images/github.png';
 import dockerIcon from '../assets/images/docker.png';
-import herokuIcon from '../assets/images/heroku.png';
-
+import cIcon from '../assets/images/c++.png';
+import arduinoIcon from '../assets/images/arduino.png';
+import raspberryPiIcon from '../assets/images/raspberrypi.webp';
+import loraIcon from '../assets/images/lora.png';
+import zigbeeIcon from '../assets/images/zigbee.png';
 
 
 const Skills = () => {
@@ -92,7 +98,7 @@ const Skills = () => {
                     <article id="backend-content" className="field-content">
                         <div className="technologies-grid-item" data-aos="zoom-in">
                             <Image className="technology-icon" src={nodeIcon} alt="node icon" />
-                            <p>Node.js</p>
+                            <p>Node/Express</p>
                         </div>
                         <div className="technologies-grid-item" data-aos="zoom-in">
                             <Image className="technology-icon" src={mongodbIcon} alt="mongodb icon" />
@@ -110,10 +116,22 @@ const Skills = () => {
                             <Image className="technology-icon" src={mySqlIcon} alt="mysql icon" />
                             <p>MySQL</p>
                         </div>
+                        <div className="technologies-grid-item" data-aos="zoom-in">
+                            <Image className="technology-icon" src={mariadbIcon} alt="mariadb icon" />
+                            <p>MariaDB</p>
+                        </div>
+                        <div className="technologies-grid-item" data-aos="zoom-in">
+                            <Image className="technology-icon" src={firebaseIcon} alt="firebase icon" />
+                            <p>Firebase</p>
+                        </div>
                     </article>
                 }
                 {value === 2 &&
                     <article id="tools-content" className="field-content">
+                        <div className="technologies-grid-item" data-aos="zoom-in">
+                            <Image className="technology-icon" src={vsCodeIcon} alt="visual studio code icon" />
+                            <p>VSCode</p>
+                        </div>
                         <div className="technologies-grid-item" data-aos="zoom-in">
                             <Image className="technology-icon" src={gitIcon} alt="git icon" />
                             <p>Git</p>
@@ -130,9 +148,32 @@ const Skills = () => {
                 }
                 {value === 3 &&
                     <article id="embedded-systems-content" className="field-content">
-                        <Image className="technology-icon" src={androidJavaIcon} alt="android java icon" />
-                        <p>Java for Android</p>
+                        <div className="technologies-grid-item" data-aos="zoom-in">
+                            <Image className="technology-icon" src={androidJavaIcon} alt="android java icon" />
+                            <p>Android Java</p>
+                        </div>
+                        <div className="technologies-grid-item" data-aos="zoom-in">
+                            <Image className="technology-icon" src={cIcon} alt="c++ icon" />
+                            <p>C++</p>
+                        </div>
+                        <div className="technologies-grid-item" data-aos="zoom-in">
+                            <Image className="technology-icon" src={arduinoIcon} alt="arduino icon" />
+                            <p>Arduino</p>
+                        </div>
+                        <div className="technologies-grid-item" data-aos="zoom-in">
+                            <Image className="technology-icon" src={raspberryPiIcon} alt="raspberry pi icon" />
+                            <p>Raspberry Pi</p>
+                        </div>
+                        <div className="technologies-grid-item" data-aos="zoom-in">
+                            <Image className="technology-icon" src={loraIcon} alt="lora icon" />
+                            <p>LoRa</p>
+                        </div>
+                        <div className="technologies-grid-item" data-aos="zoom-in">
+                            <Image className="technology-icon" src={zigbeeIcon} alt="zigbee icon" />
+                            <p>Zigbee</p>
+                        </div>
                     </article>
+                    
                 }
                 {value === 4 &&
                     <article id="articial-intelligence-content" className="field-content">
