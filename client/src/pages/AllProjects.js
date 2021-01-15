@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/client';
 import { FETCH_PROJECTS_QUERY } from '../utils/graphql';
 
 // Import components
-import Projects from '../components/all-projects/Projects';
+import Projects from '../components/all-projects/AllProjects';
 import Spinner from '../components/common/Spinner';
 
 const AllProjects = () => {
