@@ -5,6 +5,9 @@ import 'aos/dist/aos.css';
 // Import bootstrap components
 import { Col, Container, Image, Row } from 'react-bootstrap';
 
+// Import components
+import Sidebar from '../components/common/Sidebar';
+
 // Import images
 import htmlIcon from '../assets/images/html-5.png';
 import cssIcon from '../assets/images/css.png';
@@ -36,6 +39,9 @@ const Skills = () => {
 
     return (
         <Container id="skills" fluid>
+
+            <Sidebar />
+
             <Row>
                 <Col xs={12} md={12} lg={6} id="skills-info">
                     <h1 className="mb-4" data-aos="fade-up">Skills</h1>
