@@ -359,7 +359,7 @@ video {
 */
 #skills {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   color: white;
@@ -394,7 +394,7 @@ video {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 .field-btn {
   background: transparent;
@@ -425,9 +425,9 @@ video {
 }
 
 .field-content {
-  width: 50%;
+  width: 60%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
   border: 4px solid var(--main-red);
   border-radius: 50px;
@@ -468,6 +468,85 @@ video {
 .technology-icon {
   width: 2rem;
   height: 2rem;
+}
+
+@media (max-width: 992px) {
+  .field-content {
+    width: 70%;
+  }
+}
+
+@media (max-width: 750px) {
+  .field-content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 592px) {
+  .btn-container button {
+    font-size: 1em;
+  }
+
+  .technology-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .technologies-grid-item p {
+    transform: scale(0.8);
+  }
+
+  .field-info p {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 530px) {
+  .btn-container button {
+    font-size: 0.8em;
+  }
+  .field-content {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .technology-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  .technologies-grid-item p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .btn-container button {
+    font-size: 0.7em;
+  }
+  .technology-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  .technologies-grid-item p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 415px) {
+  .btn-container button {
+    font-size: 0.6em;
+  }
+  .field-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 375px) {
+  .technology-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .technologies-grid-item p {
+    font-size: 0.6rem;
+  }
 }
 
 /* =============
@@ -845,35 +924,5 @@ footer a:focus {
   #projects {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-  }
-}
-
-@media (max-width: 490px) {
-  .technology-icon {
-    width: 2rem;
-    height: 2rem;
-  }
-  .technologies-grid-item p {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 415px) {
-  .technology-icon {
-    width: 1.75rem;
-    height: 1.75rem;
-  }
-  .technologies-grid-item p {
-    font-size: 0.7rem;
-  }
-}
-
-@media (max-width: 375px) {
-  .technology-icon {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  .technologies-grid-item p {
-    font-size: 0.6rem;
   }
 }
