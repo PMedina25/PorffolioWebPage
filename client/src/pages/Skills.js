@@ -31,6 +31,7 @@ import vsCodeIcon from '../assets/images/vscode.png';
 import gitIcon from '../assets/images/git.png';
 import githubIcon from '../assets/images/github.png';
 import dockerIcon from '../assets/images/docker.png';
+import herokuIcon from '../assets/images/heroku.png';
 import cIcon from '../assets/images/c++.png';
 import arduinoIcon from '../assets/images/arduino.png';
 import raspberryPiIcon from '../assets/images/raspberrypi.webp';
@@ -63,117 +64,156 @@ const Skills = () => {
                 </div>
 
                 {value === 0 &&
-                    <article id="frontend-content" className="field-content">
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={htmlIcon} alt="html icon" />
-                            <p>HTML</p>
+                    <>
+                        <article id="frontend-content" className="field-content">
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={htmlIcon} alt="html icon" />
+                                <p>HTML</p>
+                            </div>
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={cssIcon} alt="css icon" />
+                                <p>CSS</p>
+                            </div>
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={javascriptIcon} alt="javascript icon" />
+                                <p>JavaScript</p>
+                            </div>
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={reactIcon} alt="react icon" />
+                                <p>React</p>
+                            </div>
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={reduxIcon} alt="redux icon" />
+                                <p>Redux</p>
+                            </div>
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={bootstrapIcon} alt="bootstrap icon" />
+                                <p>Bootstrap</p>
+                            </div>
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={semanticUiIcon} alt="semantic ui icon" />
+                                <p>Semantic UI</p>
+                            </div>
+                        </article>
+                        <div className="field-info">
+                            <p>
+                                In regards to the frontend, this involves skilled in <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong> and  
+                                {' '}<strong>JSX</strong>, besides CSS frameworks such as <strong>Bootstrap</strong> and <strong>Semantic UI</strong>. For managing react states, I have developed some applications 
+                                with <strong>React Hooks</strong>, <strong>Context API</strong> and <strong>Redux</strong>.
+                            </p>
                         </div>
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={cssIcon} alt="css icon" />
-                            <p>CSS</p>
-                        </div>
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={javascriptIcon} alt="javascript icon" />
-                            <p>JavaScript</p>
-                        </div>
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={reactIcon} alt="react icon" />
-                            <p>React</p>
-                        </div>
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={reduxIcon} alt="redux icon" />
-                            <p>Redux</p>
-                        </div>
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={bootstrapIcon} alt="bootstrap icon" />
-                            <p>Bootstrap</p>
-                        </div>
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={semanticUiIcon} alt="semantic ui icon" />
-                            <p>Semantic UI</p>
-                        </div>
-                    </article>
+                    </>
                 }
                 {value === 1 &&
-                    <article id="backend-content" className="field-content">
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={nodeIcon} alt="node icon" />
-                            <p>Node/Express</p>
+                    <>
+                        <article id="backend-content" className="field-content">
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={nodeIcon} alt="node icon" />
+                                <p>Node/Express</p>
+                            </div>
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={mongodbIcon} alt="mongodb icon" />
+                                <p>MongoDB</p>
+                            </div>
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={graphqlIcon} alt="graphql icon" />
+                                <p>GraphQL</p>
+                            </div>
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={apolloIcon} alt="apollo icon" />
+                                <p>Apollo Server</p>
+                            </div>
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={mySqlIcon} alt="mysql icon" />
+                                <p>MySQL</p>
+                            </div>
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={mariadbIcon} alt="mariadb icon" />
+                                <p>MariaDB</p>
+                            </div>
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={firebaseIcon} alt="firebase icon" />
+                                <p>Firebase</p>
+                            </div>
+                        </article>
+                        <div className="field-info">
+                            <p>
+                                <strong>Node</strong> and <strong>Express</strong> as the mainstay, as well as <strong>MongoDB</strong> as the primary database system. Moreover, I have developed
+                                {' '}some applications using <strong>GraphQL</strong> and <strong>Apollo Server</strong> for the backend.
+                            </p>
+                            <p>
+                                For mobile app development, I have used <strong>Firebase Realtime Database</strong> and <strong>SQLite</strong>.
+                            </p>
                         </div>
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={mongodbIcon} alt="mongodb icon" />
-                            <p>MongoDB</p>
-                        </div>
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={graphqlIcon} alt="graphql icon" />
-                            <p>GraphQL</p>
-                        </div>
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={apolloIcon} alt="apollo icon" />
-                            <p>Apollo Server</p>
-                        </div>
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={mySqlIcon} alt="mysql icon" />
-                            <p>MySQL</p>
-                        </div>
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={mariadbIcon} alt="mariadb icon" />
-                            <p>MariaDB</p>
-                        </div>
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={firebaseIcon} alt="firebase icon" />
-                            <p>Firebase</p>
-                        </div>
-                    </article>
+                    </>
                 }
                 {value === 2 &&
-                    <article id="tools-content" className="field-content">
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={vsCodeIcon} alt="visual studio code icon" />
-                            <p>VSCode</p>
+                    <>
+                        <article id="tools-content" className="field-content">
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={vsCodeIcon} alt="visual studio code icon" />
+                                <p>VSCode</p>
+                            </div>
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={gitIcon} alt="git icon" />
+                                <p>Git</p>
+                            </div>
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={githubIcon} alt="github icon" />
+                                <p>GitHub</p>
+                            </div>
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={dockerIcon} alt="docker icon" />
+                                <p>Docker</p>
+                            </div>
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={herokuIcon} alt="heroku icon" />
+                                <p>Heroku</p>
+                            </div>
+                        </article>
+                        <div className="field-info">
+                            <p>
+                                <strong>Visual Studio Code</strong> as the main IDE, with experience in <strong>Git</strong> version control system and <strong>Git Flow</strong>. Furthermore,
+                                {' '}knowledge in deploying apps with <strong>Docker</strong> and <strong>Heroku</strong>.
+                            </p>
                         </div>
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={gitIcon} alt="git icon" />
-                            <p>Git</p>
-                        </div>
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={githubIcon} alt="github icon" />
-                            <p>GitHub</p>
-                        </div>
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={dockerIcon} alt="docker icon" />
-                            <p>Docker</p>
-                        </div>
-                    </article>
+                    </>
                 }
                 {value === 3 &&
-                    <article id="embedded-systems-content" className="field-content">
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={androidJavaIcon} alt="android java icon" />
-                            <p>Android Java</p>
+                    <>
+                        <article id="embedded-systems-content" className="field-content">
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={androidJavaIcon} alt="android java icon" />
+                                <p>Android Java</p>
+                            </div>
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={cIcon} alt="c++ icon" />
+                                <p>C++</p>
+                            </div>
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={arduinoIcon} alt="arduino icon" />
+                                <p>Arduino</p>
+                            </div>
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={raspberryPiIcon} alt="raspberry pi icon" />
+                                <p>Raspberry Pi</p>
+                            </div>
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={loraIcon} alt="lora icon" />
+                                <p>LoRa</p>
+                            </div>
+                            <div className="technologies-grid-item" data-aos="zoom-in">
+                                <Image className="technology-icon" src={zigbeeIcon} alt="zigbee icon" />
+                                <p>Zigbee</p>
+                            </div>
+                        </article>
+                        <div className="field-info">
+                            <p>
+                                <strong>Visual Studio Code</strong> as the main IDE, with experience in <strong>Git</strong> version control system and <strong>Git Flow</strong>. Furthermore,
+                                {' '}knowledge in deploying apps with <strong>Docker</strong> and <strong>Heroku</strong>.
+                            </p>
                         </div>
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={cIcon} alt="c++ icon" />
-                            <p>C++</p>
-                        </div>
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={arduinoIcon} alt="arduino icon" />
-                            <p>Arduino</p>
-                        </div>
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={raspberryPiIcon} alt="raspberry pi icon" />
-                            <p>Raspberry Pi</p>
-                        </div>
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={loraIcon} alt="lora icon" />
-                            <p>LoRa</p>
-                        </div>
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={zigbeeIcon} alt="zigbee icon" />
-                            <p>Zigbee</p>
-                        </div>
-                    </article>
-                    
+                    </> 
                 }
                 {value === 4 &&
                     <article id="articial-intelligence-content" className="field-content">
