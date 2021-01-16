@@ -710,7 +710,7 @@ video {
   }
   .card-column:nth-child(2),
   .card-column:nth-child(3) {
-    margin-top: 400px;
+    margin-top: 350px;
   }
 }
 
