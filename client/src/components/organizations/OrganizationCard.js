@@ -9,6 +9,7 @@ import { Card, Col, Container, Row } from 'react-bootstrap';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 // Import components
+import Sidebar from '../common/Sidebar';
 import SliderCard from './SliderCard';
 
 const OrganizationCard = ({ data }) => {
@@ -82,10 +83,12 @@ const OrganizationCard = ({ data }) => {
     }, []);
 
     return (
-        <Container id="organizations" className="bg-light" fluid>
+        <Container id="organizations" fluid>
+            <Sidebar />
             <Row>
               <Col className="card-column" xs={12} md={4} lg={4}>
                 <h1 data-aos="fade-down">Education</h1>
+                <div className="underline"></div>
                 <div className="cards-container" data-aos="flip-down">
                     {eduOrganizations &&
                     eduOrganizations
@@ -118,6 +121,7 @@ const OrganizationCard = ({ data }) => {
               </Col>
               <Col className="card-column" xs={12} md={4} lg={4}>
                 <h1 data-aos="fade-down">Experience</h1>
+                <div className="underline"></div>
                 <div className="cards-container" data-aos="flip-down">
                     {expOrganizations &&
                     expOrganizations
@@ -152,6 +156,7 @@ const OrganizationCard = ({ data }) => {
               </Col>
               <Col className="card-column" xs={12} md={4} lg={4}>
                 <h1 data-aos="fade-down">Certifications</h1>
+                <div className="underline"></div>
                 <div className="cards-container" data-aos="flip-down">
                     {certOrganizations &&
                     certOrganizations

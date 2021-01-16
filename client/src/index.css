@@ -628,14 +628,21 @@ video {
 */
 #organizations {
   width: 100%;
-  min-height: 600px;
-  padding: 4rem;
+  padding: 2rem 4rem 2rem 4rem;
+  margin: 0;
+  color: white;
+}
+
+.card-column {
   text-align: center;
+  display: flex;
+  flex-direction: column !important;
+  justify-content: center;
 }
 
 .slider-card {
   position: absolute !important;
-  top: 1;
+  top: 0;
   left: 0;
   right: 0;
   display: flex;
