@@ -76,6 +76,7 @@ html {
 
 body,
 #root {
+  min-height: 100vh;
   background-color: var(--main-gray);
   background-image: linear-gradient(62deg, #434649 0%, #181719 100%);
 }
@@ -441,14 +442,10 @@ video {
 */
 #skills {
   width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  color: white;
-  padding: 2rem;
-  background-color: var(--main-gray);
-  background-image: linear-gradient(62deg, #434649 0%, #181719 100%);
+  padding: 2rem 4rem 2rem 4rem;
   margin: 0;
+  text-align: justify;
+  color: white;
 }
 
 .fields-center {
