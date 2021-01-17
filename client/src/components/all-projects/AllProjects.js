@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { CardColumns, Col, Container, Row } from 'react-bootstrap';
@@ -13,9 +13,9 @@ const Projects = ({ projects }) => {
         <Container>
             <Row>
                 <Col xs={10} sm={6} md={5} lg={4} xl={3}>
-                    <Link to="/" id="back-btn" className="btn btn-project">
+                    <Link to="/projects" id="back-btn" className="btn btn-project">
                         <AiOutlineArrowLeft style={{'marginRight': '10'}} />
-                        Back to main page
+                        Back to projects page
                     </Link>
                 </Col>
             </Row>

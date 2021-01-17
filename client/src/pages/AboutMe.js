@@ -28,7 +28,7 @@ const AboutMe = () => {
             'lng': 4.84671
         }
     }
-    const [questions, setQuestions] = useState(aboutMeData)
+    const [questions] = useState(aboutMeData)
 
     useEffect(() => {
         Aos.init({duration: 1000});

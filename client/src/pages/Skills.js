@@ -3,7 +3,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 // Import bootstrap components
-import { Col, Container, Image, Row, Tab, Tabs } from 'react-bootstrap';
+import { Container, Image } from 'react-bootstrap';
 
 // Import components
 import Sidebar from '../components/common/Sidebar';
