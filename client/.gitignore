@@ -3,6 +3,8 @@
 debug.log
 package-lock.json
 
+src/videos/
+
 # dependencies
 /node_modules
 /.pnp

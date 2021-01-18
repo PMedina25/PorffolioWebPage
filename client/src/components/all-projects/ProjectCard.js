@@ -3,7 +3,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 // Import bootstrap components
-import { Button, Card, Col } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 
 // Import components
 import ProjectInfo from '../projects/ProjectInfo';
