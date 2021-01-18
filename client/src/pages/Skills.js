@@ -60,7 +60,7 @@ const Skills = () => {
                     <button onClick={() => setValue(1)} className={`field-btn ${value === 1 && 'active-btn'}`}>Backend</button>
                     <button onClick={() => setValue(2)} className={`field-btn ${value === 2 && 'active-btn'}`}>Tools</button>
                     <button onClick={() => setValue(3)} className={`field-btn ${value === 3 && 'active-btn'}`}>Embedded Systems</button>
-                    <button onClick={() => setValue(4)} className={`field-btn ${value === 4 && 'active-btn'}`}>A.I.</button>
+                    {/*<button onClick={() => setValue(4)} className={`field-btn ${value === 4 && 'active-btn'}`}>A.I.</button> */}
                 </div>
 
                 {value === 0 &&
@@ -209,13 +209,16 @@ const Skills = () => {
                         </article>
                         <div className="field-info">
                             <p>
-                                <strong>Visual Studio Code</strong> as the main IDE, with experience in <strong>Git</strong> version control system and <strong>Git Flow</strong>. Furthermore,
-                                {' '}knowledge in deploying apps with <strong>Docker</strong> and <strong>Heroku</strong>.
+                                I have built plenty of embedded systems with <strong>Arduino</strong> and <strong>Raspberry Pi</strong>,
+                                {' '} with the use of different wireless communication protocols (<strong>Bluetooth</strong>, <strong>LoRa</strong>
+                                {' '} and <strong>Zigbee</strong>) and connected to the cloud.
                             </p>
                         </div>
                     </> 
                 }
-                {value === 4 &&
+
+                {   /*
+                    value === 4 &&
                     <article id="articial-intelligence-content" className="field-content">
                         <div className="technologies-grid-item" data-aos="zoom-in">
                             <Image className="technology-icon" src={pythonIcon} alt="python icon" />
@@ -230,6 +233,7 @@ const Skills = () => {
                             <p>Keras</p>
                         </div>
                     </article>
+                    */
                 }
             </div>
         </Container>
