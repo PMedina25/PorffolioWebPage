@@ -39,6 +39,8 @@ const Projects = () => {
             <Sidebar />
 
             <h1 style={{'textAlign': 'center'}} data-aos="zoom-in">Projects</h1>
+            <div className="underline"></div>
+            
             <CardDeck data-aos="zoom-in">
                 <Row>
                 {
