@@ -20,7 +20,7 @@ function App() {
           <Route path="/projects" component={Projects} exact />
           <Route path="/allprojects" component={AllProjects} exact />
       </Router> 
-  )
+  );
 }
 
 export default App;

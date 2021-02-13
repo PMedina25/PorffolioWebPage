@@ -1,8 +1,12 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+debug.log
+package-lock.json
+
+src/videos/
+
 # dependencies
-node_modules
-node_modules/
+/node_modules
 /.pnp
 .pnp.js
 
@@ -14,7 +18,6 @@ node_modules/
 
 # misc
 .DS_Store
-.env
 .env.local
 .env.development.local
 .env.test.local
@@ -23,3 +26,4 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
