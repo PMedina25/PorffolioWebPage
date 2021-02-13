@@ -8,36 +8,8 @@ import { Container, Image } from 'react-bootstrap';
 // Import components
 import Sidebar from '../components/common/Sidebar';
 
-// Import images
-import htmlIcon from '../assets/images/html-5.png';
-import cssIcon from '../assets/images/css.png';
-import javascriptIcon from '../assets/images/javascript.png';
-import reactIcon from '../assets/images/react.png';
-import reduxIcon from '../assets/images/Redux.png';
-import bootstrapIcon from '../assets/images/bootstrap.png';
-import semanticUiIcon from '../assets/images/semantic-ui.png';
-import nodeIcon from '../assets/images/nodejs.png';
-import mongodbIcon from '../assets/images/mongodb.png';
-import graphqlIcon from '../assets/images/graphql.png';
-import apolloIcon from '../assets/images/apollo.png';
-import pythonIcon from '../assets/images/python.png';
-import tensorFlowIcon from '../assets/images/TensorFlow.png';
-import kerasIcon from '../assets/images/keras.png';
-import mySqlIcon from '../assets/images/mysql.png';
-import mariadbIcon from '../assets/images/mariadb.png';
-import firebaseIcon from '../assets/images/firebase.png';
-import androidJavaIcon from '../assets/images/android_w_java.png';
-import vsCodeIcon from '../assets/images/vscode.png';
-import gitIcon from '../assets/images/git.png';
-import githubIcon from '../assets/images/github.png';
-import dockerIcon from '../assets/images/docker.png';
-import herokuIcon from '../assets/images/heroku.png';
-import cIcon from '../assets/images/c++.png';
-import arduinoIcon from '../assets/images/arduino.png';
-import raspberryPiIcon from '../assets/images/raspberrypi.webp';
-import loraIcon from '../assets/images/lora.png';
-import zigbeeIcon from '../assets/images/zigbee.png';
-
+// Import skills constants
+import { KNOWLEDGE_FIELDS, TECHNOLOGY_FIELDS } from '../constants/constants';
 
 const Skills = () => {
     const [value, setValue] = useState(0);
@@ -45,6 +17,48 @@ const Skills = () => {
     useEffect(() => {
         Aos.init({duration: 1000});
     }, []);
+
+    let frontendGridColumns, backendGridColumns, toolsCloudGridColumns, embeddedSystemsGridColumns;
+
+    if (TECHNOLOGY_FIELDS.frontend.length % 5 == 0) {
+        frontendGridColumns = '1fr 1fr 1fr 1fr 1fr';
+    } else if (TECHNOLOGY_FIELDS.frontend.length % 4 == 0) {
+        frontendGridColumns = '1fr 1fr 1fr 1fr';
+    } else if (TECHNOLOGY_FIELDS.frontend.length % 3 == 0){
+        frontendGridColumns = '1fr 1fr 1fr';
+    } else {
+        frontendGridColumns = '1fr 1fr';
+    }
+
+    if (TECHNOLOGY_FIELDS.backend.length % 5 == 0) {
+        backendGridColumns = '1fr 1fr 1fr 1fr 1fr';
+    } else if (TECHNOLOGY_FIELDS.backend.length % 4 == 0) {
+        backendGridColumns = '1fr 1fr 1fr 1fr';
+    } else if (TECHNOLOGY_FIELDS.backend.length % 3 == 0){
+        backendGridColumns = '1fr 1fr 1fr';
+    } else {
+        backendGridColumns = '1fr 1fr';
+    }
+
+    if (TECHNOLOGY_FIELDS.tools_cloud.length % 5 == 0) {
+        toolsCloudGridColumns = '1fr 1fr 1fr 1fr 1fr';
+    } else if (TECHNOLOGY_FIELDS.tools_cloud.length % 4 == 0) {
+        toolsCloudGridColumns = '1fr 1fr 1fr 1fr';
+    } else if (TECHNOLOGY_FIELDS.tools_cloud.length % 3 == 0){
+        toolsCloudGridColumns = '1fr 1fr 1fr';
+    } else {
+        toolsCloudGridColumns = '1fr 1fr';
+    }
+
+    if (TECHNOLOGY_FIELDS.embedded_systems.length % 5 == 0) {
+        embeddedSystemsGridColumns = '1fr 1fr 1fr 1fr 1fr';
+    } else if (TECHNOLOGY_FIELDS.embedded_systems.length % 4 == 0) {
+        embeddedSystemsGridColumns = '1fr 1fr 1fr 1fr';
+    } else if (TECHNOLOGY_FIELDS.embedded_systems.length % 3 == 0){
+        embeddedSystemsGridColumns = '1fr 1fr 1fr';
+    } else {
+        embeddedSystemsGridColumns = '1fr 1fr';
+    }
 
     return (
         <Container id="skills" fluid>
@@ -56,44 +70,34 @@ const Skills = () => {
                 <div className="underline"></div>
 
                 <div className="btn-container">
-                    <button onClick={() => setValue(0)} className={`field-btn ${value === 0 && 'active-btn'}`}>Frontend</button>
-                    <button onClick={() => setValue(1)} className={`field-btn ${value === 1 && 'active-btn'}`}>Backend</button>
-                    <button onClick={() => setValue(2)} className={`field-btn ${value === 2 && 'active-btn'}`}>Tools</button>
-                    <button onClick={() => setValue(3)} className={`field-btn ${value === 3 && 'active-btn'}`}>Embedded Systems</button>
-                    {/*<button onClick={() => setValue(4)} className={`field-btn ${value === 4 && 'active-btn'}`}>A.I.</button> */}
+                    {
+                        KNOWLEDGE_FIELDS.map((field, index) => {
+                            return (
+                                <button 
+                                  key={field} 
+                                  onClick={() => setValue(index)} 
+                                  className={`field-btn ${value === index && 'active-btn'}`
+                                }>
+                                  {field}
+                                </button>
+                            );
+                        })
+                    }
                 </div>
 
                 {value === 0 &&
                     <>
-                        <article id="frontend-content" className="field-content">
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={htmlIcon} alt="html icon" />
-                                <p>HTML</p>
-                            </div>
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={cssIcon} alt="css icon" />
-                                <p>CSS</p>
-                            </div>
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={javascriptIcon} alt="javascript icon" />
-                                <p>JavaScript</p>
-                            </div>
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={reactIcon} alt="react icon" />
-                                <p>React</p>
-                            </div>
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={reduxIcon} alt="redux icon" />
-                                <p>Redux</p>
-                            </div>
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={bootstrapIcon} alt="bootstrap icon" />
-                                <p>Bootstrap</p>
-                            </div>
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={semanticUiIcon} alt="semantic ui icon" />
-                                <p>Semantic UI</p>
-                            </div>
+                        <article id="frontend-content" className="field-content" style={{'gridTemplateColumns': `${frontendGridColumns}`}}>
+                        {
+                            TECHNOLOGY_FIELDS.frontend.map((technology, index) => {
+                                return (
+                                    <div key={index} className="technologies-grid-item" data-aos="zoom-in">
+                                        <Image className="technology-icon" src={technology.icon} alt={`${technology.name} icon`} />
+                                        <p>{technology.name}</p>
+                                    </div>
+                                );
+                            })
+                        }
                         </article>
                         <div className="field-info">
                             <p>
@@ -106,35 +110,17 @@ const Skills = () => {
                 }
                 {value === 1 &&
                     <>
-                        <article id="backend-content" className="field-content">
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={nodeIcon} alt="node icon" />
-                                <p>Node/Express</p>
-                            </div>
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={mongodbIcon} alt="mongodb icon" />
-                                <p>MongoDB</p>
-                            </div>
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={graphqlIcon} alt="graphql icon" />
-                                <p>GraphQL</p>
-                            </div>
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={apolloIcon} alt="apollo icon" />
-                                <p>Apollo Server</p>
-                            </div>
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={mySqlIcon} alt="mysql icon" />
-                                <p>MySQL</p>
-                            </div>
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={mariadbIcon} alt="mariadb icon" />
-                                <p>MariaDB</p>
-                            </div>
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={firebaseIcon} alt="firebase icon" />
-                                <p>Firebase</p>
-                            </div>
+                        <article id="backend-content" className="field-content" style={{'gridTemplateColumns': `${backendGridColumns}`}}>
+                        {
+                            TECHNOLOGY_FIELDS.backend.map((technology, index) => {
+                                return (
+                                    <div key={index} className="technologies-grid-item" data-aos="zoom-in">
+                                        <Image className="technology-icon" src={technology.icon} alt={`${technology.name} icon`} />
+                                        <p>{technology.name}</p>
+                                    </div>
+                                );
+                            })
+                        }
                         </article>
                         <div className="field-info">
                             <p>
@@ -142,34 +128,24 @@ const Skills = () => {
                                 {' '}some applications using <strong>GraphQL</strong> and <strong>Apollo Server</strong> for the backend.
                             </p>
                             <p>
-                                For mobile app development, I have used <strong>Firebase Realtime Database</strong> and <strong>SQLite</strong>.
+                                For mobile app development, I have used <strong>Firebase</strong> and <strong>SQLite</strong>.
                             </p>
                         </div>
                     </>
                 }
                 {value === 2 &&
                     <>
-                        <article id="tools-content" className="field-content">
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={vsCodeIcon} alt="visual studio code icon" />
-                                <p>VSCode</p>
-                            </div>
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={gitIcon} alt="git icon" />
-                                <p>Git</p>
-                            </div>
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={githubIcon} alt="github icon" />
-                                <p>GitHub</p>
-                            </div>
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={dockerIcon} alt="docker icon" />
-                                <p>Docker</p>
-                            </div>
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={herokuIcon} alt="heroku icon" />
-                                <p>Heroku</p>
-                            </div>
+                        <article id="tools-content" className="field-content" style={{'gridTemplateColumns': `${toolsCloudGridColumns}`}}>
+                        {
+                            TECHNOLOGY_FIELDS.tools_cloud.map((technology, index) => {
+                                return (
+                                    <div key={index} className="technologies-grid-item" data-aos="zoom-in">
+                                        <Image className="technology-icon" src={technology.icon} alt={`${technology.name} icon`} />
+                                        <p>{technology.name}</p>
+                                    </div>
+                                );
+                            })
+                        }
                         </article>
                         <div className="field-info">
                             <p>
@@ -181,31 +157,17 @@ const Skills = () => {
                 }
                 {value === 3 &&
                     <>
-                        <article id="embedded-systems-content" className="field-content">
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={androidJavaIcon} alt="android java icon" />
-                                <p>Android Java</p>
-                            </div>
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={cIcon} alt="c++ icon" />
-                                <p>C++</p>
-                            </div>
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={arduinoIcon} alt="arduino icon" />
-                                <p>Arduino</p>
-                            </div>
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={raspberryPiIcon} alt="raspberry pi icon" />
-                                <p>Raspberry Pi</p>
-                            </div>
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={loraIcon} alt="lora icon" />
-                                <p>LoRa</p>
-                            </div>
-                            <div className="technologies-grid-item" data-aos="zoom-in">
-                                <Image className="technology-icon" src={zigbeeIcon} alt="zigbee icon" />
-                                <p>Zigbee</p>
-                            </div>
+                        <article id="embedded-systems-content" className="field-content" style={{'gridTemplateColumns': `${embeddedSystemsGridColumns}`}}>
+                        {
+                            TECHNOLOGY_FIELDS.embedded_systems.map((technology, index) => {
+                                return (
+                                    <div key={index} className="technologies-grid-item" data-aos="zoom-in">
+                                        <Image className="technology-icon" src={technology.icon} alt={`${technology.name} icon`} />
+                                        <p>{technology.name}</p>
+                                    </div>
+                                );
+                            })
+                        }
                         </article>
                         <div className="field-info">
                             <p>
