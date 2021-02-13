@@ -4,7 +4,7 @@ import { FETCH_PROJECTS_QUERY } from '../utils/graphql';
 
 // Import components
 import Projects from '../components/all-projects/AllProjects';
-import Spinner from '../components/common/Spinner';
+import Loader from '../components/common/Loader';
 
 const AllProjects = () => {
     const {
@@ -22,7 +22,7 @@ const AllProjects = () => {
     }, []);
 
     if (loading) {
-        return <Spinner />
+        return <Loader />
     }
     if (error) {
         return <h1>Error: Something Wrong Happened</h1>;

@@ -4,7 +4,7 @@ import { FETCH_ORGANIZATIONS_QUERY } from '../utils/graphql';
 
 // Import components
 import OrganizationCard from '../components/organizations/OrganizationCard';
-import Spinner from '../components/common/Spinner';
+import Loader from '../components/common/Loader';
 
 
 const Organizations = () => {
@@ -15,7 +15,7 @@ const Organizations = () => {
     } = useQuery(FETCH_ORGANIZATIONS_QUERY);
     
     if (loading) {
-      return <Spinner />
+      return <Loader />
     }
     if (error) {
         return <h1>Error: Something Wrong Happened</h1>;

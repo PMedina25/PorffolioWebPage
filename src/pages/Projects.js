@@ -14,7 +14,7 @@ import { FiChevronRight } from 'react-icons/fi';
 // Import components
 import Sidebar from '../components/common/Sidebar';
 import ProjectCard from '../components/projects/ProjectCard';
-import Spinner from '../components/common/Spinner';
+import Loader from '../components/common/Loader';
 
 const Projects = () => {
     const {
@@ -28,7 +28,7 @@ const Projects = () => {
     }, []);
 
     if (loading) {
-        return <Spinner />
+        return <Loader />
     }
     if (error) {
         return <h1>Error: Something Wrong Happened</h1>;
