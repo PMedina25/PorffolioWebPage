@@ -12,9 +12,6 @@ const SliderCard = ({ name, description, startDate, endDate, url, logo }) => {
                         {description}
                     </Card.Text>
                 </Card.Body>
-                <Card.Footer>
-                    <small className="text-muted">{startDate}{' '}-{' '}{endDate}</small>
-                </Card.Footer>
             </div>
         </>
     );
