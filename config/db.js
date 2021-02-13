@@ -5,7 +5,19 @@ const colors = require('colors');
 // Load env vars
 dotenv.config();
 
-const connectDB = async (server, port) => {
+// Connection to MongoDB database
+mongoose.connect(process.env.MONGO_URI, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true, useFindAndModify: true })
+    .then(() => {
+        console.log('MongoDB Connected');
+        return server.listen({ port: port });
+    })
+    .then(res => {
+        console.log(`Server running at ${res.url}`)
+    })
+    .catch(err => console.log(err));
+
+
+/* const connectDB = async (server, port) => {
     try {
         const conn = await mongoose.connect(process.env.MONGO_URI, {
             useUnifiedTopology: true,
@@ -20,6 +32,6 @@ const connectDB = async (server, port) => {
         console.error(`Error: ${error.message}`.red);
         process.exit(1);
     }
-}
+} */
 
-module.exports = connectDB;
+// module.exports = connectDB;

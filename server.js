@@ -1,4 +1,5 @@
 const { ApolloServer } = require('apollo-server');
+const mongoose = require('mongoose');
 const path = require('path');
 const dotenv = require('dotenv');
 
@@ -8,6 +9,20 @@ const connectDB = require('./config/db');
 
 // Load env vars 
 dotenv.config();
+
+// Set port
+const port = process.env.PORT || 5000;
+
+// Connection to MongoDB database
+mongoose.connect(process.env.MONGO_URI, { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true, useFindAndModify: true })
+    .then(() => {
+        console.log('MongoDB Connected');
+        return server.listen({ port: port });
+    })
+    .then(res => {
+        console.log(`Server running at ${res.url}`)
+    })
+    .catch(err => console.log(err));
 
 // Serve static assets if in production
 if (process.env.NODE_ENV === 'production') {
@@ -26,8 +41,5 @@ const server = new ApolloServer({
     context: ( { req }) => ({ req })
 });
 
-// Set port
-const port = process.env.PORT || 5000;
-
 // Establish connection to mongoDB
-connectDB(server, port);
+//connectDB(server, port);
