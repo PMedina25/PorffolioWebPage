@@ -23,9 +23,9 @@ import awsLambdaIcon from '../assets/images/aws-lambda.png';
 import herokuIcon from '../assets/images/heroku.png';
 import netlifyIcon from '../assets/images/netlify.png';
 import androidJavaIcon from '../assets/images/android_w_java.png';
-import cIcon from '../assets/images/c++.png';
+import cIcon from '../assets/images/cplusplus.png';
 import arduinoIcon from '../assets/images/arduino.png';
-import raspberryPiIcon from '../assets/images/raspberrypi.webp';
+import raspberryPiIcon from '../assets/images/raspberrypi.png';
 import loraIcon from '../assets/images/lora.png';
 import zigbeeIcon from '../assets/images/zigbee.png';
 
