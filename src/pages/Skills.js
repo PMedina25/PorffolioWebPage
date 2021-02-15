@@ -20,41 +20,41 @@ const Skills = () => {
 
     let frontendGridColumns, backendGridColumns, toolsCloudGridColumns, embeddedSystemsGridColumns;
 
-    if (TECHNOLOGY_FIELDS.frontend.length % 5 == 0) {
+    if (TECHNOLOGY_FIELDS.frontend.length % 5 === 0) {
         frontendGridColumns = '1fr 1fr 1fr 1fr 1fr';
-    } else if (TECHNOLOGY_FIELDS.frontend.length % 4 == 0) {
+    } else if (TECHNOLOGY_FIELDS.frontend.length % 4 === 0) {
         frontendGridColumns = '1fr 1fr 1fr 1fr';
-    } else if (TECHNOLOGY_FIELDS.frontend.length % 3 == 0){
+    } else if (TECHNOLOGY_FIELDS.frontend.length % 3 === 0){
         frontendGridColumns = '1fr 1fr 1fr';
     } else {
         frontendGridColumns = '1fr 1fr';
     }
 
-    if (TECHNOLOGY_FIELDS.backend.length % 5 == 0) {
+    if (TECHNOLOGY_FIELDS.backend.length % 5 === 0) {
         backendGridColumns = '1fr 1fr 1fr 1fr 1fr';
-    } else if (TECHNOLOGY_FIELDS.backend.length % 4 == 0) {
+    } else if (TECHNOLOGY_FIELDS.backend.length % 4 === 0) {
         backendGridColumns = '1fr 1fr 1fr 1fr';
-    } else if (TECHNOLOGY_FIELDS.backend.length % 3 == 0){
+    } else if (TECHNOLOGY_FIELDS.backend.length % 3 === 0){
         backendGridColumns = '1fr 1fr 1fr';
     } else {
         backendGridColumns = '1fr 1fr';
     }
 
-    if (TECHNOLOGY_FIELDS.tools_cloud.length % 5 == 0) {
+    if (TECHNOLOGY_FIELDS.tools_cloud.length % 5 === 0) {
         toolsCloudGridColumns = '1fr 1fr 1fr 1fr 1fr';
-    } else if (TECHNOLOGY_FIELDS.tools_cloud.length % 4 == 0) {
+    } else if (TECHNOLOGY_FIELDS.tools_cloud.length % 4 === 0) {
         toolsCloudGridColumns = '1fr 1fr 1fr 1fr';
-    } else if (TECHNOLOGY_FIELDS.tools_cloud.length % 3 == 0){
+    } else if (TECHNOLOGY_FIELDS.tools_cloud.length % 3 === 0){
         toolsCloudGridColumns = '1fr 1fr 1fr';
     } else {
         toolsCloudGridColumns = '1fr 1fr';
     }
 
-    if (TECHNOLOGY_FIELDS.embedded_systems.length % 5 == 0) {
+    if (TECHNOLOGY_FIELDS.embedded_systems.length % 5 === 0) {
         embeddedSystemsGridColumns = '1fr 1fr 1fr 1fr 1fr';
-    } else if (TECHNOLOGY_FIELDS.embedded_systems.length % 4 == 0) {
+    } else if (TECHNOLOGY_FIELDS.embedded_systems.length % 4 === 0) {
         embeddedSystemsGridColumns = '1fr 1fr 1fr 1fr';
-    } else if (TECHNOLOGY_FIELDS.embedded_systems.length % 3 == 0){
+    } else if (TECHNOLOGY_FIELDS.embedded_systems.length % 3 === 0){
         embeddedSystemsGridColumns = '1fr 1fr 1fr';
     } else {
         embeddedSystemsGridColumns = '1fr 1fr';

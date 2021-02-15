@@ -2,194 +2,136 @@ import React, { useState, useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
+// import Swiper JS
+import Swiper from 'swiper';
+// import Swiper styles
+import 'swiper/swiper-bundle.css';
+
 // Import bootstrap components
 import { Card, Col, Container, Row } from 'react-bootstrap';
-
-// Import react icons
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 // Import components
 import Sidebar from '../common/Sidebar';
 import SliderCard from './SliderCard';
 
+ // core version + navigation, pagination modules:
+ import SwiperCore, { Navigation, Pagination, EffectCube, Autoplay } from 'swiper/core';
+
+ // configure Swiper to use modules
+ SwiperCore.use([Navigation, Pagination, EffectCube, Autoplay]);
+
+
 const OrganizationCard = ({ data }) => {
-    const eduOrgs = data.getOrganizations.filter(organization => organization.type === 'education');
-    const expOrgs = data.getOrganizations.filter(organization => organization.type === 'experience');
-    const certOrgs = data.getOrganizations.filter(organization => organization.type === 'certification');
-
-    const [eduOrganizations] = useState(eduOrgs);
-    const [expOrganizations] = useState(expOrgs);
-    const [certOrganizations] = useState(certOrgs);
-    const [eduIndex, setEduIndex] = useState(0);
-    const [expIndex, setExpIndex] = useState(0);
-    const [certIndex, setCertIndex] = useState(0);
-
-    useEffect(() => {
-      const lastEduIndex = eduOrganizations.length - 1;
-
-      if (eduIndex < 0) {
-        setEduIndex(lastEduIndex);
+  const eduOrgs = data.getOrganizations.filter(organization => organization.type === 'education');
+  const expOrgs = data.getOrganizations.filter(organization => organization.type === 'experience');
+  const certOrgs = data.getOrganizations.filter(organization => organization.type === 'certification');
+  
+  useEffect(() => {
+    // init Swiper:
+    const swiper = new Swiper('.swiper-container', {
+      effect: 'cube',
+      grabCursor: true,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+      },
+      cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
       }
-      if (eduIndex > lastEduIndex) {
-        setEduIndex(0);
-      }
-    }, [eduIndex, eduOrganizations]);
+    });
+  }, []);
 
-    useEffect(() => {
-        const lastExpIndex = expOrganizations.length - 1;
+  useEffect(() => {
+    Aos.init({duration: 1000});
+  }, []);
 
-        if (expIndex < 0) {
-            setExpIndex(lastExpIndex);
-          }
-        if (expIndex > lastExpIndex) {
-            setExpIndex(0);
-        }
-    }, [expIndex, expOrganizations]);
+  return (
+      <Container id="organizations" fluid>
+          <Sidebar />
+          <Row>
+            <Col className="card-column" xs={12} md={4} lg={4}>
+              <h1 className="organization-title" data-aos="fade-down">Education</h1>
+              <div className="underline"></div>
+              <div className="swiper-container" data-aos="flip-down">
+                <div className="swiper-wrapper">
 
-    useEffect(() => {
-        const lastCertIndex = certOrganizations.length - 1;
-
-        if (certIndex < 0) {
-            setCertIndex(lastCertIndex);
-          }
-        if (certIndex > lastCertIndex) {
-            setCertIndex(0);
-        }
-    }, [certIndex, certOrganizations])
-
-    useEffect(() => {
-      let eduSlider = setInterval(() => {
-        setEduIndex(eduIndex + 1);
-      }, 5000);
-      return () => clearInterval(eduSlider);
-    }, [eduIndex]);
-
-    useEffect(() => {
-      let expSlider = setInterval(() => {
-        setExpIndex(expIndex + 1);
-      }, 5000);
-      return () => clearInterval(expSlider);
-    }, [expIndex]);
-
-    useEffect(() => {
-      let certSlider = setInterval(() => {
-        setCertIndex(certIndex + 1);
-      }, 5000);
-      return () => clearInterval(certSlider);
-    }, [certIndex]);
-
-    useEffect(() => {
-      Aos.init({duration: 1000});
-    }, []);
-
-    return (
-        <Container id="organizations" fluid>
-            <Sidebar />
-            <Row>
-              <Col className="card-column" xs={12} md={4} lg={4}>
-                <h1 data-aos="fade-down">Education</h1>
-                <div className="underline"></div>
-                <div className="cards-container" data-aos="flip-down">
-                    {eduOrganizations &&
-                    eduOrganizations
-                    .map((organization, organizationIndex) => {
-                        
-                        let position = 'nextSlide';
-                        if (organizationIndex === eduIndex) {
-                        position = 'activeSlide';
-                        }
-                        if (organizationIndex === eduIndex - 1 || (eduIndex === 0 && organizationIndex === eduOrganizations.length - 1)) {
-                        position = 'lastSlide';
-                        }
-
-                        return (
-                            <Card key={organization.id} className={"m-auto slider-card " + position}>
-                                <FiChevronLeft className="left-arrow-slider" onClick={() => setEduIndex(eduIndex - 1)} />
-                                <SliderCard
-                                    name={organization.name} 
-                                    description={organization.description} 
-                                    startDate={organization.startDate} 
-                                    endDate={organization.endDate} 
-                                    url={organization.url} 
-                                    logo={organization.image} />
-                                <FiChevronRight className="right-arrow-slider" onClick={() => setEduIndex(eduIndex + 1)} />
-                            </Card>
-                        );
+                  {eduOrgs &&
+                  eduOrgs
+                  .map((organization, organizationIndex) => {
+                      return (
+                          <div key={organizationIndex} className="swiper-slide" style={{'backgroundColor': 'white', 'color': 'black'}}>
+                              <SliderCard
+                                  name={organization.name} 
+                                  description={organization.description} 
+                                  startDate={organization.startDate} 
+                                  endDate={organization.endDate} 
+                                  url={organization.url} 
+                                  logo={organization.image} />
+                          </div>
+                      );
                     })
-                    }
+                  }
                 </div>
-              </Col>
-              <Col className="card-column" xs={12} md={4} lg={4}>
-                <h1 data-aos="fade-down">Experience</h1>
-                <div className="underline"></div>
-                <div className="cards-container" data-aos="flip-down">
-                    {expOrganizations &&
-                    expOrganizations
-                    .map((organization, organizationIndex) => {
-                        
-                        let position = 'nextSlide';
-                        if (organizationIndex === expIndex) {
-                        position = 'activeSlide';
-                        }
-                        
-                        if (organizationIndex === expIndex - 1 || (expIndex === 0 && organizationIndex === expOrganizations.length - 1)) {
-                        position = 'lastSlide';
-                        }
-                        
+              </div>
+            </Col>
+            <Col className="card-column" xs={12} md={4} lg={4}>
+              <h1 className="organization-title" data-aos="fade-down">Experience</h1>
+              <div className="underline"></div>
+              <div className="swiper-container" data-aos="flip-down">
+                <div className="swiper-wrapper">
 
-                        return (
-                            <Card key={organization.id} className={"m-auto slider-card " + position}>
-                                <FiChevronLeft className="left-arrow-slider" onClick={() => setExpIndex(expIndex - 1)} />
-                                <SliderCard
-                                    name={organization.name} 
-                                    description={organization.description} 
-                                    startDate={organization.startDate} 
-                                    endDate={organization.endDate} 
-                                    url={organization.url} 
-                                    logo={organization.image} />
-                                <FiChevronRight className="right-arrow-slider" onClick={() => setExpIndex(expIndex + 1)} />
-                            </Card>
-                        );
+                  {expOrgs &&
+                  expOrgs
+                  .map((organization, organizationIndex) => {
+                      return (
+                          <div key={organizationIndex} className="swiper-slide" style={{'backgroundColor': 'white', 'color': 'black'}}>
+                              <SliderCard
+                                  name={organization.name} 
+                                  description={organization.description} 
+                                  startDate={organization.startDate} 
+                                  endDate={organization.endDate} 
+                                  url={organization.url} 
+                                  logo={organization.image} />
+                          </div>
+                      );
                     })
-                    }
+                  }
                 </div>
-              </Col>
-              <Col className="card-column" xs={12} md={4} lg={4}>
-                <h1 data-aos="fade-down">Certifications</h1>
-                <div className="underline"></div>
-                <div className="cards-container" data-aos="flip-down">
-                    {certOrganizations &&
-                    certOrganizations
-                    .map((organization, organizationIndex) => {
-                        
-                        let position = 'nextSlide';
-                        if (organizationIndex === certIndex) {
-                        position = 'activeSlide';
-                        }
-                        if (organizationIndex === certIndex - 1 || (certIndex === 0 && organizationIndex === certOrganizations.length - 1)) {
-                        position = 'lastSlide';
-                        }
+              </div>
+            </Col>
+            <Col className="card-column" xs={12} md={4} lg={4}>
+              <h1 className="organization-title" data-aos="fade-down">Certifications</h1>
+              <div className="underline"></div>
+              <div className="swiper-container" data-aos="flip-down">
+                <div className="swiper-wrapper">
 
-                        return (
-                            <Card key={organization.id} className={"m-auto slider-card " + position}>
-                                <FiChevronLeft className="left-arrow-slider" onClick={() => setCertIndex(certIndex - 1)} />
-                                <SliderCard
-                                    name={organization.name} 
-                                    description={organization.description} 
-                                    startDate={organization.startDate} 
-                                    endDate={organization.endDate} 
-                                    url={organization.url} 
-                                    logo={organization.image} />
-                                <FiChevronRight className="right-arrow-slider" onClick={() => setCertIndex(certIndex + 1)} />
-                            </Card>
-                        );
+                  {certOrgs &&
+                  certOrgs
+                  .map((organization, organizationIndex) => {
+                      return (
+                          <div key={organizationIndex} className="swiper-slide" style={{'backgroundColor': 'white', 'color': 'black'}}>
+                              <SliderCard
+                                  name={organization.name} 
+                                  description={organization.description} 
+                                  startDate={organization.startDate} 
+                                  endDate={organization.endDate} 
+                                  url={organization.url} 
+                                  logo={organization.image} />
+                          </div>
+                      );
                     })
-                    }
+                  }
                 </div>
-              </Col>
-            </Row>
-          </Container>
-    )
+              </div>
+            </Col>
+          </Row>
+        </Container>
+  )
 }
+
 
 export default OrganizationCard;
