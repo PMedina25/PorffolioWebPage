@@ -7,7 +7,7 @@ const SliderCard = ({ name, description, startDate, endDate, url, logo }) => {
             <div className="card-content">
                 <Image className="card-slider-image" src={logo} roundedCircle/>
                 <Card.Body>
-                    <Card.Title>{name}</Card.Title>
+                    <Card.Title className="card-title">{name}</Card.Title>
                     <Card.Text>
                         {description}
                     </Card.Text>
