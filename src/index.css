@@ -1,6 +1,6 @@
 :root {
   --main-white: #fff;
-  --main-red: #be3144;
+  --light-blue: #be3144;
   --main-dark-blue: hsl(222, 29%, 38%);
   --main-gray: #303841;
 
@@ -363,16 +363,9 @@ strong {
   color: white;
 }
 
-.fields-center {
-  width: 80vw;
-  height: 100%;
-  margin: 0 auto;
-  max-width: var(--max-width);
-}
-
-.fields-center h1 {
+#skills h1 {
   text-align: center;
-  margin: 0;
+  font-weight: 700;
 }
 
 .underline {
@@ -401,12 +394,13 @@ strong {
   cursor: pointer;
   padding: 0.25rem 0;
   line-height: 1;
-  outline-color: var(--main-red);
-  color: white;
+  outline-color: var(--light-blue);
+  color: var(--secondary-color);
 }
+
 .field-btn:hover {
-  color: var(--main-red);
-  box-shadow: 0 2px var(--main-red);
+  color: var(--light-blue);
+  box-shadow: 0 2px var(--light-blue);
 }
 
 .field-btn:focus {
@@ -414,8 +408,8 @@ strong {
 }
 
 .active-btn {
-  color: var(--main-red);
-  box-shadow: 0 2px var(--main-red);
+  color: var(--light-blue);
+  box-shadow: 0 2px var(--light-blue);
 }
 
 .field-content {
@@ -423,7 +417,7 @@ strong {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
-  border: 4px solid var(--main-red);
+  border: 4px solid var(--light-blue);
   border-radius: 50px;
   padding: 1.25rem;
   margin-left: auto;
@@ -604,7 +598,7 @@ strong {
   margin-top: auto;
   margin-bottom: auto;
   font-size: 4rem;
-  color: var(--main-red);
+  color: var(--light-blue);
   cursor: pointer;
 }
 
@@ -722,7 +716,7 @@ strong {
 }
 
 .btn-project {
-  background-color: var(--main-red) !important;
+  background-color: var(--light-blue) !important;
   border: 0px !important;
   font-family: 'Roboto Mono', sans-serif;
   transition: 0.3s ease-out !important;
@@ -881,7 +875,7 @@ footer {
   padding: 2rem;
   background-color: var(--main-gray);
   background-image: linear-gradient(62deg, #434649 0%, #181719 100%);
-  border-top: 4px solid var(--main-red);
+  border-top: 4px solid var(--light-blue);
 }
 
 footer span {
