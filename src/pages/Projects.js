@@ -35,9 +35,7 @@ const Projects = () => {
     }
 
     return (
-        <Container id="projects" fluid>
-            <Sidebar />
-
+        <div id="projects">
             <h1 style={{'textAlign': 'center'}} data-aos="zoom-in">Projects</h1>
             <div className="underline"></div>
             
@@ -89,7 +87,7 @@ const Projects = () => {
                      
                 </Row>
             </CardDeck>
-      </Container>
+      </div>
     );
 }
 

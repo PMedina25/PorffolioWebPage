@@ -50,8 +50,7 @@ const OrganizationCard = ({ data }) => {
   }, []);
 
   return (
-      <Container id="organizations" fluid>
-          <Sidebar />
+      <div id="organizations">
           <Row>
             <Col className="card-column" xs={12} md={4} lg={4}>
               <h1 className="organization-title" data-aos="fade-down">Education</h1>
@@ -129,7 +128,7 @@ const OrganizationCard = ({ data }) => {
               </div>
             </Col>
           </Row>
-        </Container>
+        </div>
   )
 }
 
