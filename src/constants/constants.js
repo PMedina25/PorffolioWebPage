@@ -6,7 +6,10 @@ import reactIcon from '../assets/images/react.png';
 import reduxIcon from '../assets/images/Redux.png';
 import bootstrapIcon from '../assets/images/bootstrap.png';
 import semanticUiIcon from '../assets/images/semantic-ui.png';
+import nextjsIcon from '../assets/images/nextjs.png';
+import enzymeIcon from '../assets/images/enzyme.png';
 import nodeIcon from '../assets/images/nodejs.png';
+import expressIcon from '../assets/images/express.png';
 import mongodbIcon from '../assets/images/mongodb.png';
 import graphqlIcon from '../assets/images/graphql.png';
 import apolloIcon from '../assets/images/apollo.png';
@@ -15,6 +18,8 @@ import mariadbIcon from '../assets/images/mariadb.png';
 import firebaseIcon from '../assets/images/firebase.png';
 import vsCodeIcon from '../assets/images/vscode.png';
 import postmanIcon from '../assets/images/postman.png';
+import jestIcon from '../assets/images/jest.png';
+import mochaIcon from '../assets/images/mocha.png';
 import gitIcon from '../assets/images/git.png';
 import githubIcon from '../assets/images/github.png';
 import dockerIcon from '../assets/images/docker.png';
@@ -69,12 +74,20 @@ export const TECHNOLOGY_FIELDS = {
         {
             name: 'Semantic UI',
             icon: semanticUiIcon
+        },
+        {
+            name: 'Next.js',
+            icon: nextjsIcon
         }
     ],
     'backend': [
         {
-            name: 'Node/Express',
+            name: 'Node.js',
             icon: nodeIcon
+        },
+        {
+            name: 'Express',
+            icon: expressIcon
         },
         {
             name: 'MongoDB',
@@ -95,6 +108,10 @@ export const TECHNOLOGY_FIELDS = {
         {
             name: 'MariaDB',
             icon: mariadbIcon
+        },
+        {
+            name: 'Firebase',
+            icon: firebaseIcon
         }
     ],
     'tools_cloud': [
@@ -107,6 +124,19 @@ export const TECHNOLOGY_FIELDS = {
             icon: postmanIcon
         },
         {
+            name: 'Jest',
+            icon: jestIcon
+        },
+        {
+            name: 'Mocha',
+            icon: mochaIcon
+        },
+        
+        {
+            name: 'Enzyme',
+            icon: enzymeIcon
+        },
+        {
             name: 'Git',
             icon: gitIcon
         },
@@ -117,10 +147,6 @@ export const TECHNOLOGY_FIELDS = {
         {
             name: 'Docker',
             icon: dockerIcon
-        },
-        {
-            name: 'Firebase',
-            icon: firebaseIcon
         },
         {
             name: 'AWS Amplify',
