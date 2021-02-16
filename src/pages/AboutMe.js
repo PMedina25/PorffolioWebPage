@@ -35,13 +35,10 @@ const AboutMe = () => {
     }, []);
 
     return (
-        <Container id="about-me" fluid>
-            <Sidebar />
-
-        
+        <div id="about">
             <Row>
-                <Col md={12} style={{'textAlign': 'center'}}>
-                    <h1 style={{'textAlign': 'center'}}>About Me</h1>
+                <Col md={12}>
+                    <h1>About Me</h1>
                     <div className="underline"></div>
                 </Col>
             </Row>
@@ -86,7 +83,7 @@ const AboutMe = () => {
                     })}
                 </Col>
             </Row> 
-        </Container>
+        </div>
     );
 }
 

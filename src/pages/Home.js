@@ -18,7 +18,7 @@ const Home = () => {
         <>
             <div id="home">
                 <div id="home-text">
-                    <h1 style={{'color': '#CCD6F6'}}>Hi, this is Pablo</h1>
+                    <h1>Hi, this is Pablo</h1>
                     <h1 style={{'color': '#8892B0'}}>Full Stack Developer (MERN Stack)</h1>
                     <p style={{'color': '#8892B0'}}>I'm a Computer Engineer based in Seville and Amsterdam, specialized in building web and mobile apps, both the frontend and the backend.</p>
                 </div>

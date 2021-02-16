@@ -8,6 +8,7 @@
 
   --main-color: #0a192f;
   --secondary-color: #8892b0;
+  --main-white: #ccd6f6;
 
   --light-blue: #64ffda;
 
@@ -96,6 +97,19 @@ body,
   font-weight: 500;
 }
 
+h1 {
+  color: var(--main-white);
+}
+
+p {
+  color: var(--secondary-color);
+  font-weight: 400;
+}
+
+strong {
+  color: var(--light-blue);
+}
+
 /* =============
  * Navbar
  * =============
@@ -122,6 +136,7 @@ body,
 
 .link-item:hover {
   color: var(--light-blue) !important;
+  transform: translateX(-5px);
   transition: 0.3s ease-out;
 }
 
@@ -137,7 +152,6 @@ body,
   flex-direction: column;
   justify-content: center;
   padding: 1rem;
-  color: white;
   margin: 0;
   transition: 0.3s ease-in-out;
 }
@@ -174,16 +188,6 @@ body,
 .social-network-icon:hover {
   transform: translateY(-1rem);
   transition: 0.3s ease-out;
-}
-
-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.8;
 }
 
 @media (max-width: 992px) {
@@ -234,12 +238,17 @@ video {
  * =============
 */
 
-#about-me {
+#about {
   width: 100%;
   padding: 2rem 4rem 2rem 4rem;
   margin: 0;
   text-align: justify;
   color: white;
+}
+
+#about h1 {
+  text-align: center;
+  font-weight: 700;
 }
 
 #about-me-section {
@@ -263,14 +272,14 @@ video {
   height: 100%;
   width: 100%;
   z-index: 0;
-  border: 4px solid var(--main-red);
+  border: 4px solid var(--light-blue);
   border-radius: 25px;
 }
 
 .question {
   padding: 1rem 1.5rem;
   margin-bottom: 1rem;
-  border: 2px solid var(--main-red);
+  border: 2px solid var(--light-blue);
   color: white;
   border-radius: var(--radius);
   box-shadow: var(--light-shadow);
@@ -370,7 +379,7 @@ video {
   width: 5rem;
   height: 0.25rem;
   margin-bottom: 2rem;
-  background: var(--main-red);
+  background: var(--light-blue);
   margin-left: auto;
   margin-right: auto;
 }
