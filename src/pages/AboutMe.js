@@ -4,7 +4,7 @@ import 'aos/dist/aos.css';
 import aboutMeData from '../data/about-me-data';
 
 // Import components
-import Sidebar from '../components/common/Sidebar';
+import Sidebar from '../components/common/Navbar';
 import Question from '../components/about-me/Question';
 
 // Import leaflet components

@@ -11,7 +11,7 @@ import 'swiper/swiper-bundle.css';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 
 // Import components
-import Sidebar from '../common/Sidebar';
+import Sidebar from '../common/Navbar';
 import SliderCard from './SliderCard';
 
  // core version + navigation, pagination modules:

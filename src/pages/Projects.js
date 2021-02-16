@@ -12,7 +12,7 @@ import { CardDeck, Container, Row } from 'react-bootstrap';
 import { FiChevronRight } from 'react-icons/fi';
 
 // Import components
-import Sidebar from '../components/common/Sidebar';
+import Sidebar from '../components/common/Navbar';
 import ProjectCard from '../components/projects/ProjectCard';
 import Loader from '../components/common/Loader';
 
@@ -89,10 +89,6 @@ const Projects = () => {
                      
                 </Row>
             </CardDeck>
-            <Link to={'/allprojects'} id="btn-show-all" className="btn-project btn">
-                Show all
-                <FiChevronRight id="show-all-arrow" size={32} fontWeight={700}/>
-            </Link>
       </Container>
     );
 }

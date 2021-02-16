@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 import { Container, Image } from 'react-bootstrap';
 
 // Import components
-import Sidebar from '../components/common/Sidebar';
+import Sidebar from '../components/common/Navbar';
 
 // Import skills constants
 import { KNOWLEDGE_FIELDS, TECHNOLOGY_FIELDS } from '../constants/constants';
