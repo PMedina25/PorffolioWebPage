@@ -6,13 +6,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 
 // Import pages
+import NavBar from './components/common/Navbar';
 import Home from './pages/Home';
 import AboutMe from './pages/AboutMe';
 import Skills from './pages/Skills';
 import Organizations from './pages/Organizations';
 import Projects from './pages/Projects';
 import AllProjects from './pages/AllProjects';
-import NavBar from './components/common/Navbar';
+import Footer from './pages/Footer';
+
 
 function App() {
   return (
@@ -27,6 +29,7 @@ function App() {
         <Router>
           <Route path="/projects" component={AllProjects} exact />
         </Router>
+        <Footer />
       </Container>
     </>
   );
