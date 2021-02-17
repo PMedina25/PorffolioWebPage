@@ -36,8 +36,7 @@ const Projects = () => {
 
     return (
         <div id="projects">
-            <h1 style={{'textAlign': 'center'}} data-aos="zoom-in">Projects</h1>
-            <div className="underline"></div>
+            <h1 data-aos="zoom-in"><span className="navigation-color">{'<'}</span>Projects<span className="navigation-color">{' />'}</span></h1>
             
             <CardDeck data-aos="zoom-in">
                 <Row>
@@ -87,6 +86,7 @@ const Projects = () => {
                      
                 </Row>
             </CardDeck>
+            
       </div>
     );
 }

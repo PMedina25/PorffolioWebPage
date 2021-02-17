@@ -594,39 +594,6 @@ strong {
   font-weight: 400;
 }
 
-.card-footer {
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-bottom: 0;
-  margin-top: 0 !important;
-  display: sticky !important;
-  bottom: 0 !important;
-}
-
-.left-arrow-slider,
-.right-arrow-slider {
-  margin-top: auto;
-  margin-bottom: auto;
-  font-size: 4rem;
-  color: var(--light-blue);
-  cursor: pointer;
-}
-
-.activeSlide {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.lastSlide {
-  pointer-events: none;
-  transform: translateX(-100%);
-}
-
-.nextSlide {
-  pointer-events: none;
-  opacity: 0;
-  transform: translateX(100%);
-}
-
 @media (max-width: 768px) {
   .card-column:nth-child(2),
   .card-column:nth-child(3) {
@@ -690,11 +657,19 @@ strong {
   width: 100%;
 }
 
+#projects h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
 .project-card {
-  color: black;
+  color: var(--main-white);
   height: 100%;
-  margin: 0 !important;
+  margin: 2rem 0 0 0 !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--light-blue) !important;
+  background-color: transparent !important;
 }
 
 .project-card-hover {
@@ -769,6 +744,35 @@ span {
   color: black !important;
 }
 
+.project-modal {
+  color: var(--main-white);
+}
+
+.project-modal-header {
+  background-color: var(--main-color) !important;
+  border: 1px solid var(--light-blue) !important;
+}
+
+.project-modal-header button span {
+  color: var(--light-blue) !important;
+}
+
+.project-modal-body {
+  background-color: var(--main-color) !important;
+  border-left: 1px solid var(--light-blue) !important;
+  border-right: 1px solid var(--light-blue) !important;
+}
+
+.project-modal-footer {
+  background-color: var(--main-color) !important;
+  border: 1px solid var(--light-blue) !important;
+}
+
+.project-modal-footer a:hover {
+  text-decoration: none;
+  color: var(--light-blue);
+}
+
 .modal-image {
   width: 100%;
 }
@@ -783,6 +787,10 @@ span {
   margin: 1rem;
 }
 
+.project-modal-description p {
+  text-align: justify;
+}
+
 .project-technologies-grid {
   width: 50% !important;
   display: grid;
@@ -791,9 +799,14 @@ span {
   padding: 1rem;
 }
 
+.project-technology-icon {
+  color: var(--light-blue);
+}
+
 .technology-name {
   display: inline-block;
   margin-left: 10px;
+  color: var(--secondary-color);
 }
 
 @media (max-width: 992px) {
