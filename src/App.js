@@ -23,7 +23,6 @@ function App() {
       <Container>
         <Home />
         <AboutMe />
-        <Skills />
         <Organizations />
         <Projects />
         <Router>

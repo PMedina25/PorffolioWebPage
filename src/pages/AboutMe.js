@@ -5,7 +5,6 @@ import 'aos/dist/aos.css';
 // Import react icons
 import { 
     FaDocker,
-    FaMapMarkerAlt,
     FaNodeJs,
     FaReact
 } from 'react-icons/fa';
@@ -25,17 +24,15 @@ import L from 'leaflet';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
 // Import bootstrap components
-import { Col, Row  } from 'react-bootstrap';
+import { Button, Col, Row  } from 'react-bootstrap';
 
-console.log(L);
+const API_KEY = '651fb2fadc414211aebeac8a17a62aeb';
 
 const markerIcon = new L.Icon({
-    iconUrl: FaMapMarkerAlt,
-    iconSize:     [38, 95], // size of the icon
-    shadowSize:   [50, 64], // size of the shadow
-    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-    shadowAnchor: [4, 62],  // the same for the shadow
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    iconUrl: `https://api.geoapify.com/v1/icon/?type=material&color=%2364ffda&icon=code&iconType=awesome&noWhiteCircle&apiKey=${API_KEY}`,
+    iconSize: [31, 46], // size of the icon
+    iconAnchor: [15.5, 42], // point of the icon which will correspond to marker's location
+    popupAnchor: [0, -45] // point from which the popup should open relative to the iconAnchor
 });
 
 const AboutMe = () => {
@@ -62,7 +59,7 @@ const AboutMe = () => {
         <div id="about">
             <Row>
                 <Col md={12}>
-                    <h1><span className="navigation-color">{'<'}</span>About Me{'  '}<span className="navigation-color">{'/>'}</span></h1>
+                    <h1 data-aos="fade-up"><span className="navigation-color">{'<'}</span>About Me{'  '}<span className="navigation-color">{'/>'}</span></h1>
                 </Col>
             </Row>
             
@@ -105,7 +102,7 @@ const AboutMe = () => {
                     </div>
                 </Col>
                 <Col xs={12} md={12} lg={6} id="map-col" data-aos="fade-right">
-                    <div id="about-me-map"  data-aos="flip-right">
+                    <div id="about-me-map" data-aos="flip-right">
                         <MapContainer center={[locationData.lyon.lat, locationData.lyon.lng]} zoom={3} scrollWheelZoom={true} id="mapContainer">
                             <TileLayer
                                 attribution="© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
@@ -113,27 +110,30 @@ const AboutMe = () => {
                             />
                             <Marker position={[locationData.sevilla.lat, locationData.sevilla.lng]} icon={markerIcon}>
                                 <Popup>
-                                    <strong>Education: Universidad de Sevilla</strong> <br /> Computer Engineering Degree
+                                    <strong style={{'color': '#0a192f'}}>Education: Universidad de Sevilla</strong> <br /> Computer Engineering Degree
                                     <br />
                                     <br />
-                                    <strong>Education: Universidad Pablo de Olavide</strong> <br /> Master in Computer Engineering
+                                    <strong style={{'color': '#0a192f'}}>Education: Universidad Pablo de Olavide</strong> <br /> Master in Computer Engineering
                                     <br />
                                     <br />
-                                    <strong>Experience: TTI Norte</strong> <br /> Internet of Things Developer
+                                    <strong style={{'color': '#0a192f'}}>Experience: TTI Norte</strong> <br /> Internet of Things Developer
                                 </Popup>
                             </Marker>
-                            <Marker position={[locationData.amsterdam.lat, locationData.amsterdam.lng]}>
-                                <Popup>
-                                    <strong>Education: Hogeschool van Amsterdam</strong> <br /> Mobile Development Minor
+                            <Marker position={[locationData.amsterdam.lat, locationData.amsterdam.lng]} icon={markerIcon}>
+                                <Popup style={{'backgroundColor': 'red'}}>
+                                    <strong style={{'color': '#0a192f'}}>Education: Hogeschool van Amsterdam</strong> <br /> Mobile Development Minor
                                     <br />
                                     <br />
-                                    <strong>Experience: TamTam (part of dept)</strong> <br /> iOS App Developer
+                                    <strong style={{'color': '#0a192f'}}>Experience: TamTam (part of dept)</strong> <br /> iOS App Developer
                                 </Popup>
                             </Marker>
                         </MapContainer>
                     </div>
                 </Col>
             </Row> 
+            <Row style={{'padding-left': '2rem'}}>
+                <button type='button' className='general-button'>Show All Technologies</button>
+            </Row>
         </div>
     );
 }

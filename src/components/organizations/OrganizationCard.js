@@ -53,8 +53,7 @@ const OrganizationCard = ({ data }) => {
       <div id="organizations">
           <Row>
             <Col className="card-column" xs={12} md={4} lg={4}>
-              <h1 className="organization-title" data-aos="fade-down">Education</h1>
-              <div className="underline"></div>
+              <h1 className="organization-title" data-aos="fade-down"><span className="navigation-color">{'<'}</span>Education{'  '}<span className="navigation-color">{'/>'}</span></h1>
               <div className="swiper-container" data-aos="flip-down">
                 <div className="swiper-wrapper">
 
@@ -78,8 +77,7 @@ const OrganizationCard = ({ data }) => {
               </div>
             </Col>
             <Col className="card-column" xs={12} md={4} lg={4}>
-              <h1 className="organization-title" data-aos="fade-down">Experience</h1>
-              <div className="underline"></div>
+              <h1 className="organization-title" data-aos="fade-down"><span className="navigation-color">{'<'}</span>Experience{'  '}<span className="navigation-color">{'/>'}</span></h1>
               <div className="swiper-container" data-aos="flip-down">
                 <div className="swiper-wrapper">
 
@@ -103,8 +101,7 @@ const OrganizationCard = ({ data }) => {
               </div>
             </Col>
             <Col className="card-column" xs={12} md={4} lg={4}>
-              <h1 className="organization-title" data-aos="fade-down">Certifications</h1>
-              <div className="underline"></div>
+              <h1 className="organization-title" data-aos="fade-down"><span className="navigation-color">{'<'}</span>Certifications{'  '}<span className="navigation-color">{'/>'}</span></h1>
               <div className="swiper-container" data-aos="flip-down">
                 <div className="swiper-wrapper">
 
