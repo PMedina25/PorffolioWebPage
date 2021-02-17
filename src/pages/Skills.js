@@ -62,8 +62,7 @@ const Skills = () => {
 
     return (
         <div id="skills">
-            <h1>Skills</h1>
-            <div className="underline"></div>
+            <h1><span className="navigation-color">{'<'}</span>Skills{'  '}<span className="navigation-color">{'/>'}</span></h1>
 
             <div className="btn-container">
                 {
