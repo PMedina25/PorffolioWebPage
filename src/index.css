@@ -631,6 +631,7 @@ strong {
 
 .project-modal-body {
   background-color: var(--main-color) !important;
+  border-bottom: 1px solid var(--light-blue) !important;
   border-left: 1px solid var(--light-blue) !important;
   border-right: 1px solid var(--light-blue) !important;
 }
@@ -789,8 +790,6 @@ strong {
   width: 50%;
   padding: 2rem;
   border-radius: 8px;
-  background-color: var(--main-gray);
-  background-image: linear-gradient(62deg, #434649 0%, #181719 100%);
 }
 
 /* =============

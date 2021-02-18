@@ -57,7 +57,7 @@ const Projects = () => {
                 }
                 {
                     data.getProjects
-                        .filter(project => project.id === '5ff8381ba728a819889de759')
+                        .filter(project => project.id === '5ff82d75a728a819889de753')
                         .map(project => <ProjectCard 
                                             key={project.id}
                                             title={project.title} 
