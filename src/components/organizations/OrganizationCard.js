@@ -11,7 +11,7 @@ import 'swiper/swiper-bundle.css';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 
 // Import components
-import Sidebar from '../common/Sidebar';
+import Sidebar from '../common/Navbar';
 import SliderCard from './SliderCard';
 
  // core version + navigation, pagination modules:
@@ -50,12 +50,10 @@ const OrganizationCard = ({ data }) => {
   }, []);
 
   return (
-      <Container id="organizations" fluid>
-          <Sidebar />
+      <div id="organizations">
           <Row>
-            <Col className="card-column" xs={12} md={4} lg={4}>
-              <h1 className="organization-title" data-aos="fade-down">Education</h1>
-              <div className="underline"></div>
+            <Col className="card-column" xs={12} md={6} lg={4}>
+              <h1 className="organization-title" data-aos="fade-down"><span className="navigation-color">{'<'}</span>Education{'  '}<span className="navigation-color">{'/>'}</span></h1>
               <div className="swiper-container" data-aos="flip-down">
                 <div className="swiper-wrapper">
 
@@ -78,9 +76,8 @@ const OrganizationCard = ({ data }) => {
                 </div>
               </div>
             </Col>
-            <Col className="card-column" xs={12} md={4} lg={4}>
-              <h1 className="organization-title" data-aos="fade-down">Experience</h1>
-              <div className="underline"></div>
+            <Col className="card-column" xs={12} md={6} lg={4}>
+              <h1 className="organization-title" data-aos="fade-down"><span className="navigation-color">{'<'}</span>Experience{'  '}<span className="navigation-color">{'/>'}</span></h1>
               <div className="swiper-container" data-aos="flip-down">
                 <div className="swiper-wrapper">
 
@@ -103,9 +100,8 @@ const OrganizationCard = ({ data }) => {
                 </div>
               </div>
             </Col>
-            <Col className="card-column" xs={12} md={4} lg={4}>
-              <h1 className="organization-title" data-aos="fade-down">Certifications</h1>
-              <div className="underline"></div>
+            <Col className="card-column" xs={12} md={6} lg={4}>
+              <h1 className="organization-title" data-aos="fade-down"><span className="navigation-color">{'<'}</span>Certifications{'  '}<span className="navigation-color">{'/>'}</span></h1>
               <div className="swiper-container" data-aos="flip-down">
                 <div className="swiper-wrapper">
 
@@ -129,7 +125,7 @@ const OrganizationCard = ({ data }) => {
               </div>
             </Col>
           </Row>
-        </Container>
+        </div>
   )
 }
 

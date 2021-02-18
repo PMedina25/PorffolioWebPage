@@ -24,13 +24,10 @@ const ProjectCard = ({ title, description, technologies, startDate, endDate, url
                 <Card.Text  style={{'textAlign': 'justify'}}>
                     {description}
                 </Card.Text>
-                <Button type="button" className="btn-project btn-show-more" onClick={() => setModalShow(true)}>
+                <button type="button" className="general-button" onClick={() => setModalShow(true)}>
                     Show More
-                </Button>
+                </button>
             </Card.Body>
-            <Card.Footer style={{'textAlign': 'center', 'fontFamily': 'Roboto Mono, sans-serif'}}>
-                {startDate}{' - '}{endDate}
-            </Card.Footer>
         </Card>
 
         <ProjectInfo 

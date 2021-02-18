@@ -8,33 +8,18 @@ import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { AiOutlinePhone } from 'react-icons/ai';
 
-// Import components
-import Sidebar from '../components/common/Sidebar';
-import Submenu from '../components/home/Submenu';
-
 const Home = () => {
-    const backgroundVideo = 'https://res.cloudinary.com/dttybuhk5/video/upload/v1610876666/PorfolioWebPage/programming_cga9oq.mp4';
-
     const [displayEmail, setDisplayEmail] = useState(false);
     const [displayPhone, setDisplayPhone] = useState(false);
 
     return (
         <>
-            <video src={backgroundVideo} type="video/mp4" autoPlay="autoplay" loop="loop" muted></video>
-            <div className="overlay"></div>
-
-            <Container id="home" fluid> 
-
-                <Sidebar />
-
-                <Row>
-                    <Col xs={12} md={12} lg={12}>
-                        <div id="home-text">
-                            <h1>Hi, this is Pablo</h1>
-                            <p>Full Stack Developer (MERN Stack)</p>
-                        </div>
-                    </Col>
-                </Row>
+            <div id="home">
+                <div id="home-text">
+                    <h1>Hi, this is Pablo</h1>
+                    <h1 style={{'color': '#8892B0'}}>Full Stack Developer (MERN Stack)</h1>
+                    <p style={{'color': '#8892B0'}}>I'm a Computer Engineer based in Seville and Amsterdam, specialized in building web and mobile apps, both the frontend and the backend.</p>
+                </div>
                 
                 <Row id="social-icons">
                         <a href="https://www.linkedin.com/in/pablo-medina-rodr%C3%ADguez-a3a8b9135/" rel="noreferrer" alt="linkedin profile" target="_blank" className="btn">
@@ -50,7 +35,7 @@ const Home = () => {
                             <AiOutlinePhone className="social-network-icon" />
                         </a>
                 </Row>
-            </Container>
+            </div>
         </>
     );
 }

@@ -13,16 +13,16 @@ const ProjectInfo = (props) => {
             aria-labelledby="contained-modal-title-vcenter"
             centered
         >
-            <Modal.Header closeButton>
+            <Modal.Header className="project-modal-header" closeButton>
                 <Modal.Title id="contained-modal-title-vcenter">
                     {props.title}
                 </Modal.Title>
             </Modal.Header>
-            <Modal.Body>
+            <Modal.Body className="project-modal-body">
                 <Image className="modal-image" src={props.image} />
                 <div className="project-modal-content">
                     <div className="project-modal-description">
-                        <p style={{'color': 'black', 'textAlign': 'justify'}}>
+                        <p>
                             {props.description}
                         </p>
                     </div>
@@ -42,8 +42,8 @@ const ProjectInfo = (props) => {
                 
             </Modal.Body>
             {props.url &&
-                <Modal.Footer>
-                    <Button className="btn-project" type="button" href={props.url} target="_blank">Go to project</Button>
+                <Modal.Footer className="project-modal-footer">
+                    <a className="general-button" type="button" href={props.url} target="_blank">Go to project</a>
                 </Modal.Footer>
             }
         </Modal>

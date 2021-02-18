@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 import { Container, Image } from 'react-bootstrap';
 
 // Import components
-import Sidebar from '../components/common/Sidebar';
+import Sidebar from '../components/common/Navbar';
 
 // Import skills constants
 import { KNOWLEDGE_FIELDS, TECHNOLOGY_FIELDS } from '../constants/constants';
@@ -61,145 +61,119 @@ const Skills = () => {
     }
 
     return (
-        <Container id="skills" fluid>
+        <div id="skills">
+            <h1><span className="navigation-color">{'<'}</span>Skills{'  '}<span className="navigation-color">{'/>'}</span></h1>
 
-            <Sidebar />
+            <div className="btn-container">
+                {
+                    KNOWLEDGE_FIELDS.map((field, index) => {
+                        return (
+                            <button 
+                                key={field} 
+                                onClick={() => setValue(index)} 
+                                className={`field-btn ${value === index && 'active-btn'}`
+                            }>
+                                {field}
+                            </button>
+                        );
+                    })
+                }
+            </div>
 
-            <div className="fields-center">
-                <h1>Skills</h1>
-                <div className="underline"></div>
-
-                <div className="btn-container">
+            {value === 0 &&
+                <>
+                    <article id="frontend-content" className="field-content" style={{'gridTemplateColumns': `${frontendGridColumns}`}}>
                     {
-                        KNOWLEDGE_FIELDS.map((field, index) => {
+                        TECHNOLOGY_FIELDS.frontend.map((technology, index) => {
                             return (
-                                <button 
-                                  key={field} 
-                                  onClick={() => setValue(index)} 
-                                  className={`field-btn ${value === index && 'active-btn'}`
-                                }>
-                                  {field}
-                                </button>
+                                <div key={index} className="technologies-grid-item" data-aos="zoom-in">
+                                    <Image className="technology-icon" src={technology.icon} alt={`${technology.name} icon`} />
+                                    <p>{technology.name}</p>
+                                </div>
                             );
                         })
                     }
-                </div>
-
-                {value === 0 &&
-                    <>
-                        <article id="frontend-content" className="field-content" style={{'gridTemplateColumns': `${frontendGridColumns}`}}>
-                        {
-                            TECHNOLOGY_FIELDS.frontend.map((technology, index) => {
-                                return (
-                                    <div key={index} className="technologies-grid-item" data-aos="zoom-in">
-                                        <Image className="technology-icon" src={technology.icon} alt={`${technology.name} icon`} />
-                                        <p>{technology.name}</p>
-                                    </div>
-                                );
-                            })
-                        }
-                        </article>
-                        <div className="field-info">
-                            <p>
-                                In regards to the frontend, this involves skilled in <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong> and  
-                                {' '}<strong>JSX</strong>, besides CSS frameworks such as <strong>Bootstrap</strong> and <strong>Semantic UI</strong>. For managing react states, I have developed some applications 
-                                with <strong>React Hooks</strong>, <strong>Context API</strong> and <strong>Redux</strong>.
-                            </p>
-                        </div>
-                    </>
-                }
-                {value === 1 &&
-                    <>
-                        <article id="backend-content" className="field-content" style={{'gridTemplateColumns': `${backendGridColumns}`}}>
-                        {
-                            TECHNOLOGY_FIELDS.backend.map((technology, index) => {
-                                return (
-                                    <div key={index} className="technologies-grid-item" data-aos="zoom-in">
-                                        <Image className="technology-icon" src={technology.icon} alt={`${technology.name} icon`} />
-                                        <p>{technology.name}</p>
-                                    </div>
-                                );
-                            })
-                        }
-                        </article>
-                        <div className="field-info">
-                            <p>
-                                <strong>Node</strong> and <strong>Express</strong> as the mainstay, as well as <strong>MongoDB</strong> as the primary database system. Moreover, I have developed
-                                {' '}some applications using <strong>GraphQL</strong> and <strong>Apollo Server</strong> for the backend.
-                            </p>
-                            <p>
-                                For mobile app development, I have used <strong>Firebase</strong> and <strong>SQLite</strong>.
-                            </p>
-                        </div>
-                    </>
-                }
-                {value === 2 &&
-                    <>
-                        <article id="tools-content" className="field-content" style={{'gridTemplateColumns': `${toolsCloudGridColumns}`}}>
-                        {
-                            TECHNOLOGY_FIELDS.tools_cloud.map((technology, index) => {
-                                return (
-                                    <div key={index} className="technologies-grid-item" data-aos="zoom-in">
-                                        <Image className="technology-icon" src={technology.icon} alt={`${technology.name} icon`} />
-                                        <p>{technology.name}</p>
-                                    </div>
-                                );
-                            })
-                        }
-                        </article>
-                        <div className="field-info">
-                            <p>
-                                <strong>Visual Studio Code</strong> as the main IDE, with experience in <strong>Git</strong> version control system and <strong>Git Flow</strong>. Furthermore,
-                                {' '}knowledge in deploying apps with <strong>Docker</strong> and <strong>Heroku</strong>.
-                            </p>
-                        </div>
-                    </>
-                }
-                {value === 3 &&
-                    <>
-                        <article id="embedded-systems-content" className="field-content" style={{'gridTemplateColumns': `${embeddedSystemsGridColumns}`}}>
-                        {
-                            TECHNOLOGY_FIELDS.embedded_systems.map((technology, index) => {
-                                return (
-                                    <div key={index} className="technologies-grid-item" data-aos="zoom-in">
-                                        <Image className="technology-icon" src={technology.icon} alt={`${technology.name} icon`} />
-                                        <p>{technology.name}</p>
-                                    </div>
-                                );
-                            })
-                        }
-                        </article>
-                        <div className="field-info">
-                            <p>
-                                I have built plenty of embedded systems with <strong>Arduino</strong> and <strong>Raspberry Pi</strong>,
-                                {' '} with the use of different wireless communication protocols (<strong>Bluetooth</strong>, <strong>LoRa</strong>
-                                {' '} and <strong>Zigbee</strong>) and connected to the cloud.
-                            </p>
-                        </div>
-                    </> 
-                }
-
-                {   /*
-                    value === 4 &&
-                    <article id="articial-intelligence-content" className="field-content">
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={pythonIcon} alt="python icon" />
-                            <p>Python</p>
-                        </div>
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={tensorFlowIcon} alt="tensorflow icon" />
-                            <p>TensorFlow</p>
-                        </div>
-                        <div className="technologies-grid-item" data-aos="zoom-in">
-                            <Image className="technology-icon" src={kerasIcon} alt="keras icon" />
-                            <p>Keras</p>
-                        </div>
                     </article>
-                    */
-                }
-            </div>
-        </Container>
+                    <div className="field-info">
+                        <p>
+                            In regards to the frontend, this involves skilled in <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong> and  
+                            {' '}<strong>JSX</strong>, besides CSS frameworks such as <strong>Bootstrap</strong> and <strong>Semantic UI</strong>. For managing react states, I have developed some applications 
+                            with <strong>React Hooks</strong>, <strong>Context API</strong> and <strong>Redux</strong>.
+                        </p>
+                    </div>
+                </>
+            }
+            {value === 1 &&
+                <>
+                    <article id="backend-content" className="field-content" style={{'gridTemplateColumns': `${backendGridColumns}`}}>
+                    {
+                        TECHNOLOGY_FIELDS.backend.map((technology, index) => {
+                            return (
+                                <div key={index} className="technologies-grid-item" data-aos="zoom-in">
+                                    <Image className="technology-icon" src={technology.icon} alt={`${technology.name} icon`} />
+                                    <p>{technology.name}</p>
+                                </div>
+                            );
+                        })
+                    }
+                    </article>
+                    <div className="field-info">
+                        <p>
+                            <strong>Node</strong> and <strong>Express</strong> as the mainstay, as well as <strong>MongoDB</strong> as the primary database system. Moreover, I have developed
+                            {' '}some applications using <strong>GraphQL</strong> and <strong>Apollo Server</strong> for the backend.
+                        </p>
+                        <p>
+                            For mobile app development, I have used <strong>Firebase</strong> and <strong>SQLite</strong>.
+                        </p>
+                    </div>
+                </>
+            }
+            {value === 2 &&
+                <>
+                    <article id="tools-content" className="field-content" style={{'gridTemplateColumns': `${toolsCloudGridColumns}`}}>
+                    {
+                        TECHNOLOGY_FIELDS.tools_cloud.map((technology, index) => {
+                            return (
+                                <div key={index} className="technologies-grid-item" data-aos="zoom-in">
+                                    <Image className="technology-icon" src={technology.icon} alt={`${technology.name} icon`} />
+                                    <p>{technology.name}</p>
+                                </div>
+                            );
+                        })
+                    }
+                    </article>
+                    <div className="field-info">
+                        <p>
+                            <strong>Visual Studio Code</strong> as the main IDE, with experience in <strong>Git</strong> version control system and <strong>Git Flow</strong>. Furthermore,
+                            {' '}knowledge in deploying apps with <strong>Docker</strong> and <strong>Heroku</strong>.
+                        </p>
+                    </div>
+                </>
+            }
+            {value === 3 &&
+                <>
+                    <article id="embedded-systems-content" className="field-content" style={{'gridTemplateColumns': `${embeddedSystemsGridColumns}`}}>
+                    {
+                        TECHNOLOGY_FIELDS.embedded_systems.map((technology, index) => {
+                            return (
+                                <div key={index} className="technologies-grid-item" data-aos="zoom-in">
+                                    <Image className="technology-icon" src={technology.icon} alt={`${technology.name} icon`} />
+                                    <p>{technology.name}</p>
+                                </div>
+                            );
+                        })
+                    }
+                    </article>
+                    <div className="field-info">
+                        <p>
+                            I have built plenty of embedded systems with <strong>Arduino</strong> and <strong>Raspberry Pi</strong>,
+                            {' '} with the use of different wireless communication protocols (<strong>Bluetooth</strong>, <strong>LoRa</strong>
+                            {' '} and <strong>Zigbee</strong>) and connected to the cloud.
+                        </p>
+                    </div>
+                </> 
+            }
+        </div>
     );
 }
-
 export default Skills;

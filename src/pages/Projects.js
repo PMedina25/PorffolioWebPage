@@ -12,7 +12,7 @@ import { CardDeck, Container, Row } from 'react-bootstrap';
 import { FiChevronRight } from 'react-icons/fi';
 
 // Import components
-import Sidebar from '../components/common/Sidebar';
+import Sidebar from '../components/common/Navbar';
 import ProjectCard from '../components/projects/ProjectCard';
 import Loader from '../components/common/Loader';
 
@@ -35,11 +35,8 @@ const Projects = () => {
     }
 
     return (
-        <Container id="projects" fluid>
-            <Sidebar />
-
-            <h1 style={{'textAlign': 'center'}} data-aos="zoom-in">Projects</h1>
-            <div className="underline"></div>
+        <div id="projects">
+            <h1 data-aos="zoom-in"><span className="navigation-color">{'<'}</span>Projects<span className="navigation-color">{' />'}</span></h1>
             
             <CardDeck data-aos="zoom-in">
                 <Row>
@@ -89,11 +86,12 @@ const Projects = () => {
                      
                 </Row>
             </CardDeck>
-            <Link to={'/allprojects'} id="btn-show-all" className="btn-project btn">
-                Show all
-                <FiChevronRight id="show-all-arrow" size={32} fontWeight={700}/>
-            </Link>
-      </Container>
+            <Row>
+                <Link to={'/projects'} style={{'marginTop': '4rem', 'marginLeft': 'auto', 'marginRight': 'auto'}}>
+                    <button className="general-button">Show All</button>
+                </Link>
+            </Row>
+      </div>
     );
 }
 

@@ -50,75 +50,75 @@ import {
 export const getTechnologyIcon = (technology) => {
     switch(technology) {
         case 'ARKit':
-            return <FaApple />
+            return <FaApple className="project-technology-icon" />
         case 'Bluetooth':
-            return <FaBluetooth />;
+            return <FaBluetooth className="project-technology-icon" />;
         case 'Bootstrap':
-            return <FaBootstrap />;
+            return <FaBootstrap className="project-technology-icon" />;
         case 'Cloud':
-            return <FaCloud />;
+            return <FaCloud className="project-technology-icon" />;
         case 'Docker':
-            return <FaDocker />;
+            return <FaDocker className="project-technology-icon" />;
         case 'Java':
-            return <FaJava />;
+            return <FaJava className="project-technology-icon" />;
         case 'Node':
         case 'Express':
-            return <FaNodeJs />;
+            return <FaNodeJs className="project-technology-icon" />;
         case 'Python':
-            return <FaPython />;
+            return <FaPython className="project-technology-icon" />;
         case 'Raspberry Pi':
-            return <FaRaspberryPi />;
+            return <FaRaspberryPi className="project-technology-icon" />;
         case 'React':
-            return <FaReact />;
+            return <FaReact className="project-technology-icon" />;
         case 'Swift':
-            return <FaSwift />
+            return <FaSwift className="project-technology-icon" />
         case 'LoRa':
         case 'MQTT':
-            return <FaWifi />;
+            return <FaWifi className="project-technology-icon" />;
         case 'Apollo Server':
-            return <SiApollographql />;
+            return <SiApollographql className="project-technology-icon" />;
         case 'Arduino':
-            return <SiArduino />;
+            return <SiArduino className="project-technology-icon" />;
         case 'C++':
-            return <SiCplusplus />;
+            return <SiCplusplus className="project-technology-icon" />;
         case 'Firebase':
-            return <SiFirebase />;
+            return <SiFirebase className="project-technology-icon" />;
         case 'Google Maps':
-            return <SiGooglemaps />;
+            return <SiGooglemaps className="project-technology-icon" />;
         case 'GraphQL':
-            return <SiGraphql />;
+            return <SiGraphql className="project-technology-icon" />;
         case 'Heroku':
-            return <SiHeroku />;
+            return <SiHeroku className="project-technology-icon" />;
         case 'iBeacons':
-            return <SiIbeacon />;
+            return <SiIbeacon className="project-technology-icon" />;
         case 'JavaScript':
-            return <SiJavascript />;
+            return <SiJavascript className="project-technology-icon" />;
         case 'Keras':
-            return <SiKeras />;
+            return <SiKeras className="project-technology-icon" />;
         case 'Kubernetes':
-            return <SiKubernetes />;
+            return <SiKubernetes className="project-technology-icon" />;
         case 'MariaDB':
-            return <SiMariadb />;
+            return <SiMariadb className="project-technology-icon" />;
         case 'MATLAB':
-            return <SiMathworks />;
+            return <SiMathworks className="project-technology-icon" />;
         case 'MongoDB':
-            return <SiMongodb />;
+            return <SiMongodb className="project-technology-icon" />;
         case 'MySQL':
-            return <SiMysql />;
+            return <SiMysql className="project-technology-icon" />;
         case 'Netlify':
-            return <SiNetlify />;
+            return <SiNetlify className="project-technology-icon" />;
         case 'Redux':
-            return <SiRedux />;
+            return <SiRedux className="project-technology-icon" />;
         case 'TensorFlow':
-            return <SiTensorflow />;
+            return <SiTensorflow className="project-technology-icon" />;
         case 'Zigbee':
-            return <SiZigbee />;
+            return <SiZigbee className="project-technology-icon" />;
         case 'Semantic UI':
-            return <AiFillLayout />;
+            return <AiFillLayout className="project-technology-icon" />;
         case 'Android':
-            return <DiAndroid />;
+            return <DiAndroid className="project-technology-icon" />;
         case 'GPS':
-            return <MdGpsFixed />
+            return <MdGpsFixed className="project-technology-icon" />
         default:
             return <div></div>;
     }
