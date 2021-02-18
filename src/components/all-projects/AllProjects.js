@@ -10,17 +10,19 @@ import ProjectCard from './ProjectCard';
 
 const Projects = ({ projects }) => {
     return (
-        <Container>
+        <Container id="all-projects">
             <Row>
-                <Col xs={10} sm={6} md={5} lg={4} xl={3}>
-                    <Link to="/projects" id="back-btn" className="btn btn-project">
-                        <AiOutlineArrowLeft style={{'marginRight': '10'}} />
-                        Back to projects page
+                <Col md={12}>
+                    <Link to="/" id="back-btn">
+                        <button type="button" className="general-button">
+                            <AiOutlineArrowLeft style={{'marginRight': '10'}} />
+                            Back to projects page
+                        </button>
                     </Link>
                 </Col>
             </Row>
             <div id="main-projects">
-                <h1>Professional and Academic Projects</h1>
+                <h1><span className="navigation-color">{'<'}</span>Professional and Academic Projects<span className="navigation-color">{' />'}</span></h1>
                 <CardColumns>
                     {
                         projects.getProjects &&
@@ -45,7 +47,7 @@ const Projects = ({ projects }) => {
                 </CardColumns>
             </div>
             <div id="personal-projects">
-                <h1>Personal Projects</h1>
+                <h1><span className="navigation-color">{'<'}</span>Personal Projects<span className="navigation-color">{' />'}</span></h1>
                 <CardColumns>
                 {
                     projects.getProjects &&
@@ -70,7 +72,7 @@ const Projects = ({ projects }) => {
                 </CardColumns>
             </div>
             <div id="other-projects">
-                <h1>Other Projects</h1>
+                <h1><span className="navigation-color">{'<'}</span>Other Projects<span className="navigation-color">{' />'}</span></h1>
                 <CardColumns>
                 {
                     projects.getProjects &&

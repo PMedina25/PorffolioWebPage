@@ -100,6 +100,7 @@ const AboutMe = () => {
                             </div>
                         </div>
                     </div>
+                    <button id="show-all-technologies-button" type='button' className='general-button'>Show All Technologies</button>
                 </Col>
                 <Col xs={12} md={12} lg={6} id="map-col" data-aos="fade-right">
                     <div id="about-me-map" data-aos="flip-right">
@@ -130,9 +131,6 @@ const AboutMe = () => {
                         </MapContainer>
                     </div>
                 </Col>
-            </Row> 
-            <Row style={{'padding-left': '2rem'}}>
-                <button type='button' className='general-button'>Show All Technologies</button>
             </Row>
         </div>
     );

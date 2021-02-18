@@ -52,7 +52,7 @@ const OrganizationCard = ({ data }) => {
   return (
       <div id="organizations">
           <Row>
-            <Col className="card-column" xs={12} md={4} lg={4}>
+            <Col className="card-column" xs={12} md={6} lg={4}>
               <h1 className="organization-title" data-aos="fade-down"><span className="navigation-color">{'<'}</span>Education{'  '}<span className="navigation-color">{'/>'}</span></h1>
               <div className="swiper-container" data-aos="flip-down">
                 <div className="swiper-wrapper">
@@ -76,7 +76,7 @@ const OrganizationCard = ({ data }) => {
                 </div>
               </div>
             </Col>
-            <Col className="card-column" xs={12} md={4} lg={4}>
+            <Col className="card-column" xs={12} md={6} lg={4}>
               <h1 className="organization-title" data-aos="fade-down"><span className="navigation-color">{'<'}</span>Experience{'  '}<span className="navigation-color">{'/>'}</span></h1>
               <div className="swiper-container" data-aos="flip-down">
                 <div className="swiper-wrapper">
@@ -100,7 +100,7 @@ const OrganizationCard = ({ data }) => {
                 </div>
               </div>
             </Col>
-            <Col className="card-column" xs={12} md={4} lg={4}>
+            <Col className="card-column" xs={12} md={6} lg={4}>
               <h1 className="organization-title" data-aos="fade-down"><span className="navigation-color">{'<'}</span>Certifications{'  '}<span className="navigation-color">{'/>'}</span></h1>
               <div className="swiper-container" data-aos="flip-down">
                 <div className="swiper-wrapper">

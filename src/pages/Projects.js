@@ -86,7 +86,11 @@ const Projects = () => {
                      
                 </Row>
             </CardDeck>
-            
+            <Row>
+                <Link to={'/projects'} style={{'marginTop': '4rem', 'marginLeft': 'auto', 'marginRight': 'auto'}}>
+                    <button className="general-button">Show All</button>
+                </Link>
+            </Row>
       </div>
     );
 }

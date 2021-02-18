@@ -19,17 +19,19 @@ import Footer from './pages/Footer';
 function App() {
   return (
     <>
-      <NavBar />
-      <Container>
-        <Home />
-        <AboutMe />
-        <Organizations />
-        <Projects />
-        <Router>
+      <Router>
+        <Route path="/" exact>
+          <NavBar />
+          <Container>
+            <Home />
+            <AboutMe />
+            <Organizations />
+            <Projects />
+          </Container>
+        </Route>
           <Route path="/projects" component={AllProjects} exact />
-        </Router>
-        <Footer />
-      </Container>
+          <Footer />
+      </Router>
     </>
   );
 }

@@ -9,8 +9,6 @@ import { HiOutlineMail } from 'react-icons/hi';
 import { AiOutlinePhone } from 'react-icons/ai';
 
 const Home = () => {
-    const backgroundVideo = 'https://res.cloudinary.com/dttybuhk5/video/upload/v1610876666/PorfolioWebPage/programming_cga9oq.mp4';
-
     const [displayEmail, setDisplayEmail] = useState(false);
     const [displayPhone, setDisplayPhone] = useState(false);
 
