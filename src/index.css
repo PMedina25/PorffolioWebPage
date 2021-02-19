@@ -52,6 +52,11 @@ h1 {
   margin-bottom: 0 !important;
 }
 
+h4 {
+  color: var(--main-white);
+  font-weight: 700 !important;
+}
+
 p {
   color: var(--secondary-color);
   font-weight: 400;
@@ -176,9 +181,12 @@ strong {
 
 #home h1 {
   font-size: 3em;
-  margin: 0;
   padding-top: 0;
   font-weight: 700;
+}
+
+#home h1:nth-child(2) {
+  margin-bottom: 0.5rem !important;
 }
 
 #home p {
@@ -253,7 +261,7 @@ strong {
   padding: 1rem;
 }
 
-#about-technologies-grid {
+.about-technologies-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -267,10 +275,6 @@ strong {
 .about-technology-icon {
   color: var(--light-blue);
   margin-right: 10px;
-}
-
-#show-all-technologies-button {
-  margin-left: 1rem;
 }
 
 @media (max-width: 992px) {
@@ -295,6 +299,30 @@ strong {
   z-index: 0;
   border: 2px solid var(--light-blue);
   border-radius: 25px;
+}
+
+#all-technologies {
+  padding: 1rem;
+}
+
+#button-col {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#show-all-technologies-button {
+  margin-bottom: 1rem;
+}
+
+#all-technologies h4 {
+  margin-bottom: 1rem;
+}
+
+.technology-col {
+  padding: 1rem !important;
+  transition: var(--transition);
 }
 
 /* =============

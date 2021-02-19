@@ -53,8 +53,8 @@ const OrganizationCard = ({ data }) => {
       <div id="organizations">
           <Row>
             <Col className="card-column" xs={12} md={6} lg={4}>
-              <h1 className="organization-title" data-aos="fade-down"><span className="navigation-color">{'<'}</span>Education{'  '}<span className="navigation-color">{'/>'}</span></h1>
-              <div className="swiper-container" data-aos="flip-down">
+              <h1 className="organization-title" data-aos="fade-down"><span className="navigation-color">{'<'}</span>Training{'  '}<span className="navigation-color">{'/>'}</span></h1>
+              <div className="swiper-container" data-aos="fade-down">
                 <div className="swiper-wrapper">
 
                   {eduOrgs &&
@@ -78,7 +78,7 @@ const OrganizationCard = ({ data }) => {
             </Col>
             <Col className="card-column" xs={12} md={6} lg={4}>
               <h1 className="organization-title" data-aos="fade-down"><span className="navigation-color">{'<'}</span>Experience{'  '}<span className="navigation-color">{'/>'}</span></h1>
-              <div className="swiper-container" data-aos="flip-down">
+              <div className="swiper-container" data-aos="fade-down">
                 <div className="swiper-wrapper">
 
                   {expOrgs &&
@@ -102,7 +102,7 @@ const OrganizationCard = ({ data }) => {
             </Col>
             <Col className="card-column" xs={12} md={6} lg={4}>
               <h1 className="organization-title" data-aos="fade-down"><span className="navigation-color">{'<'}</span>Certifications{'  '}<span className="navigation-color">{'/>'}</span></h1>
-              <div className="swiper-container" data-aos="flip-down">
+              <div className="swiper-container" data-aos="fade-down">
                 <div className="swiper-wrapper">
 
                   {certOrgs &&
