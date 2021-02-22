@@ -11,7 +11,7 @@ import Home from './components/Home';
 import AboutMe from './components/about-me/AboutMe';
 import Skills from './pages/Skills';
 import Organizations from './pages/Organizations';
-import Projects from './pages/Projects';
+import Projects from './components/projects/Projects';
 import AllProjects from './pages/AllProjects';
 import Footer from './pages/Footer';
 
@@ -29,8 +29,8 @@ function App() {
             <Projects />
           </Container>
         </Route>
-          <Route path="/projects" component={AllProjects} exact />
-          <Footer />
+        <Route path="/projects" component={AllProjects} exact />
+        <Footer />
       </Router>
     </>
   );

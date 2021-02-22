@@ -26,6 +26,7 @@ export const FETCH_PROJECTS_QUERY = gql`
         startDate
         endDate
         url
+        github
         image
     }
 }
