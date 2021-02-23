@@ -1,11 +1,14 @@
 import { 
     FaApple,
+    FaAws,
     FaBluetooth,
     FaBootstrap,
     FaCloud,
     FaDocker, 
+    FaFigma,
     FaJava,
     FaNodeJs, 
+    FaPaypal,
     FaPython,
     FaRaspberryPi, 
     FaReact,
@@ -23,6 +26,7 @@ import {
     SiHeroku,
     SiIbeacon,
     SiJavascript, 
+    SiJest,
     SiKeras,
     SiKubernetes, 
     SiMariadb,
@@ -30,6 +34,7 @@ import {
     SiMongodb,
     SiMysql,
     SiNetlify,
+    SiPostman,
     SiRedux,
     SiTensorflow,
     SiZigbee
@@ -50,7 +55,9 @@ import {
 export const getTechnologyIcon = (technology) => {
     switch(technology) {
         case 'ARKit':
-            return <FaApple className="project-technology-icon" />
+            return <FaApple className="project-technology-icon" />;
+        case 'AWS':
+            return <FaAws className="project-technology-icon" />;
         case 'Bluetooth':
             return <FaBluetooth className="project-technology-icon" />;
         case 'Bootstrap':
@@ -59,6 +66,8 @@ export const getTechnologyIcon = (technology) => {
             return <FaCloud className="project-technology-icon" />;
         case 'Docker':
             return <FaDocker className="project-technology-icon" />;
+        case 'Figma':
+            return <FaFigma className="project-technology-icon" />;
         case 'Java':
             return <FaJava className="project-technology-icon" />;
         case 'Node':
@@ -69,6 +78,7 @@ export const getTechnologyIcon = (technology) => {
         case 'Raspberry Pi':
             return <FaRaspberryPi className="project-technology-icon" />;
         case 'React':
+        case 'React Native':
             return <FaReact className="project-technology-icon" />;
         case 'Swift':
             return <FaSwift className="project-technology-icon" />
@@ -93,6 +103,8 @@ export const getTechnologyIcon = (technology) => {
             return <SiIbeacon className="project-technology-icon" />;
         case 'JavaScript':
             return <SiJavascript className="project-technology-icon" />;
+        case 'Jest':
+            return <SiJest className="project-technology-icon" />;
         case 'Keras':
             return <SiKeras className="project-technology-icon" />;
         case 'Kubernetes':
@@ -107,6 +119,10 @@ export const getTechnologyIcon = (technology) => {
             return <SiMysql className="project-technology-icon" />;
         case 'Netlify':
             return <SiNetlify className="project-technology-icon" />;
+        case 'PayPal API':
+            return <FaPaypal className="project-technology-icon" />;
+        case 'Postman':
+            return <SiPostman className="project-technology-icon" />;
         case 'Redux':
             return <SiRedux className="project-technology-icon" />;
         case 'TensorFlow':

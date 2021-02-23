@@ -4,6 +4,7 @@ import { getTechnologyIcon } from '../../utils/get-technology-icon';
 
 import { AiFillGithub } from 'react-icons/ai';
 import { BiLinkExternal } from 'react-icons/bi';
+import { FaLinkedin } from 'react-icons/fa';
 
 const ProjectSingleContainer = ({ project }) => {
     return (
@@ -43,6 +44,28 @@ const ProjectSingleContainer = ({ project }) => {
                             </a>
                         }
                     </div>
+                    {
+                        project.title === 'Penpals' &&
+                        <div className="project-team-members">
+                            Team Members:{' '}
+                            <div className="team-member">
+                                <a className="member-linkedin" href="https://www.linkedin.com/in/laura-vendrell-aparisi-9139a0106/" target="_blank">
+                                    <FaLinkedin className="member-linkedin-icon" />
+                                    <div className="member-name">
+                                        Laura Vendrell
+                                    </div>
+                                </a>
+                            </div>
+                            <div className="team-member">
+                                <a className="member-linkedin" href="https://www.linkedin.com/in/elena-reboul-pardo-813a88139/" target="_blank">
+                                    <FaLinkedin className="member-linkedin-icon" />
+                                    <div className="member-name">
+                                        Elena Reboul
+                                    </div>
+                                </a>
+                            </div>
+                    </div>
+                    }
                 </div>
             </div>
         </div>

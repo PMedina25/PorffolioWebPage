@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import { useMediaQuery } from 'react-responsive';
 import Aos from 'aos';
@@ -13,6 +13,9 @@ import Project from './Project';
 import ProjectSingleContainer from './ProjectSingleContainer';
 
 const Projects = () => {
+    const [showProjects, setShowProjects] = useState(false);
+    const [buttonText, setButtonText] = useState('Show Projects in Development');
+
     const {
         loading,
         error,
@@ -32,6 +35,19 @@ const Projects = () => {
     }
     if (error) {
         return <h1>Error: Something Wrong Happened</h1>;
+    }
+
+    /**
+     * Click handler for the show projects in development button
+     */
+    const onClickHandler = () => {
+        setShowProjects(!showProjects);
+        
+        if (!showProjects) {
+            setButtonText('Hide Projects');
+        } else {
+            setButtonText('Show Projects in Development');
+        }
     }
 
     return (
@@ -84,6 +100,30 @@ const Projects = () => {
                       );
                   })
             }
+            <Row id="projects-development" data-aos="fade-up">
+                <Col md={12} className="button-col">
+                    <button
+                        id="show-projects-development" 
+                        type='button' 
+                        className='general-button'
+                        onClick={onClickHandler}
+                    >
+                        {buttonText}
+                    </button>
+                </Col>
+                <div className="projects-grid">
+                {
+                    showProjects && 
+                    data.getProjects
+                      .filter(project => project.category === 'development')
+                      .map(project => {
+                          return (
+                              <ProjectSingleContainer key={project.id} project={project} />
+                          );
+                      })
+                }
+                </div>
+            </Row>
         </div>
     );
 };
