@@ -9,11 +9,10 @@ import { Container } from 'react-bootstrap';
 import NavBar from './components/common/Navbar';
 import Home from './components/Home';
 import AboutMe from './components/about-me/AboutMe';
-import Skills from './pages/Skills';
-import Organizations from './pages/Organizations';
+import Organizations from './components/organizations/Organizations';
 import Projects from './components/projects/Projects';
 import AllProjects from './pages/AllProjects';
-import Footer from './pages/Footer';
+import Footer from './components/common/Footer';
 
 
 function App() {
@@ -24,9 +23,9 @@ function App() {
           <NavBar />
           <Container>
             <Home />
+            <Projects />
             <AboutMe />
             <Organizations />
-            <Projects />
           </Container>
         </Route>
         <Route path="/projects" component={AllProjects} exact />

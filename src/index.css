@@ -79,7 +79,8 @@ strong {
 
 #main-projects,
 #personal-projects,
-#other-projects {
+#other-projects,
+#development-projects {
   margin-top: 4rem;
 }
 
@@ -306,11 +307,12 @@ strong {
   padding: 1rem;
 }
 
-#button-col {
+.button-col {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding-top: 2rem;
 }
 
 #show-all-technologies-button {
@@ -839,7 +841,8 @@ strong {
 
 .project-single-container:hover .project-single-container-links,
 .project-single-container:hover .project-single-container-description,
-.project-single-container:hover .project-single-container-technologies-grid {
+.project-single-container:hover .project-single-container-technologies-grid,
+.project-single-container:hover .project-team-members {
   opacity: 1;
   transition: var(--transition);
 }
@@ -855,14 +858,51 @@ strong {
   transition: var(--transition);
 }
 
+.project-team-members {
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-white);
+  transition: var(--transition);
+}
+
+.team-member {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.member-linkedin {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--main-white);
+  transition: var(--transition);
+}
+
+.member-linkedin:hover {
+  text-decoration: none;
+  color: var(--light-blue);
+  transition: var(--transition);
+}
+
+.member-linkedin-icon {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 1.5rem;
+}
+
 @media (max-width: 1200px) {
-  .project-single-container-description {
+  .project-single-container-description,
+  .project-single-container-technologies-grid,
+  .project-team-members {
     font-size: 0.8em;
   }
-  .project-single-container-technologies-grid {
-    font-size: 0.8em;
-  }
-  .project-single-container-links {
+  .project-single-container-links,
+  .member-linkedin-icon {
     font-size: 1.3rem;
   }
 }
@@ -877,13 +917,13 @@ strong {
   .project-single-container h4 {
     font-size: 1.2em;
   }
-  .project-single-container-description {
+  .project-single-container-description,
+  .project-single-container-technologies-grid,
+  .project-team-members {
     font-size: 0.6em;
   }
-  .project-single-container-technologies-grid {
-    font-size: 0.6em;
-  }
-  .project-single-container-links {
+  .project-single-container-links,
+  .member-linkedin-icon {
     font-size: 1.1rem;
   }
 }

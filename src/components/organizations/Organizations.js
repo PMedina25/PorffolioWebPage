@@ -1,10 +1,10 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
-import { FETCH_ORGANIZATIONS_QUERY } from '../utils/graphql';
+import { FETCH_ORGANIZATIONS_QUERY } from '../../utils/graphql';
 
 // Import components
-import OrganizationCard from '../components/organizations/OrganizationCard';
-import Loader from '../components/common/Loader';
+import OrganizationCard from './OrganizationCard';
+import Loader from '../common/Loader';
 
 
 const Organizations = () => {

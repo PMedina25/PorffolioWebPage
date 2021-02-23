@@ -7,7 +7,6 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 
 // Import components
-import Projects from '../components/all-projects/AllProjects';
 import Loader from '../components/common/Loader';
 import ProjectSingleContainer from '../components/projects/ProjectSingleContainer';
 
@@ -82,6 +81,20 @@ const AllProjects = () => {
                         data.getProjects &&
                         data.getProjects
                             .filter(project => project.category === 'others')
+                            .map(project => {
+                                return <ProjectSingleContainer key={project.id} project={project} />;
+                            })
+                    }
+                    </div>
+                </div>
+
+                <div id="development-projects">
+                    <h1><span className="navigation-color">{'<'}</span>Projects in Development<span className="navigation-color">{' />'}</span></h1>
+                    <div className="projects-grid">
+                    {
+                        data.getProjects &&
+                        data.getProjects
+                            .filter(project => project.category === 'development')
                             .map(project => {
                                 return <ProjectSingleContainer key={project.id} project={project} />;
                             })
