@@ -49,12 +49,12 @@ const AboutMe = () => {
         <div id="about">
             <Row>
                 <Col md={12}>
-                    <h1 data-aos="fade-up"><span className="navigation-color">{'<'}</span>About Me{'  '}<span className="navigation-color">{'/>'}</span></h1>
+                    <h1 data-aos="fade-up" data-aos-once="true"><span className="navigation-color">{'<'}</span>About Me{'  '}<span className="navigation-color">{'/>'}</span></h1>
                 </Col>
             </Row>
             
             <Row id="about-me-section">
-                <Col xs={12} md={12} lg={6} id="about-me-info"  data-aos="fade-right">
+                <Col xs={12} md={12} lg={6} id="about-me-info"  data-aos="fade-right" data-aos-once="true">
                     <div id="about-me-text">
                         <p>Computer engineer and full stack developer based in Sevilla and Amsterdam.</p>
                         <p>Designing and creating any kind of digital product is my passion, either web or mobile, with their respective backend.</p>
@@ -92,7 +92,7 @@ const AboutMe = () => {
                     </div>
                 </Col>
 
-                <Col xs={12} md={12} lg={6} id="map-col" data-aos="flip-right">
+                <Col xs={12} md={12} lg={6} id="map-col" data-aos="flip-right" data-aos-once="true">
                     <Map />
                 </Col>
             </Row>

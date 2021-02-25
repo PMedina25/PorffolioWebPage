@@ -8,7 +8,7 @@ import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
 
 // Import bootstrap components
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 
 // Import components
 import Sidebar from '../common/Navbar';
@@ -53,8 +53,8 @@ const OrganizationCard = ({ data }) => {
       <div id="organizations">
           <Row>
             <Col className="card-column" xs={12} md={6} lg={4}>
-              <h1 className="organization-title" data-aos="fade-down"><span className="navigation-color">{'<'}</span>Training{'  '}<span className="navigation-color">{'/>'}</span></h1>
-              <div className="swiper-container" data-aos="fade-down">
+              <h1 className="organization-title" data-aos="fade-down" data-aos-once="true"><span className="navigation-color">{'<'}</span>Training{'  '}<span className="navigation-color">{'/>'}</span></h1>
+              <div className="swiper-container" data-aos="fade-down" data-aos-once="true">
                 <div className="swiper-wrapper">
 
                   {eduOrgs &&
@@ -77,8 +77,8 @@ const OrganizationCard = ({ data }) => {
               </div>
             </Col>
             <Col className="card-column" xs={12} md={6} lg={4}>
-              <h1 className="organization-title" data-aos="fade-down"><span className="navigation-color">{'<'}</span>Experience{'  '}<span className="navigation-color">{'/>'}</span></h1>
-              <div className="swiper-container" data-aos="fade-down">
+              <h1 className="organization-title" data-aos="fade-down" data-aos-once="true"><span className="navigation-color">{'<'}</span>Experience{'  '}<span className="navigation-color">{'/>'}</span></h1>
+              <div className="swiper-container" data-aos="fade-down" data-aos-once="true">
                 <div className="swiper-wrapper">
 
                   {expOrgs &&
@@ -101,8 +101,8 @@ const OrganizationCard = ({ data }) => {
               </div>
             </Col>
             <Col className="card-column" xs={12} md={6} lg={4}>
-              <h1 className="organization-title" data-aos="fade-down"><span className="navigation-color">{'<'}</span>Certifications{'  '}<span className="navigation-color">{'/>'}</span></h1>
-              <div className="swiper-container" data-aos="fade-down">
+              <h1 className="organization-title" data-aos="fade-down" data-aos-once="true"><span className="navigation-color">{'<'}</span>Certifications{'  '}<span className="navigation-color">{'/>'}</span></h1>
+              <div className="swiper-container" data-aos="fade-down" data-aos-once="true">
                 <div className="swiper-wrapper">
 
                   {certOrgs &&

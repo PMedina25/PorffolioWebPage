@@ -15,7 +15,7 @@ const Project = ({ project }) => {
     }, []);
 
     return (
-        <div className="project" data-aos="fade-up">
+        <div className="project" data-aos="fade-up" data-aos-once="true">
             <Row>
                 <Col md={6} className="project-image-container">
                     <div className="overlay">
