@@ -911,67 +911,87 @@ strong {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+  .project-single-container-description,
+  .project-single-container-technologies-grid,
+  .project-team-members {
+    font-size: 1em;
+  }
+  .project-single-container-links,
+  .member-linkedin-icon {
+    font-size: 1.5rem;
+  }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 768px) {
+  .project-single-container-description,
+  .project-single-container-technologies-grid,
+  .project-team-members {
+    font-size: 0.8em;
+  }
+  .project-single-container-links,
+  .member-linkedin-icon {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 560px) {
   .project-single-container h4 {
-    font-size: 1.2em;
+    margin-bottom: 1rem;
   }
   .project-single-container-description,
   .project-single-container-technologies-grid,
   .project-team-members {
     font-size: 0.6em;
   }
+  .project-single-container h4,
   .project-single-container-links,
   .member-linkedin-icon {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 
-@media (max-width: 460px) {
-  .project-single-container h4 {
-    font-size: 1em;
+@media (max-width: 480px) {
+  .project-single-container-description,
+  .project-single-container-technologies-grid,
+  .project-team-members {
+    font-size: 0.5em;
   }
-  .project-single-container-description {
-    font-size: 0.4em;
-  }
-  .project-single-container-technologies-grid {
-    font-size: 0.4em;
-  }
-  .project-single-container-links {
-    font-size: 0.9rem;
+  .project-single-container h4,
+  .project-single-container-links,
+  .member-linkedin-icon {
+    font-size: 1rem;
   }
 }
 
-@media (max-width: 440px) {
-  .project-single-container h4 {
-    font-size: 1em;
-    margin-bottom: 1rem;
-  }
-  .project-single-container-description {
-    font-size: 0.4em;
-  }
-  .project-single-container-technologies-grid {
-    font-size: 0.4em;
-  }
-  .project-single-container-links {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 400px) {
+@media (max-width: 415px) {
   .project-single-container h4 {
     font-size: 0.8em;
     margin-bottom: 0.8rem;
   }
   .project-single-container-description {
-    font-size: 0.2em;
+    font-size: 0.4em;
   }
   .project-single-container-technologies-grid {
-    font-size: 0.2em;
+    font-size: 0.4em;
   }
   .project-single-container-links {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 415px) {
+  .project-single-container h4 {
+    font-size: 0.7em;
+    margin-bottom: 0.7rem;
+  }
+  .project-single-container-description {
+    font-size: 0.3em;
+  }
+  .project-single-container-technologies-grid {
+    font-size: 0.3em;
+  }
+  .project-single-container-links {
+    font-size: 0.5rem;
   }
 }
 
