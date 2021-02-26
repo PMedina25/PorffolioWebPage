@@ -97,7 +97,7 @@ const AboutMe = () => {
                 </Col>
             </Row>
             <Row id="all-technologies">
-                <Col md={12} id="button-col">
+                <Col md={12} className="button-col">
                     <button
                         id="show-all-technologies-button" 
                         type='button' 

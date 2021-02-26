@@ -313,7 +313,7 @@ strong {
   padding: 1rem;
 }
 
-#button-col {
+.button-col {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -732,6 +732,10 @@ strong {
 .project-link-icon:hover {
   color: var(--light-blue);
   transition: var(--transition);
+}
+
+#show-projects-development {
+  margin-top: 2rem;
 }
 
 @media (max-width: 1200px) {
