@@ -112,6 +112,12 @@ strong {
   outline: 0;
 }
 
+@media (max-width: 400px) {
+  .general-button {
+    font-size: 0.8rem;
+  }
+}
+
 /* =============
  * Navbar
  * =============
@@ -307,12 +313,12 @@ strong {
   padding: 1rem;
 }
 
-.button-col {
+#button-col {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 #show-all-technologies-button {
@@ -896,18 +902,24 @@ strong {
 }
 
 @media (max-width: 1200px) {
+  .project-single-container h4 {
+    margin-bottom: 1rem;
+  }
   .project-single-container-description,
   .project-single-container-technologies-grid,
   .project-team-members {
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
   .project-single-container-links,
   .member-linkedin-icon {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 992px) {
+  .project-single-container h4 {
+    margin-bottom: 2rem;
+  }
   .projects-grid {
     grid-template-columns: 1fr;
   }
@@ -1081,9 +1093,15 @@ footer p {
   font-family: 'IBM Plex Mono', monospace;
 }
 
-#footer-icon {
+.footer-icon {
   color: var(--secondary-color);
   margin-left: 10px;
+}
+
+@media (max-width: 375px) {
+  footer {
+    font-size: 0.8rem;
+  }
 }
 
 /* =============
