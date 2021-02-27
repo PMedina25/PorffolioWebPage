@@ -2,6 +2,8 @@
 
 debug.log
 .eslintcache
+package-lock.json
+
 
 src/videos/
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { FETCH_PROJECTS_QUERY } from '../utils/graphql';
@@ -10,12 +10,35 @@ import { AiOutlineArrowLeft } from 'react-icons/ai';
 import Loader from '../components/common/Loader';
 import ProjectSingleContainer from '../components/projects/ProjectSingleContainer';
 
+// Import button component
+import ScrollToTopButton from '../components/ScrollToTopButton';
+
 const AllProjects = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
     const {
         loading,
         error,
         data
     } = useQuery(FETCH_PROJECTS_QUERY);
+
+    // Show button when page is scrolled up to given distance
+    const toggleVisibility = () => {
+        if (window.pageYOffset > 600) {
+        setIsVisible(true);
+        } else {
+        setIsVisible(false);
+        }
+    };
+
+    // Set the top cordinate to 0
+    // make scrolling smooth
+    const scrollToTop = () => {
+        window.scrollTo({
+        top: 0,
+        behaviour: "smooth"
+        });
+    };
 
     useEffect(() => {
         window.scroll({
@@ -23,6 +46,7 @@ const AllProjects = () => {
             'left': 0,
             'behaviour': 'auto'
         });
+        window.addEventListener("scroll", toggleVisibility);
     }, []);
 
     if (loading) {
@@ -103,6 +127,10 @@ const AllProjects = () => {
                 </div>
 
             </Container>
+
+            {isVisible && 
+                <ScrollToTopButton onClick={scrollToTop} />
+            }
         </div>
     )
 }
