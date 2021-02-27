@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -13,7 +13,6 @@ import Organizations from './components/organizations/Organizations';
 import Projects from './components/projects/Projects';
 import AllProjects from './pages/AllProjects';
 import Footer from './components/common/Footer';
-
 
 function App() {
   return (

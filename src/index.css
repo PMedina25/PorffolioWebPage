@@ -1105,55 +1105,25 @@ footer p {
 }
 
 /* =============
- * Media Queries
+ * Scroll To Top Button
  * =============
 */
-@media (max-width: 1220px) {
-  .btn-show-more {
-    width: 45%;
-  }
+.scroll-to-top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 1.3rem 1.5rem;
+  margin: 2rem;
+  font-size: 1.5rem;
+  background-color: transparent;
+  color: var(--light-blue);
+  border: 1px solid var(--light-blue);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: var(--transition);
 }
 
-@media (max-width: 1200px) {
-  .card-deck div {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .card-deck div:last-child {
-    margin-top: 2rem;
-  }
-
-  .btn-show-more {
-    width: 45%;
-  }
-}
-
-@media (max-width: 1015px) {
-  .btn-show-more {
-    width: 50%;
-  }
-}
-
-@media (max-width: 810px) {
-  .btn-show-more {
-    width: 50%;
-  }
-}
-
-@media (max-width: 767px) {
-  .card-deck div {
-    margin-top: 2rem;
-  }
-
-  .btn-show-project {
-    width: 40%;
-  }
-}
-
-@media (max-width: 575px) {
-  #projects {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
+.scroll-to-top:hover {
+  background-color: var(--hover-color);
+  transition: var(--transition);
 }
