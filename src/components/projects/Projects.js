@@ -67,7 +67,7 @@ const Projects = () => {
             {
                 data.getProjects && 
                 data.getProjects
-                  .filter(project => project.id === '5ff8368da728a819889de758')
+                  .filter(project => project.id === '6034ced5dd716a8cf36f88ac')
                   .map(project => {
                       return (     
                             isSmallScreen
@@ -79,7 +79,7 @@ const Projects = () => {
             {
                 data.getProjects && 
                 data.getProjects
-                  .filter(project => project.id === '5ff82d75a728a819889de753')
+                  .filter(project => project.id === '5ff8368da728a819889de758')
                   .map(project => {
                       return (     
                             isSmallScreen
