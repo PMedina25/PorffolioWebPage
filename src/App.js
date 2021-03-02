@@ -1,20 +1,34 @@
-import React, { useState, useEffect } from 'react'
+/**
+ * Import packages
+ */
+import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// Import bootstrap components
+
+/**
+ * Import Bootstrap Components
+ */
 import { Container } from 'react-bootstrap';
 
-// Import pages
+
+/**
+ * Import Components
+ */
 import NavBar from './components/common/Navbar';
 import Home from './components/home/Home';
 import AboutMe from './components/about-me/AboutMe';
 import Organizations from './components/organizations/Organizations';
 import Projects from './components/projects/Projects';
 import AllProjects from './pages/AllProjects';
+import Contact from './components/contact/Contact';
 import Footer from './components/common/Footer';
 
-function App() {
+
+/**
+ * App Component
+ */
+const App = () => {
   return (
     <>
       <Router>
@@ -25,6 +39,7 @@ function App() {
             <Projects />
             <AboutMe />
             <Organizations />
+            <Contact />
           </Container>
         </Route>
         <Route path="/projects" component={AllProjects} exact />

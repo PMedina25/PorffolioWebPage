@@ -1,0 +1,56 @@
+/****************
+ *   Contact    *
+ ****************/
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--secondary-color);
+  -webkit-box-shadow: 0 0 0px 1000px var(--dark-blue) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+#contact {
+  width: 100%;
+  margin: 0;
+  text-align: justify;
+}
+
+#contact h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+#contact-form {
+  padding: 2rem;
+}
+
+.form-label {
+  color: var(--main-white);
+}
+
+.form-control {
+  color: var(--secondary-color);
+  background-color: var(--dark-blue) !important;
+  border-color: var(--light-blue);
+}
+
+.form-control:focus {
+  color: var(--secondary-color);
+  background-color: var(--dark-blue);
+  border: 2px solid var(--light-blue);
+  outline: 0;
+  box-shadow: none;
+}
+
+.form-control:active {
+  background-color: var(--dark-blue);
+}
