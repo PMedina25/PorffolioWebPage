@@ -15,6 +15,7 @@ const NavBar = () => {
                     <Nav.Link className="link-item" href="#projects">Projects{' '}<span className="navigation-color">{'/>'}</span></Nav.Link>
                     <Nav.Link className="link-item" href="#about">About{' '}<span className="navigation-color">{'/>'}</span></Nav.Link>
                     <Nav.Link className="link-item" href="#organizations">Training && Experience{' '}<span className="navigation-color">{'/>'}</span></Nav.Link>
+                    <Nav.Link className="link-item" href="#contact">Contact{' '}<span className="navigation-color">{'/>'}</span></Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
