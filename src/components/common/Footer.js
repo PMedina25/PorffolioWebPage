@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles/footer.css';
 
 import { FaAws, FaBootstrap, FaNodeJs, FaReact } from 'react-icons/fa';
 import { SiApollographql, SiGraphql, SiMongodb } from 'react-icons/si';

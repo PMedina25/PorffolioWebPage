@@ -7,7 +7,7 @@ import { Container } from 'react-bootstrap';
 
 // Import pages
 import NavBar from './components/common/Navbar';
-import Home from './components/Home';
+import Home from './components/home/Home';
 import AboutMe from './components/about-me/AboutMe';
 import Organizations from './components/organizations/Organizations';
 import Projects from './components/projects/Projects';

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { FETCH_PROJECTS_QUERY } from '../utils/graphql';
+import './styles/all-projects.css';
 
 import { Container, Row, Col } from 'react-bootstrap';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
@@ -11,7 +12,7 @@ import Loader from '../components/common/Loader';
 import ProjectSingleContainer from '../components/projects/ProjectSingleContainer';
 
 // Import button component
-import ScrollToTopButton from '../components/ScrollToTopButton';
+import ScrollToTopButton from '../components/scroll-to-top-button/ScrollToTopButton';
 
 const AllProjects = () => {
     const [isVisible, setIsVisible] = useState(false);
