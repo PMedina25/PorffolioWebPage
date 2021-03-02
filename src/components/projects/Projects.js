@@ -5,6 +5,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useQuery } from '@apollo/client';
 import { FETCH_PROJECTS_QUERY } from '../../utils/graphql';
+import './styles/projects.css';
 
 import { Row, Col } from 'react-bootstrap';
 
@@ -111,6 +112,7 @@ const Projects = () => {
                         {buttonText}
                     </button>
                 </Col>
+            </Row>
                 <div className="projects-grid">
                 {
                     showProjects && 
@@ -123,7 +125,6 @@ const Projects = () => {
                       })
                 }
                 </div>
-            </Row>
         </div>
     );
 };

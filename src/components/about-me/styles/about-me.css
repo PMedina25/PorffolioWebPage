@@ -1,0 +1,112 @@
+/****************
+ *   About Me   *
+ ****************/
+
+#about {
+  width: 100%;
+  margin: 0;
+  text-align: justify;
+}
+
+#about h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+#about-me-section {
+  margin-top: 2rem;
+}
+
+#about-me-text {
+  padding: 1rem;
+}
+
+.about-technologies-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.about-grid-item p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.about-technology-icon {
+  color: var(--light-blue);
+  margin-right: 10px;
+}
+
+@media (max-width: 992px) {
+  #show-all-technologies-button {
+    margin-bottom: 1rem;
+  }
+}
+
+#map-col {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+#about-me-map {
+  width: 100%;
+}
+
+#mapContainer {
+  height: 350px;
+  width: 100%;
+  z-index: 0;
+  border: 2px solid var(--light-blue);
+  border-radius: 25px;
+}
+
+#all-technologies {
+  padding: 1rem;
+}
+
+#button-col {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+#show-all-technologies-button {
+  margin-bottom: 1rem;
+}
+
+#all-technologies h4 {
+  margin-bottom: 1rem;
+}
+
+.technology-col {
+  padding: 1rem !important;
+  transition: var(--transition);
+}
+
+@media (max-width: 550px) {
+  .about-grid-item {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 450px) {
+  #about-me-text p {
+    font-size: 0.8rem;
+  }
+  .about-grid-item {
+    font-size: 0.6rem;
+  }
+  .about-technology-icon {
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 350px) {
+  .about-grid-item {
+    font-size: 0.5rem;
+  }
+}

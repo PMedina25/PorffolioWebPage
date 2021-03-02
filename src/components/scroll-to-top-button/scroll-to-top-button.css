@@ -1,0 +1,23 @@
+/* =============
+ * Scroll To Top Button
+ * =============
+*/
+.scroll-to-top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 1.3rem 1.5rem;
+  margin: 2rem;
+  font-size: 1.5rem;
+  background-color: transparent;
+  color: var(--light-blue);
+  border: 1px solid var(--light-blue);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.scroll-to-top:hover {
+  background-color: var(--hover-color);
+  transition: var(--transition);
+}
