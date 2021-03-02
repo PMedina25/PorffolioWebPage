@@ -5,6 +5,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useQuery } from '@apollo/client';
 import { FETCH_PROJECTS_QUERY } from '../../utils/graphql';
+import './styles/projects.css';
 
 import { Row, Col } from 'react-bootstrap';
 

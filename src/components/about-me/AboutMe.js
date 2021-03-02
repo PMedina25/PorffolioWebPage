@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import './styles/about-me.css';
 
 // Import components
 import Map from './Map';

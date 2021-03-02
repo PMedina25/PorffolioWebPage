@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { FETCH_ORGANIZATIONS_QUERY } from '../../utils/graphql';
+import './styles/organizations.css';
 
 // Import components
 import OrganizationCard from './OrganizationCard';
