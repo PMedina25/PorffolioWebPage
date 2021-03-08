@@ -20,16 +20,16 @@ const Home = () => {
                 </div>
                 
                 <Row id="social-icons">
-                        <a href="https://www.linkedin.com/in/pablo-medina-rodr%C3%ADguez-a3a8b9135/" rel="noreferrer" alt="linkedin profile" target="_blank" className="btn">
+                        <a href="https://www.linkedin.com/in/pablo-medina-rodr%C3%ADguez-a3a8b9135/" rel="noreferrer" alt="linkedin profile" target="_blank" className="social-icon-container btn">
                             <FaLinkedin className="social-network-icon" />
                         </a>
-                        <a href="https://github.com/PMedina25" rel="noreferrer" alt="github profile" target="_blank" className="btn">
+                        <a href="https://github.com/PMedina25" rel="noreferrer" alt="github profile" target="_blank" className="social-icon-container btn">
                             <FaGithub className="social-network-icon" />
                         </a>
-                        <a  rel="noreferrer" alt="email account" className="btn" onClick={() => alert('pablo.medina.us@gmail.com')}>
+                        <a  rel="noreferrer" alt="email account" className="btn" onClick={() => alert('pablo.medina.us@gmail.com')} className="social-icon-container btn">
                             <HiOutlineMail id="email-icon" className="social-network-icon" />
                         </a>
-                        <a rel="noreferrer" alt="email account" className="btn" onClick={() => alert('+34 639 538 774')}>
+                        <a rel="noreferrer" alt="email account" className="btn" onClick={() => alert('+34 639 538 774')} className="social-icon-container btn">
                             <AiOutlinePhone className="social-network-icon" />
                         </a>
                 </Row>

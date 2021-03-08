@@ -97,7 +97,7 @@ const AboutMe = () => {
                     <Map />
                 </Col>
             </Row>
-            <Row id="all-technologies">
+            <Row id="all-technologies" data-aos="fade-up" data-aos-once="true">
                 <Col md={12} className="button-col">
                     <button
                         id="show-all-technologies-button" 

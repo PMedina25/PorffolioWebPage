@@ -53,15 +53,15 @@ const Projects = () => {
 
     return (
         <div id="projects">
-            <Row>
+            <Row data-aos="fade-up" data-aos-once="true">
                 <Col md={12}>
-                    <h1 data-aos="fade-up" data-aos-once="true"><span className="navigation-color">{'<'}</span>Projects{'  '}<span className="navigation-color">{'/>'}</span></h1>
+                    <h1><span className="navigation-color">{'<'}</span>Projects{'  '}<span className="navigation-color">{'/>'}</span></h1>
                 </Col>
             </Row>
-            <Row>
+            <Row data-aos="fade-up" data-aos-once="true">
                 <Col md={12}>
                     <Link to={'/projects'} id="view-all-projects-button-container">
-                        <button id="view-all-projects-button" data-aos="fade-up" data-aos-once="true">view all projects</button>
+                        <button id="view-all-projects-button">view all projects</button>
                     </Link>
                 </Col>
             </Row>

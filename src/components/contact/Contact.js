@@ -29,8 +29,10 @@ const Contact = () => {
    * @param {object} e - Event
    */
   const sendEmail = (e) => {
+    /* Avoid the page to be refreshed */
     e.preventDefault();
 
+    /* Send email with emailJS */
     emailjs.send(
       'service_inke7o9', 
       'template_0qs8gjg', {
@@ -41,8 +43,10 @@ const Contact = () => {
       },
       'user_nSFn72jWq3bv20i8C79Xi');
 
+    /* Reset the value */
     e.target.reset();
 
+    /* Alert which shows that the message has been sent */
     alert('Message sent!')
   };
 
@@ -51,10 +55,10 @@ const Contact = () => {
    * Return the component
    */
   return (
-      <div id="contact">
+      <div id="contact" data-aos="fade-up" data-aos-once="true">
         <Row>
             <Col md={12}>
-                <h1 data-aos="fade-up" data-aos-once="true"><span className="navigation-color">{'<'}</span>Contact{'  '}<span className="navigation-color">{'/>'}</span></h1>
+                <h1><span className="navigation-color">{'<'}</span>Contact{'  '}<span className="navigation-color">{'/>'}</span></h1>
             </Col>
         </Row>
 
