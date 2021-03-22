@@ -7,7 +7,6 @@ import {
     FaAws,
     FaBluetooth,
     FaDocker,
-    FaLess,
     FaNodeJs,
     FaRaspberryPi,
     FaReact,
@@ -31,6 +30,7 @@ import {
     SiMocha,
     SiNetlify,
     SiNextDotJs,
+    SiPostgresql,
     SiPostman,
     SiRedux,
     SiZigbee
@@ -70,9 +70,6 @@ const Technologies = () => {
                         <p><SiBootstrap className="about-technology-icon" />{' '}Bootstrap</p>
                     </div>
                     <div className="about-grid-item">
-                        <p><FaLess className="about-technology-icon" />{' '}Less</p>
-                    </div>
-                    <div className="about-grid-item">
                         <p><FaSass className="about-technology-icon" />{' '}Sass</p>
                     </div>
                     <div className="about-grid-item">
@@ -95,6 +92,9 @@ const Technologies = () => {
                     </div>
                     <div className="about-grid-item">
                         <p><SiMongodb className="about-technology-icon" />{' '}MongoDB</p>
+                    </div>
+                    <div className="about-grid-item">
+                        <p><SiPostgresql className="about-technology-icon" />{' '}PostgreSQL</p>
                     </div>
                     <div className="about-grid-item">
                         <p><DiMysql className="about-technology-icon" />{' '}MySQL</p>
