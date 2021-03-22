@@ -14,22 +14,22 @@ const Home = () => {
         <>
             <div id="home">
                 <div id="home-text">
-                    <h1>Hi, this is Pablo</h1>
-                    <h1 style={{'color': '#8892B0'}}>Full Stack Developer (MERN Stack)</h1>
-                    <p style={{'color': '#8892B0'}}>I'm a Computer Engineer based in Seville and Amsterdam, specialized in building web and mobile apps, both the frontend and the backend.</p>
+                    <h1 className="animate-pop-in">Hi, this is Pablo</h1>
+                    <h1 className="animate-pop-in" style={{'color': '#8892B0'}}>Full Stack Developer (MERN Stack)</h1>
+                    <p className="animate-pop-in" style={{'color': '#8892B0'}}>I'm a Computer Engineer based in Seville and Amsterdam, specialized in building web and mobile apps, both the frontend and the backend.</p>
                 </div>
                 
                 <Row id="social-icons">
-                        <a href="https://www.linkedin.com/in/pablo-medina-rodr%C3%ADguez-a3a8b9135/" rel="noreferrer" alt="linkedin profile" target="_blank" className="social-icon-container btn">
+                        <a href="https://www.linkedin.com/in/pablo-medina-rodr%C3%ADguez-a3a8b9135/" className="social-icon-container btn animate-pop-in" rel="noreferrer" alt="linkedin profile" target="_blank">
                             <FaLinkedin className="social-network-icon" />
                         </a>
-                        <a href="https://github.com/PMedina25" rel="noreferrer" alt="github profile" target="_blank" className="social-icon-container btn">
+                        <a href="https://github.com/PMedina25" className="social-icon-container btn animate-pop-in" rel="noreferrer" alt="github profile" target="_blank">
                             <FaGithub className="social-network-icon" />
                         </a>
-                        <a  rel="noreferrer" alt="email account" className="btn" onClick={() => alert('pablo.medina.us@gmail.com')} className="social-icon-container btn">
+                        <a  rel="noreferrer" className="social-icon-container btn animate-pop-in" alt="email account" onClick={() => alert('pablo.medina.us@gmail.com')}>
                             <HiOutlineMail id="email-icon" className="social-network-icon" />
                         </a>
-                        <a rel="noreferrer" alt="email account" className="btn" onClick={() => alert('+34 639 538 774')} className="social-icon-container btn">
+                        <a rel="noreferrer" className="social-icon-container btn animate-pop-in" alt="email account" onClick={() => alert('+34 639 538 774')}>
                             <AiOutlinePhone className="social-network-icon" />
                         </a>
                 </Row>
