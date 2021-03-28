@@ -1,10 +1,13 @@
 import React from 'react';
 import './styles/home.css';
 
-// Import bootstrap components
+/* Import components */
+import Tooltip from './Tooltip';
+
+/* Import bootstrap components */
 import { Row  } from 'react-bootstrap';
 
-// Import react icons
+/* Import react icons */
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { AiOutlinePhone } from 'react-icons/ai';
@@ -20,17 +23,38 @@ const Home = () => {
                 </div>
                 
                 <Row id="social-icons">
-                        <a href="https://www.linkedin.com/in/pablo-medina-rodr%C3%ADguez-a3a8b9135/" className="social-icon-container btn animate-pop-in" rel="noreferrer" alt="linkedin profile" target="_blank">
+                        <a 
+                          href="https://www.linkedin.com/in/pablo-medina-rodr%C3%ADguez-a3a8b9135/" 
+                          className="social-icon-container btn animate-pop-in" 
+                          rel="noreferrer" 
+                          alt="linkedin profile" 
+                          target="_blank"
+                        >
                             <FaLinkedin className="social-network-icon" />
                         </a>
-                        <a href="https://github.com/PMedina25" className="social-icon-container btn animate-pop-in" rel="noreferrer" alt="github profile" target="_blank">
+                        <a 
+                          href="https://github.com/PMedina25" 
+                          className="social-icon-container btn animate-pop-in" 
+                          rel="noreferrer" alt="github profile" 
+                          target="_blank"
+                        >
                             <FaGithub className="social-network-icon" />
                         </a>
-                        <a  rel="noreferrer" className="social-icon-container btn animate-pop-in" alt="email account" onClick={() => alert('pablo.medina.us@gmail.com')}>
+                        <a  
+                          rel="noreferrer" 
+                          className="social-icon-container btn animate-pop-in anchor-tooltip" 
+                          alt="email account" 
+                        >
                             <HiOutlineMail id="email-icon" className="social-network-icon" />
+                            <Tooltip tooltipText={'pabmedinarod@gmail.com'}/>
                         </a>
-                        <a rel="noreferrer" className="social-icon-container btn animate-pop-in" alt="email account" onClick={() => alert('+34 639 538 774')}>
+                        <a 
+                          rel="noreferrer" 
+                          className="social-icon-container btn animate-pop-in anchor-tooltip"
+                          alt="phone number"
+                        >
                             <AiOutlinePhone className="social-network-icon" />
+                            <Tooltip tooltipText={'+34 639 538 774'}/>
                         </a>
                 </Row>
             </div>
