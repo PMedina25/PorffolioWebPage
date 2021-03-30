@@ -32,10 +32,11 @@ const Projects = () => {
     }, []);
 
     if (loading) {
-        return <Loader />
+        return <Loader section='Training and Experience'/>
     }
     if (error) {
-        return <h1>Error: Something Wrong Happened</h1>;
+        return <Loader section='Projects'/>
+        // return <h1>Error: Something Wrong Happened</h1>;
     }
 
     /**

@@ -1,21 +1,14 @@
-import React from 'react'
-import { Spinner } from 'react-bootstrap';
+import React from 'react';
+import './styles/loader.css';
 
-const Loader = () => {
+const Loader = ({ section }) => {
     return (
-        <Spinner 
-          animation='border' 
-          role='status' 
-          variant='info'
-          style={{ 
-            width: '100px', 
-            height: '100px', 
-            margin: 'auto', 
-            display: 'block',
-            marginTop: '50px' 
-          }}>
-            <span className="sr-only">Loading...</span>
-        </Spinner>
+      <div className="spinner-container">
+        <div className="triple-spinner"></div>
+        <div className="loading-info">
+            <span>Loading {section}...</span>
+        </div>
+      </div>
     )
 }
 

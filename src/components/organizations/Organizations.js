@@ -16,10 +16,11 @@ const Organizations = () => {
     } = useQuery(FETCH_ORGANIZATIONS_QUERY);
     
     if (loading) {
-      return <Loader />
+      return <Loader section='Training and Experience'/>
     }
     if (error) {
-        return <h1>Error: Something Wrong Happened</h1>;
+      return <Loader section='Training and Experience'/>
+        // return <h1>Error: Something Wrong Happened</h1>;
     }
 
     return (
