@@ -110,7 +110,7 @@
 
 .title-tooltip {
   width: 16rem;
-  background: transparent;
+  background: var(--main-color);
   color: var(--light-blue);
   border: 1px solid var(--light-blue);
   border-radius: 10px;
